@@ -1,0 +1,45 @@
+
+.divi1 {
+
+    height: 40px;
+    border:1px solid #222;
+    padding-top: 10px;
+    background-color: #F9F9F9;
+    padding-left: 15px;
+}
+
+.divi2 {
+
+    height: 40px;
+    border:1px solid #222;
+    padding-top: 10px;
+    background-color: #ffffff;
+    padding-left: 15px;
+}
+
+.divi3 {
+    border:1px solid #222;
+    padding-bottom: 50px;
+
+}
+
+.cjtobotones {
+    margin-top: 30px;
+}
+
+.bloque1 {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.bloque2 {
+    margin-top: 30px !important;
+}
+
+.bloque4 {
+
+    padding-bottom: 50px;
+}
+

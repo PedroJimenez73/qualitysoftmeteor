@@ -1,0 +1,42 @@
+<template name="Mapa"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2 class="titulo-linea">Mapa de Procesos</h2>
+                </div>
+                <div class="row filamapa">
+                    <div class="col-md-1 rectangulo"></div>
+                    <div class="col-md-2"><div class="bg_dy rectangulo sombreados"> <a href="/organizacion">  Organización y su contexto</a></div> </div>
+                    <div class="col-md-2 rectangulo"> <img class="flecha hidden-xs hidden-sm" data-toggle="tooltip" title="Planificar" src="Arrow3.svg" alt="flecha"> </div>
+                    <div class="col-md-2"><div class="bg_lo rectangulo sombreados"> <a href="#">  Apoyo y Operación</a> </div></div>
+                    <div class="col-md-2 rectangulo"> <img class="flecha hidden-xs hidden-sm" data-toggle="tooltip" title="Hacer" src="Arrow2.svg" alt="flecha"> </div>
+                    <div class="col-md-2"><div class="bg_lg rectangulo sombreados"> <a href="#">  Satisfacción del Cliente</a> </div></div>
+                    <div class="col-md-1 rectangulo"></div>                
+                </div>
+                <div class="row filamapa">
+                    <div class="col-md-1 rectangulo"></div>
+                    <div class="col-md-2"><div class="bg_dy rectangulo sombreados"> <a href="#">  Requisitos del cliente</a></div> </div>
+                    <div class="col-md-2"><div class="bg_lo rectangulo sombreados"> <a href="#">  Planificación</a> </div></div>
+                    <div class="col-md-2"><div class="bg_lo rectangulo sombreados"> <a href="#">  Liderazgo</a> </div></div>
+                    <div class="col-md-2"><div class="bg_lo rectangulo sombreados"> <a href="#">  Evaluación del desempeño</a> </div></div>
+                    <div class="col-md-2"><div class="bg_lg rectangulo sombreados"> <a href="#">  Resultados del SCG</a> </div></div>
+                    <div class="col-md-1 rectangulo"></div>                
+                </div>
+                <div class="row filamapa">
+                    <div class="col-md-1 rectangulo"></div>
+                    <div class="col-md-2"><div class="bg_dy rectangulo sombreados"> <a href="/necesidades">  Necesidades y expectativas</a></div> </div>
+                    <div class="col-md-2 rectangulo"> <img class="flecha hidden-xs hidden-sm" data-toggle="tooltip" title="Actuar" src="Arrow4.svg" alt="flecha"> </div>
+                    <div class="col-md-2"><div class="bg_lo rectangulo sombreados"> <a href="#">  Mejora</a> </div></div>
+                    <div class="col-md-2 rectangulo"> <img class="flecha hidden-xs hidden-sm" data-toggle="tooltip" title="Verificar" src="Arrow1.svg" alt="flecha"> </div>
+                    <div class="col-md-2"><div class="bg_lg rectangulo sombreados"> <a href="#">  Productos y Servicios</a> </div></div>
+                    <div class="col-md-1 rectangulo"></div>                
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function(){
+                $('[data-toggle="tooltip"]').tooltip(); 
+                            });
+        </script>
+
+</template>

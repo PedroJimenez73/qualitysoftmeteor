@@ -1,0 +1,11 @@
+<template name="AppLayout">
+    <div id="wrapper">
+        <div class="overlay"></div>
+        {{> header}}
+        {{> nav}}
+            <main class="app-layout">
+                {{> Template.dynamic template=main}}
+            </main>
+
+    </div>
+</template>

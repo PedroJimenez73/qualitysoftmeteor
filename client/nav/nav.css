@@ -1,0 +1,316 @@
+#sidebar-wrapper {
+
+    height: 100%;
+
+}
+
+#wrapper {
+    padding-left: 0;
+
+}
+
+/*Remove rounded coners*/
+
+nav.sidebar.navbar {
+    border-radius: 0px;
+}
+
+
+
+nav.sidebar, .container-main{
+    -webkit-transition: margin 200ms ease-out;
+    -moz-transition: margin 200ms ease-out;
+    -o-transition: margin 200ms ease-out;
+    transition: margin 200ms ease-out;
+}
+
+/* Icons */
+.menu-icon {
+    font-size: 24px !important;
+}
+
+/* Add gap to nav and right windows.*/
+/*.container-main{
+    padding: 10px 10px 0 10px;
+}*/
+
+/* Colors */
+.navbar-m2p {
+    background-color: #00448D;
+}
+.navbar-m2p span, .navbar-m2p a, .navbar-m2p p{
+    color: #FFFFFF;
+}
+
+.navbar-m2p p{
+    padding-left: 15px;
+}
+
+.nav .open > a {
+    background-color:e;
+    border-color: #0074D9;
+}
+.nav li > a:hover, .nav .open > a:hover,
+.nav li > a:focus, .nav .open > a:focus,
+.nav li > a:active, .nav .open > a:active {
+    background-color: #0074D9 !important;
+}
+
+.nav .open ul > li {
+    background-color: #4192D9;
+}
+
+.navbar-m2p .navbar-nav .open .dropdown-menu>li>a {
+    color: #FFFFFF;
+    padding: 10px;
+}
+
+/* borda menu active */
+.navbar-m2p .navbar-nav .active a {
+    margin-left: -1px;
+    border-left: 5px solid #285eaf;
+}
+/* Hamburger */
+.navbar-toggle {
+    background-color: white;
+    border: 1px solid #fff;
+}
+.navbar-toggle .icon-bar,
+.navbar-toggle .icon-bar + .icon-bar {
+    background-color: #0002bc;
+}
+
+nav:hover .forAnimate{
+    opacity: 1;
+}
+
+.navbar-m2p .dropdown-menu {
+    padding: 0px;
+}
+
+.nav li.separator {
+    padding: 10px 15px;
+    text-transform: uppercase;
+    background-color: rgba(0, 0, 39, 0.2);
+    color: rgba(208, 208, 207, 0.4);
+}
+
+/* .....NavBar: Icon only with coloring/layout.....*/
+
+/*small/medium side display*/
+@media (min-width: 768px) {
+
+    /*Allow main to be next to Nav*/
+    .container-main{
+        position: absolute;
+        width: calc(100% - 40px); /*keeps 100% minus nav size*/
+        margin-left: 40px;
+        float: right;
+    }
+
+    /*lets nav bar to be showed on mouseover*/
+    nav.sidebar:hover + .container-main{
+        margin-left: 300px;
+    }
+
+    .navbar-brand {
+        height: 75px;
+    }
+
+    /*Center Brand*/
+    nav.sidebar.navbar.sidebar>.container .navbar-brand, .navbar>.container-fluid .navbar-brand {
+        margin-left: 0px;
+    }
+    /*Center Brand*/
+    nav.sidebar .navbar-brand, nav.sidebar .navbar-header{
+        text-align: center;
+        width: 100%;
+        margin-left: 0px;
+        font-size: 25px !important;
+        line-height: 27px;
+    }
+
+    /*Center Icons*/
+    nav.sidebar a{
+        padding-right: 12px;
+    }
+
+    /* Colors/style dropdown box*/
+    nav.sidebar .navbar-nav .open .dropdown-menu {
+        position: static;
+        float: none;
+        width: auto;
+        margin-top: 0;
+        background-color: transparent;
+        border: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    }
+
+    /*allows nav box to use 100% width*/
+    nav.sidebar .navbar-collapse, nav.sidebar .container-fluid{
+        padding: 0 0px 0 0px;
+    }
+
+    /*gives sidebar width/height*/
+    nav.sidebar{
+        width: 300px;
+        height: 100%;
+        margin-left: -250px;
+        float: left;
+        z-index: 8000;
+        margin-bottom: 0px;
+    }
+
+    /*give sidebar 100% width;*/
+    nav.sidebar li {
+        width: 100%;
+    }
+
+    /* Move nav to full on mouse over*/
+    nav.sidebar:hover{
+        margin-left: 0px;
+    }
+    /*for hiden things when navbar hidden*/
+    .forAnimate{
+        opacity: 0;
+    }
+}
+
+/* .....NavBar: Fully showing nav bar..... */
+
+@media (min-width: 1330px) {
+
+    /*Allow main to be next to Nav*/
+    .container-main{
+        width: calc(100% - 300px); /*keeps 100% minus nav size*/
+        margin-left: 300px;
+    }
+
+    /*Show all nav*/
+    nav.sidebar{
+        margin-left: 0px;
+        float: left;
+    }
+    /*Show hidden items on nav*/
+    nav.sidebar .forAnimate{
+        opacity: 1;
+    }
+}
+
+.vacio {
+    min-height: 100px;
+}
+
+
+/*header qsoft*/
+
+#main-header {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	background-color: #fff;
+	z-index: 99;
+
+	-moz-box-shadow: 0 1px 5px #999;
+	-webkit-box-shadow: 0 1px 5px #999;
+	box-shadow: 0 1px 5px #999;
+}
+
+#main-menu {
+	float:right;
+	padding-top: 15px;
+	padding-bottom: 10px;
+}
+
+#main-menu li{
+	padding-left: 15px;
+}
+
+.simple {
+	padding-top: 15px;
+}
+
+#main-menu.nav-pills>li.active>a, 
+#main-menu.nav-pills>li.active>a:hover, 
+#main-menu.nav-pills>li.active>a:focus,
+#main-menu.nav-pills>li>a:hover {
+	background: none;
+}
+
+.usuario {
+    color: #00448D;
+    font-size: 18px;
+    padding-left: 5px;
+    padding-top: 10px;
+}
+
+.usuario i{
+    font-size: 26px;
+}
+
+
+#logo {
+    padding-top: 15px;
+}
+
+#logoxs {
+	padding-top: 5px;
+	display: inline;
+}
+
+.feder {
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 15px;
+  width: 234px;
+  height: auto;
+}
+
+/* Botones bootstrap */
+
+.btn-sample { 
+  color: #ffffff; 
+  background-color: #E8008B; 
+  border-color: #E8008B; 
+} 
+ 
+.btn-sample:hover, 
+.btn-sample:focus, 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  color: #ffffff; 
+  background-color: #B80671; 
+  border-color: #E8008B; 
+} 
+ 
+.btn-sample:active, 
+.btn-sample.active, 
+.open .dropdown-toggle.btn-sample { 
+  background-image: none; 
+} 
+ 
+.btn-sample.disabled, 
+.btn-sample[disabled], 
+fieldset[disabled] .btn-sample, 
+.btn-sample.disabled:hover, 
+.btn-sample[disabled]:hover, 
+fieldset[disabled] .btn-sample:hover, 
+.btn-sample.disabled:focus, 
+.btn-sample[disabled]:focus, 
+fieldset[disabled] .btn-sample:focus, 
+.btn-sample.disabled:active, 
+.btn-sample[disabled]:active, 
+fieldset[disabled] .btn-sample:active, 
+.btn-sample.disabled.active, 
+.btn-sample[disabled].active, 
+fieldset[disabled] .btn-sample.active { 
+  background-color: #E8008B; 
+  border-color: #E8008B; 
+} 
+ 
+.btn-sample .badge { 
+  color: #E8008B; 
+  background-color: #ffffff; 
+}

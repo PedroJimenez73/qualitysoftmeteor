@@ -1,0 +1,47 @@
+body {
+    position: relative;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    color: #222;
+}
+
+
+body,html{
+    height: 100%;
+}
+
+
+* {
+  border-radius: 0 !important;
+  text-decoration: none !important;
+}
+
+.overlay {
+    position: fixed;
+    display: none;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+}
+
+/* remove outer padding */
+.container-main .row{
+    padding: 0px;
+    margin: 0px;
+}
+
+/* Encabezado de página */
+.encabezado {
+    padding-top: 100px;
+    padding-bottom: 30px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.titulo-linea {
+    display: inline;
+}
