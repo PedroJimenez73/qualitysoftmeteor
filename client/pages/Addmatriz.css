@@ -1,0 +1,32 @@
+
+.add-matriz {
+  max-width: 600px;
+  padding: 15px;
+  margin: 0 auto;
+  background-color: #fff;  
+}
+.add-matriz .add-matriz-heading,
+.add-matriz .checkbox {
+  margin-bottom: 10px;
+}
+.add-matriz .checkbox {
+  font-weight: normal;
+}
+.add-matriz .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.add-matriz .form-control:focus {
+  z-index: 2;
+}
+.add-matrizp input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}

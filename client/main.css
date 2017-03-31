@@ -45,3 +45,66 @@ body,html{
 .titulo-linea {
     display: inline;
 }
+
+.logoheader {
+    width: 70px;
+    height: auto;
+    margin-top: 15px;
+}
+
+.logonav {
+    width: 70px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+/* select en formularios */
+
+select#departamento {
+   height: 40px;
+   overflow: hidden;
+   width: 100%;
+   margin-bottom: 15px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: lightgrey;
+   background: transparent;
+   font-size: 18px;
+   color: lightslategrey;
+   padding-left: 10px; /* If you add too much padding here, the options won't show in IE */
+   -webkit-appearance: none;
+   -webkit-border-radius: 0px;
+}
+
+
+.back-to-top {
+ 
+background: none;
+ 
+margin: 0;
+ 
+position: fixed;
+ 
+bottom: 0;
+ 
+right: 0;
+ 
+width: 60px;
+ 
+height: 60px;
+ 
+z-index: 100;
+ 
+display: none;
+ 
+text-decoration: none;
+ 
+color: #00448D;
+  
+}
+
+.back-to-top i {
+ 
+  font-size: 30px;
+ 
+}

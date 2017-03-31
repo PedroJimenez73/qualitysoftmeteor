@@ -1,0 +1,58 @@
+<template name="Matrices"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2 class="titulo-linea">Matriz de Riesgos y Oportunidades</h2>
+                        <a class="pull-right btn btn-primary" href="/riesgos" type="button"> Volver a Gestión de Matrices</a>
+                </div>
+                <div class="row" style="margin-bottom: 30px; margin-left: 5px">
+                    <a class="btn btn-success" type="button" href="/addmatriz">Añadir nuevo proceso</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Proceso</th>
+                                    <th>Responsable</th>
+                                    <th>Causa/Cambio</th>
+                                    <th>Riesgo</th>
+                                    <th>Oportunidad</th>
+                                    <th>Control/Frecuencia</th>
+                                    <th>Impacto</th>
+                                    <th>Probabilidad</th>
+                                    <th>Ponderacion</th>
+                                    <th>Acción</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each matrices}}
+                                    <tr>
+                                        <td>{{proceso}}</td>
+                                        <td>{{responsable}}</td>
+                                        <td>{{causacambio}}</td>
+                                        <td>{{riesgo}}</td>
+                                        <td>{{oportunidad}}</td> 
+                                        <td>{{controlfrecuencia}}</td>            
+                                        <td>{{impacto}}</td>
+                                        <td>{{probabilidad}}</td>
+                                        <td>{{ponderacion}}</td>
+                                        <td>{{accion}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row bloque1">	
+                        <div class="col-md-4 divi4">
+                            <p>
+                                RESPONSABLE/FECHA DE REVISIÓN
+                                Gerencia:
+                            </p>
+                        </div>
+                        <div class="col-md-8 divi4"><p></p></div>
+                </div>
+            </div>
+    </div>
+</template>

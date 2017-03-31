@@ -1,0 +1,36 @@
+<template name="Addmatriz">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2 class="titulo-linea">Añadir nuevo proceso</h2>
+                <a class="pull-right btn btn-primary" href="/matrices" type="button"> Volver a Matriz</a>
+            </div>
+            <form class="add-matriz">
+                <h4 class="add-matriz-heading">Introduzca los siguientes datos</h4>
+                <label for="proceso" class="sr-only">Proceso</label>
+                <input type="text" class="form-control" name="proceso" id="proceso" placeholder="Proceso" required autofocus>
+                <label for="responsable" class="sr-only">Responsable</label>
+                <input type="text" class="form-control" name="responsable" id="responsable" placeholder="Responsable">
+                <label for="causacambio" class="sr-only">Causa/Cambio</label>
+                <input type="text" class="form-control" name="causacambio" id="causacambio" placeholder="Causa/Cambio">
+                <label for="riesgo" class="sr-only">Riesgo</label>
+                <input type="text" class="form-control" name="riesgo" id="riesgo" placeholder="Riesgo">
+                <label for="oportunidad" class="sr-only">Oportunidad</label>
+                <input type="text" class="form-control" name="oportunidad" id="oportunidad" placeholder="Oportunidad">
+                <label for="controlfrecuencia" class="sr-only">Control/Frecuencia</label>
+                <input type="text" class="form-control" name="controlfrecuencia" id="controlfrecuencia" placeholder="Control/Frecuencia">
+                <label for="impacto" class="sr-only">Impacto</label>
+                <input type="text" class="form-control" name="impacto" id="impacto" placeholder="Impacto">
+                <label for="probabilidad" class="sr-only">Probabilidad</label>
+                <input type="text" class="form-control" name="probabilidad" id="probabilidad" placeholder="Probabilidad">
+                <label for="ponderacion" class="sr-only">Ponderación del Riesgo (IXP)</label>
+                <input type="text" class="form-control" name="ponderacion" id="ponderacion" placeholder="Ponderación del Riesgo">
+                <label for="accion" class="sr-only">Acción</label>
+                <input type="text" class="form-control" name="accion" id="accion" placeholder="Acción">
+
+                <button class="btn btn-primary" type="submit">Crear proceso</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

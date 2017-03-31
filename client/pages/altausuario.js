@@ -5,6 +5,7 @@ Template.altausuario.events({
         var password2 = event.target.password2.value;
         var first_name = event.target.first_name.value;
         var last_name = event.target.last_name.value;
+        var departamento = event.target.departamento.value;
 
         if(isValidPassword(password) && areValidPasswords(password, password2))
             {
@@ -14,7 +15,8 @@ Template.altausuario.events({
                     password: password,
                     profile: {
                         first_name: first_name,
-                        last_name: last_name
+                        last_name: last_name,
+                        departamento: departamento
                     }
                 }, function(err){
                     if(err){
