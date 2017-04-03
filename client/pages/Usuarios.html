@@ -1,0 +1,54 @@
+<template name="Usuarios"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2 class="titulo-linea">Usuarios</h2>
+                        <a class="pull-right btn btn-primary" href="/mapa" type="button"> Volver al Mapa de Procesos</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                    {{#if isInRole 'admin'}}
+                        <a class="btn btn-primary" href="/altausuario" type="button"> Crear nuevo Usuario</a>
+
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nombre</th>
+                                    <th>Apellidos</th>
+                                    <th>Email</th>
+                                    <th>Teléfono</th>
+                                    <th>Rol/Departamento</th>
+                                    <th>Fecha alta</th>
+                                    <th>Permisos Administrador</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each users}}
+                                    <tr>
+                                        <td>{{username}}</td>
+                                        <td>{{usersurname}}</td>
+                                        <td><a href="mailto:{{userEmail}}" style="text-decoration: none;">{{userEmail}}</a></td>
+                                        <td>{{userTelefono}}</td>
+                                        <td>{{userDepartamento}}</td>
+                                        <td>{{dateFormat}}</td>
+                                        <td>
+                                            <div class="user-edit">
+                                                {{#if isAdmin}}
+                                                    <button class="toggle-admin btn btn-success">Quitar permiso</button>
+                                                {{else}}
+                                                    <button class="toggle-admin btn btn-danger">Añadir permiso</button>
+                                                {{/if}}
+                                            </div>
+                                        </td>             
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    {{else}}
+                        <h3>Acceso no autorizado, por favor consulte a su administrador</h3>
+                    {{/if}}
+                    </div>
+                </div>
+            </div>
+    </div>    
+</template>

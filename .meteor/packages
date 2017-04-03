@@ -27,5 +27,15 @@ kadira:blaze-layout
 
 accounts-base
 accounts-password
+useraccounts:unstyled
+raix:handlebar-helpers
+
+session
+
+momentjs:moment
+rzymek:moment-locale-es
+
+alanning:roles
+
 
 themeteorchef:bert
