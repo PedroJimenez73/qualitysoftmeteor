@@ -1,10 +1,15 @@
 <template name="Evalpro"> 
     <div class="container">
-        <div class="row encabezado">
-            <h2>Procedimiento de Evaluación de Proveedores</h2>
-            <a href="/">Inicio></a><a href="/necesidades">Necesidades y Expectativas</a>
-        </div>
-
+                <div class="row encabezado">
+                    <h2>Procedimiento de Evaluación de Proveedores</h2> 
+                    <a href="/mapa">Mapa de procesos ></a> Evaluación de proveedores
+                </div>
+                <div class="row">
+                   <div class="col-md-12">
+                       <a class="btn btn-success cjtobotones" type="button" href="/proveedores">Listado de Proveedores</a>
+			            <a class="btn btn-primary cjtobotones" type="button" id="indiceClick">Índice del procedimiento</a>
+                   </div>
+                </div>
                     <div class="row bloque1">	
                         <div class="col-md-6 divi1"><p>REFERENCIA DEL PROCEDIMIENTO</p></div>
                         <div class="col-md-6 divi2"><p>PRO-07</p></div>
@@ -29,10 +34,10 @@
                         <div class="col-md-12 divi3" >
                             <h3>Índice</h3>
                             <ul>
-                                <li>1. OBJETO</li>
-                                <li>2. RELACIÓN</li>
-                                <li>3. ALCANCE</li>
-                                <li>4. DESCRIPCIÓN</li>
+                                <li><a href="#" id="indiceObjeto">1. OBJETO</a></li>
+                                <li><a href="#" id="indiceRelacion">2. RELACIÓN</a></li>
+                                <li><a href="#" id="indiceAlcance">3. ALCANCE</a></li>
+                                <li><a href="#" id="indiceDescripcion">4. DESCRIPCIÓN</a></li>
                                     <ul>
                                         <li>4.1   Lista de proveedores homologados</li>
                                         <li>4.2   Evaluación y aprobación de proveedores</li>
@@ -40,8 +45,8 @@
                                         <li>4.4   Evaluación anual</li>
                                         <li>4.5   Registro de Evaluación de proveedores</li>
                                     </ul>
-                                <li>5. RESPONSABILIDADES</li>
-                                <li>6. ANEXO</li>
+                                <li><a href="#" id="indiceResponsabilidades">5. RESPONSABILIDADES</a></li>
+                                <li><a href="#" id="indiceAnexo">6. ANEXO</a></li>
                             </ul>
                         </div>
                     </div>
@@ -175,6 +180,8 @@
                             <a href="/planes"><i class="fa fa-external-link"></i> Lista de Proveedores Homologados F--07/01.</a>                        </div>
                             <br>
                     </div>
-               
+                    <div class="row bloque1">
+                        <a href="#" class="back-to-top" style="display: inline;"><i class="fa fa-arrow-circle-up" id="#toppage"></i></a>
+                    </div>               
     </div>
 </template>

@@ -1,0 +1,38 @@
+<template name="Proveedores"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Listado de Proveedores</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addproveedor">Añadir Proveedor</a> 
+                    <a href="/mapa">Mapa de procesos ></a><a href="/evalpro"> Procedimiento de Evaluación ></a> Listado de Proveedores
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nombre</th>
+                                    <th>Teléfono</th>
+                                    <th>Mail</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each proveedores}}
+                                    <tr>
+                                        <td>{{nombre}}</td>
+                                        <td>{{telefono}}</td>
+                                        <td>{{mail}}</td>
+                                        <td><a class="pull-right btn btn-success" type="button" href="/viewproveedor/{{_id}}">Más Info</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editproveedor/{{_id}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

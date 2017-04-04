@@ -1,0 +1,40 @@
+<template name="Addproveedor">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Matriz de Riesgos y Oportunidades</h2> 
+                <a href="/mapa">Mapa de procesos ></a><a href="/evalpro"> Evaluación de Proveedores ></a><a href="/proveedores"> Listado de proveedores ></a> Añadir nuevo Proveedor
+            </div>
+            <form class="add-objeto add-proveedor">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="nombre" class="sr-only">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required autofocus>
+                <label for="servicio" class="sr-only">Producto/Servicio</label>
+                <input type="text" class="form-control" name="servicio" id="servicio" placeholder="Producto/Servicio" required autofocus>
+                <label for="cif" class="sr-only">CIF</label>
+                <input type="text" class="form-control" name="cif" id="cif" placeholder="CIF" required autofocus>
+                <label for="direccion" class="sr-only">Dirección</label>
+                <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" required autofocus>
+                <label for="telefono" class="sr-only">Teléfono</label>
+                <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" required autofocus>
+                <label for="persona" class="sr-only">Persona de Contacto</label>
+                <input type="text" class="form-control" name="persona" id="persona" placeholder="Persona de Contacto" required autofocus>
+                <label for="mail" class="sr-only">Persona de Contacto</label>
+                <input type="text" class="form-control" name="mail" id="mail" placeholder="Mail" required autofocus>
+                <label for="pago" class="sr-only">Forma de pago</label>
+                <input type="text" class="form-control" name="pago" id="pago" placeholder="Forma de pago" required autofocus>
+                <label for="nc" class="sr-only">No conformidad</label>
+                <input type="text" class="form-control" name="nc" id="nc" placeholder="No conformidad" required autofocus>
+                <label for="eval" class="sr-only">Evaluación/Reevaluación</label>                
+                <select class="form-control" id="eval" name="eval">
+                    <option class="boxCheck" value="evaluacion">Evaluación</option>
+                    <option class="boxCheck" value="reevaluacion">Reevaluación</option>           
+                </select>
+                <label for="fechamodif" class="sr-only">Fecha Última Modificación</label> 
+                <input type="date" name="fechamodif">
+                <button class="btn btn-primary" type="submit">Crear Proveedor</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

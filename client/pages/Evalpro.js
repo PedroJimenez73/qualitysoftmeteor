@@ -1,7 +1,7 @@
-Template.Riesgos.events({
-    'click #indiceClick2': function (evt) {
+Template.Evalpro.events({
+    'click #indiceClick': function (evt) {
         $('html, body').animate({
-        scrollTop: $("#indice2").offset().top
+        scrollTop: $("#indice").offset().top
     	}, 1000);
   	},
 	'click #indiceObjeto': function (evt) {
@@ -19,15 +19,11 @@ Template.Riesgos.events({
         scrollTop: $("#alcance").offset().top
     	}, 1000);
   	},
-	  	'click #indiceDefiniciones': function (evt) {
+	  	'click #indiceDescripcion': function (evt) {
         $('html, body').animate({
-        scrollTop: $("#definiciones").offset().top
+        scrollTop: $("#descripcion").offset().top
     	}, 1000);
-  	},	'click #indiceDesarrollo': function (evt) {
-        $('html, body').animate({
-        scrollTop: $("#desarrollo").offset().top
-    	}, 1000);
-  	},
+  	},	
 	  	'click #indiceResponsabilidades': function (evt) {
         $('html, body').animate({
         scrollTop: $("#responsabilidades").offset().top

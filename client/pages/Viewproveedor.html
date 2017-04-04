@@ -1,0 +1,43 @@
+<template name="Viewproveedor"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles {{editproveedor.nombre}}</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/proveedores">Volver a Proveedores</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-proveedor">
+                            <label for="nombre" class="sr-only">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editproveedor.nombre}}" disabled>
+                            <label for="servicio" class="sr-only">Producto/Servicio</label>
+                            <input type="text" class="form-control" name="servicio" id="servicio" placeholder="Producto/Servicio" value="{{editproveedor.servicio}}" disabled>
+                            <label for="cif" class="sr-only">CIF</label>
+                            <input type="text" class="form-control" name="cif" id="cif" placeholder="CIF" value="{{editproveedor.cif}}" disabled>
+                            <label for="direccion" class="sr-only">Dirección</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" value="{{editproveedor.direccion}}" disabled>
+                            <label for="telefono" class="sr-only">Teléfono</label>
+                            <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" value="{{editproveedor.telefono}}" disabled>
+                            <label for="persona" class="sr-only">Persona de Contacto</label>
+                            <input type="text" class="form-control" name="persona" id="persona" placeholder="Persona de Contacto" value="{{editproveedor.persona}}" disabled>
+                            <label for="mail" class="sr-only">Persona de Contacto</label>
+                            <input type="text" class="form-control" name="mail" id="mail" placeholder="Mail" value="{{editproveedor.mail}}" disabled>
+                            <label for="pago" class="sr-only">Forma de pago</label>
+                            <input type="text" class="form-control" name="pago" id="pago" placeholder="Forma de pago" value="{{editproveedor.pago}}" disabled>
+                            <label for="nc" class="sr-only">No conformidad</label>
+                            <input type="text" class="form-control" name="nc" id="nc" placeholder="No conformidad" value="{{editproveedor.nc}}" disabled>
+                            <label for="eval" class="sr-only">Evaluación/Reevaluación</label>                
+                            <select class="form-control" id="eval" name="eval" value="{{editproveedor.eval}}" disabled>
+                                <option value="evaluacion" {{seleccionado "evaluacion"}}>Evaluación</option>
+                                <option value="reevaluacion" {{seleccionado "reevaluacion"}}>Reevaluación</option>           
+                            </select>
+                            <label for="fechamodif" class="sr-only">Fecha Última Modificación</label> 
+                            <input type="date" name="fechamodif" value="{{editproveedor.fechamodif}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>
