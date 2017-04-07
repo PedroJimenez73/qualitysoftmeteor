@@ -39,3 +39,7 @@ alanning:roles
 
 chrismbeckett:toastr
 themeteorchef:bert
+
+cfs:standard-packages
+cfs:gridfs
+

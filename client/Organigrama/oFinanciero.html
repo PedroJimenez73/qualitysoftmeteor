@@ -1,0 +1,39 @@
+<template name="oFinanciero">
+<div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2 class="titulo-linea">Departamento de Administración y Finanzas</h2>
+                        <a class="pull-right btn btn-primary" href="/organigrama" type="button"> Volver al Organigrama</a>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nombre</th>
+                                    <th>Apellidos</th>
+                                    <th>Email</th>
+                                    <th>Teléfono</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each users}}
+                                    <tr>
+                                        {{#if isEmpleadoadyfin}}
+                                        <td>{{username}}</td>
+                                        <td>{{usersurname}}</td>
+                                        <td><a href="mailto:{{userEmail}}" style="text-decoration: none;">{{userEmail}}</a></td>
+                                        <td>{{userTelefono}}</td>
+                                        {{else}}
+                                        <!--<div class="desc">No existe</div>-->
+                                        {{/if}}
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

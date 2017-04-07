@@ -1,0 +1,356 @@
+<template name="Organigrama"> 
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Organigrama</h2> 
+                <a href="/mapa">Mapa de procesos ></a> Organigrama
+            </div>
+            <!--primera fila-->
+            <div class="row filamapa">
+                <div class="col-md-4 white"></div> 
+                <div class="col-md-4">
+                    <div class="rectCard sombreados">
+                        <h3>Gerencia</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isGerente}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Gerente</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilgerencia">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal4">+ Info</a>
+                    </div> 
+                </div>
+                <div class="col-md-4 white"></div> 
+            </div>   
+            <!--segunda fila-->            
+            <div class="row filamapa">
+                <div class="col-md-12 rectSalt">
+                    <img class="hidden-xs hidden-sm" src="flechaVertical.png" alt="flecha" style="height: 100px;">
+                </div>
+            </div>
+            <!--tercera fila-->
+            <div class="row filamapa">
+                <div class="col-md-4">
+                    <div class="rectCard sombreados">
+                        <h3>Departamento C.M.S.</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isResponsableCMS}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Responsable</h5></div>
+                        <div><h5>C.M.S.</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilcalidad">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal3">+ Info</a>
+                    </div> 
+                </div>
+                <div class="col-md-4 white">
+                    <img class="flecha2 hidden-xs hidden-sm" src="flechaHorizontal.png" alt="flecha" style="width: 100px;">
+                </div> 
+                <div class="col-md-4">
+                    <div class="rectCard sombreados">
+                        <h3>Departamento P.R.L.</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isResponsablePRL}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Responsable</h5></div>
+                        <div><h5>P.R.L.</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilprl">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal5">+ Info</a>
+                    </div> 
+                </div>
+            </div>
+            <!--cuarta fila-->
+            <div class="row filamapa">
+                <div class="col-md-12 rectSalt">
+                    <img class="hidden-xs hidden-sm" src="flechaVertical.png" alt="flecha" style="height: 100px;">
+                </div>
+            </div>
+            <!--quinta fila-->
+            <div class="row filamapa">
+                <div class="col-md-3">
+                    <div class="rectCard2 sombreados">
+                        <h3>Departamento de Compras</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isDtorcompras}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Director</h5></div>
+                        <div><h5>de Compras</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilcompras">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal6">+ Info</a>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/ocompras">Acceso a empleados</a>
+                    </div> 
+                </div>
+                <div class="col-md-1 white">
+                </div>
+                <div class="col-md-4">
+                    <div class="rectCard2 sombreados">
+                        <h3>Departamento de RR.HH.</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isDtorrrhh}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Director</h5></div>
+                        <div><h5>de RR.HH.</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="#">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal7">+ Info</a>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/orrhh">Acceso a empleados</a>
+                    </div> 
+                </div>
+                <div class="col-md-1 white">
+                </div>
+                <div class="col-md-3">
+                    <div class="rectCard2 sombreados">
+                        <h3>Departamento de Producción</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isDtorproduccion}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Director</h5></div>
+                        <div><h5>de Producción</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilproduccion">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal8">+ Info</a>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/oproduccion">Acceso a empleados</a>
+                    </div> 
+                </div>
+            </div>
+            <!--sexta fila-->
+            <div class="row filamapa">
+                <div class="col-md-1 white"></div>
+                <div class="col-md-4">
+                    <div class="rectCard2 sombreados">
+                        <h3>Departamento de Admón. y Finanzas</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isDtorfinanciero}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Director</h5></div>
+                        <div><h5>Financiero</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilfinanciero">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal9">+ Info</a>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/ofinanciero">Acceso a empleados</a>
+                    </div> 
+                </div>
+                <div class="col-md-2 white"></div>
+                <div class="col-md-4">
+                    <div class="rectCard2 sombreados">
+                        <h3>Departamento Comercial</h3>
+                        <hr>
+                        {{#each users}}
+                        {{#if isDtorcomercial}}
+                            <div><h4>{{username}}</h4></div>
+                            <div><h4>{{usersurname}}</h4></div>
+                        {{else}}
+                            <!--<div class="desc">No existe</div>-->
+                        {{/if}}
+                        {{/each}}
+                        <div><h5>Director</h5></div>
+                        <div><h5>Comercial</h5></div>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/perfilcomercial">Perfil de Responsabilidad</a>
+                        <a class="btn btn-primary" type="button" href="#openModal10">+ Info</a>
+                        <hr>
+                        <a class="btn btn-primary" type="button" href="/ocomercial">Acceso a empleados</a>
+                    </div> 
+                </div> 
+                <div class="col-md-1 white"></div>  
+            </div>    
+            <!--modals-->
+                        <div id="openModal3" class="modalDialog3">
+                            <div>
+                                <a href="#close3" title="Close3" class="close3">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isResponsableCMS}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Responsable de Calidad, Medio Ambiente y Sostenibilidad</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>
+                        <div id="openModal4" class="modalDialog4">
+                            <div>
+                                <a href="#close4" title="Close4" class="close4">X</a>
+                                    <div>
+                                    {{#if isInRole 'admin'}}
+                                    {{#each users}}
+                                    {{#if isGerente}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Gerente</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                     {{else}}
+                                    <h3>Información restringida a su rol.</h3>
+                                     {{/if}}
+                                    </div>                         
+                            </div>
+                        </div>
+                        <div id="openModal5" class="modalDialog5">
+                            <div>
+                                <a href="#close5" title="Close5" class="close5">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isResponsablePRL}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Responsable de Prevención de Riesgos Laborales</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>
+                         <div id="openModal6" class="modalDialog6">
+                            <div>
+                                <a href="#close6" title="Close6" class="close6">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isDtorcompras}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Director de Compras</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>
+                        <div id="openModal7" class="modalDialog7">
+                            <div>
+                                <a href="#close7" title="Close7" class="close7">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isDtorrrhh}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Director de Recursos Humanos</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>
+                        <div id="openModal8" class="modalDialog8">
+                            <div>
+                                <a href="#close8" title="Close8" class="close8">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isDtorproduccion}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Director de Producción</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>
+                        <div id="openModal9" class="modalDialog9">
+                            <div>
+                                <a href="#close9" title="Close9" class="close9">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isDtorfinanciero}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Director Financiero</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>
+                        <div id="openModal10" class="modalDialog10">
+                            <div>
+                                <a href="#close10" title="Close10" class="close10">X</a>
+                                    <div>
+                                    {{#each users}}
+                                    {{#if isDtorcomercial}}
+                                    <div><h3>{{username}} {{usersurname}}</h3></div>
+                                    <div class="desc"><h4>Director Comercial</h4></div>
+                                    <hr>    
+                                        <div><h4><span class="glyphicon glyphicon-envelope"><a href="mailto:{{userEmail}}">  {{userEmail}}</a></span></h4></div>
+                                        <div><h4><span class="glyphicon glyphicon-phone"></span>  {{userTelefono}}</h4></div>                                    
+                                    {{else}}
+                                    <!--<div class="desc">No existe</div>-->
+                                   {{/if}}
+                                    {{/each}}
+                                    </div>                         
+                            </div>
+                        </div>     
+        </div>
+    </div>            
+</template>

@@ -7,31 +7,31 @@
                 <div class="row">
                     <div class="col-md-12">
                         <form class="add-objeto edit-proveedor">
-                            <label for="nombre" class="sr-only">Nombre</label>
+                            <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editproveedor.nombre}}">
-                            <label for="servicio" class="sr-only">Producto/Servicio</label>
+                            <label for="servicio">Producto/Servicio</label>
                             <input type="text" class="form-control" name="servicio" id="servicio" placeholder="Producto/Servicio" value="{{editproveedor.servicio}}">
-                            <label for="cif" class="sr-only">CIF</label>
+                            <label for="cif">CIF</label>
                             <input type="text" class="form-control" name="cif" id="cif" placeholder="CIF" value="{{editproveedor.cif}}">
-                            <label for="direccion" class="sr-only">Dirección</label>
+                            <label for="direccion">Dirección</label>
                             <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" value="{{editproveedor.direccion}}">
-                            <label for="telefono" class="sr-only">Teléfono</label>
+                            <label for="telefono">Teléfono</label>
                             <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" value="{{editproveedor.telefono}}">
-                            <label for="persona" class="sr-only">Persona de Contacto</label>
+                            <label for="persona">Persona de Contacto</label>
                             <input type="text" class="form-control" name="persona" id="persona" placeholder="Persona de Contacto" value="{{editproveedor.persona}}">
-                            <label for="mail" class="sr-only">Persona de Contacto</label>
+                            <label for="mail">Persona de Contacto</label>
                             <input type="text" class="form-control" name="mail" id="mail" placeholder="Mail" value="{{editproveedor.mail}}">
-                            <label for="pago" class="sr-only">Forma de pago</label>
+                            <label for="pago">Forma de pago</label>
                             <input type="text" class="form-control" name="pago" id="pago" placeholder="Forma de pago" value="{{editproveedor.pago}}">
-                            <label for="nc" class="sr-only">No conformidad</label>
+                            <label for="nc">No conformidad</label>
                             <input type="text" class="form-control" name="nc" id="nc" placeholder="No conformidad" value="{{editproveedor.nc}}">
-                            <label for="eval" class="sr-only">Evaluación/Reevaluación</label>                
+                            <label for="eval">Evaluación/Reevaluación</label>                
                             <select class="form-control" id="eval" name="eval" value="{{editproveedor.eval}}">
                                 <option value="evaluacion" {{seleccionado "evaluacion"}}>Evaluación</option>
                                 <option value="reevaluacion" {{seleccionado "reevaluacion"}}>Reevaluación</option>           
                             </select>
-                            <label for="fechamodif" class="sr-only">Fecha Última Modificación</label> 
-                            <input type="date" name="fechamodif" value="{{editproveedor.fechamodif}}">
+                            <label for="fechamodif">Fecha Última Modificación</label> 
+                            <input type="date" name="fechamodif" class="form-control" value="{{editproveedor.fechamodif}}">
                             <button class="btn btn-primary" type="submit">Guardar Cambios</button>
                             <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
                             <button class="btn btn-danger" id="deleteProveedor" type="button">Eliminar</button>

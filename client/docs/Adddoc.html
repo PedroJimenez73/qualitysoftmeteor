@@ -1,0 +1,27 @@
+<template name="Adddoc">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo documento</h2> 
+                <a href="/mapa">Mapa de procesos ></a><a href="/documentos"> Documentos ></a> Añadir documento
+            </div>
+                <form class="add-objeto addDoc">
+                    <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                    <label for="nombre">Nombre del documento</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre del documento" required autofocus>   
+                    <label for="destino" class="sr-only">Destino/situación del documento</label>                
+                    <select class="form-control" id="destino" name="destino">
+                        <option class="boxCheck" value="0">Seleccione una opción</option>
+                        <option class="boxCheck" value="externo">Externo en vigor</option>
+                        <option class="boxCheck" value="interno">Interno en vigor</option>           
+                        <option class="boxCheck" value="obsoleto">Obsoleto</option>           
+           
+                    </select>
+                    <label>Documento</label>
+                    <input class="form-control" type="file" name="docpdf" id="docpdf">
+                    <button class="btn btn-primary" type="submit">Añadir documento</button>
+                    <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                </form>
+        </div>
+    </div>
+</template>

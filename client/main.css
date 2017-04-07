@@ -58,23 +58,7 @@ body,html{
     margin-bottom: 15px;
 }
 
-/* select en formularios */
 
-select#departamento {
-   height: 40px;
-   overflow: hidden;
-   width: 100%;
-   margin-bottom: 15px;
-   border-style: solid;
-   border-width: 1px;
-   border-color: lightgrey;
-   background: transparent;
-   font-size: 18px;
-   color: lightslategrey;
-   padding-left: 10px; /* If you add too much padding here, the options won't show in IE */
-   -webkit-appearance: none;
-   -webkit-border-radius: 0px;
-}
 
 
 .back-to-top {
@@ -141,4 +125,38 @@ color: #00448D;
   margin-bottom: -1px;
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
+}
+
+/* select en formularios */
+
+select {
+   height: 40px;
+   overflow: hidden;
+   width: 100%;
+   margin-bottom: 15px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: lightgrey;
+   background: transparent;
+   font-size: 18px;
+   color: lightslategrey;
+   padding-left: 10px; /* If you add too much padding here, the options won't show in IE */
+   -webkit-appearance: none;
+   -webkit-border-radius: 0px;
+}
+
+.cargadoc {
+   height: 40px;
+   overflow: hidden;
+   width: 100%;
+   margin-bottom: 15px;
+   border-style: solid;
+   border-width: 1px;
+   border-color: lightgrey;
+   background: transparent;
+   font-size: 18px;
+   color: lightslategrey;
+   padding-left: 10px; /* If you add too much padding here, the options won't show in IE */
+   -webkit-appearance: none;
+   -webkit-border-radius: 0px;
 }
