@@ -1,0 +1,29 @@
+<template name="Editdoc"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Modificar situación {{editdocumento.nombre}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-documento">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editdocumento.nombre}}">
+                            <label for="destino">Destino/situación del documento</label>                
+                            <select class="form-control" id="destino" name="destino" value="{{editdocumento.destino}}">          
+                                <option class="boxCheck" {{seleccionado "externo"}}>Externo en vigor</option>
+                                <option class="boxCheck" {{seleccionado "interno"}}>Interno en vigor</option>           
+                                <option class="boxCheck" {{seleccionado "obsoleto"}}>Obsoleto</option>           
+                            </select>
+                            
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <button class="btn btn-danger" id="deleteDocumento" type="button">Eliminar</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>
