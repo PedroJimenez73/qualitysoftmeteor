@@ -1,0 +1,29 @@
+<template name="Addveh">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Vehículo</h2> 
+                <a href="/mapa">Mapa de procesos ></a><a href="/vehiculos"> Vehículos ></a> Añadir nuevo Vehículo
+            </div>
+            <form class="add-objeto add-veh">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="numero" class="sr-only">Nº Asignado</label>
+                <input type="text" class="form-control" name="numero" id="numero" placeholder="Nº Asignado" required autofocus>
+                <label for="nombre" class="sr-only">Nombre</label>
+                <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" required autofocus>
+                <label for="modelo" class="sr-only">Modelo</label>
+                <input type="text" class="form-control" name="modelo" id="modelo" placeholder="Modelo" required autofocus>
+                <label for="matricula" class="sr-only">Matrícula</label>
+                <input type="text" class="form-control" name="matricula" id="matricula" placeholder="Matrícula" required autofocus>
+                <label for="anyo" class="sr-only">Año</label>
+                <input type="text" class="form-control" name="anyo" id="anyo" placeholder="Año" required autofocus>
+                <label for="perioitv" class="sr-only">Periodicidad ITV</label>
+                <input type="text" class="form-control" name="perioitv" id="perioitv" placeholder="Periodicidad ITV" required autofocus>
+                <label for="fechamodif" class="sr-only">Fecha Última Modificación</label> 
+                <input type="date" name="fechamodif" class="form-control">
+                <button class="btn btn-primary" type="submit">Crear Vehículo</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

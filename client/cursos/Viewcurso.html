@@ -1,0 +1,32 @@
+<template name="Viewcurso"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles Curso {{editcurso.titulo}}</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/planesform">Volver a Plan Anual</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-curso">
+                            <label for="titulo">Título del Curso</label>
+                            <input type="text" class="form-control" name="titulo" id="titulo" placeholder="titulo" value="{{editcurso.titulo}}" disabled>
+                            <label for="organizador">Organizador</label>
+                            <input type="text" class="form-control" name="organizador" id="organizador" placeholder="Marca" value="{{editcurso.organizador}}" disabled>
+                            <label for="horas">Nº de Horas</label>
+                            <input type="text" class="form-control" name="horas" id="horas" placeholder="Nº de Horas" value="{{editcurso.horas}}" disabled>
+                            <label for="asistentes">Asistentes</label>
+                            <input type="text" class="form-control" name="asistentes" id="asistentes" placeholder="Asistentes" value="{{editcurso.asistentes}}" disabled>
+                            <label for="fechas">Fechas</label>
+                            <input type="text" class="form-control" name="fechas" id="fechas" placeholder="Fechas" value="{{editcurso.fechas}}" disabled>
+                            <label for="observaciones">Observaciones</label>
+                            <input type="text" class="form-control" name="observaciones" id="observaciones" placeholder="Observaciones" value="{{editcurso.observaciones}}" disabled>
+                            <label for="fechamodif">Fecha Última Modificación</label> 
+                            <input type="date" class="form-control" name="fechamodif" value="{{editcurso.fechamodif}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

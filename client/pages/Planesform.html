@@ -1,0 +1,37 @@
+<template name="Planesform"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Plan Anual de Formación</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addcurso">Añadir Curso</a> 
+                    <a href="/mapa">Mapa de procesos ></a><a href="/formacion"> Formación ></a> Plan Anual de Formación
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Título del Curso</th>
+                                    <th>Fecha Prevista</th>
+                                    <th>Detalles</th>
+                                    <th>Editar</th>
+                                    <th>Fecha Últ. Modificación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each cursos}}
+                                    <tr>
+                                        <td>{{titulo}}</td>
+                                        <td>{{fechas}}</td> 
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewcurso/{{_id}}">Visualizar</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editcurso/{{_id}}">Editar</a> </td>           
+                                        <td>{{fechamodif}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

@@ -1,0 +1,34 @@
+<template name="Editcurso"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar Curso{{editcurso.titulo}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-curso">
+                            <label for="titulo">Título del Curso</label>
+                            <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Título del Curso" value="{{editcurso.titulo}}">
+                            <label for="organizador">Organizador</label>
+                            <input type="text" class="form-control" name="organizador" id="organizador" placeholder="Organizador" value="{{editcurso.organizador}}">
+                            <label for="horas">Horas</label>
+                            <input type="text" class="form-control" name="horas" id="horas" placeholder="Horas" value="{{editcurso.horas}}">
+                            <label for="asistentes">Asistentes</label>
+                            <input type="text" class="form-control" name="asistentes" id="asistentes" placeholder="Asistentes" value="{{editcurso.asistentes}}">
+                            <label for="fechas">Fechas</label>
+                            <input type="text" class="form-control" name="fechas" id="fechas" placeholder="Fechas" value="{{editcurso.fechas}}">
+                            <label for="observaciones">Observaciones</label>
+                            <input type="text" class="form-control" name="observaciones" id="observaciones" placeholder="Observaciones" value="{{editcurso.observaciones}}">                            <label for="fechamodif">Fecha Última Modificación</label> 
+                            <label for="fechamodif">Fecha Última Modificación</label>                             
+                            <input type="date" name="fechamodif" class="form-control" value="{{editcurso.fechamodif}}">
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <button class="btn btn-danger" id="deleteCurso" type="button">Eliminar</button>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

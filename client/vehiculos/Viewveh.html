@@ -1,0 +1,32 @@
+<template name="Viewveh"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles {{editvehiculo.matricula}}</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/vehiculos">Volver a Vehículos</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-veh">
+                            <label for="numero">Nº Asignado</label>
+                            <input type="text" class="form-control" name="numero" id="numero" placeholder="numero" value="{{editvehiculo.numero}}" disabled>
+                            <label for="nombre">Marca</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Marca" value="{{editvehiculo.nombre}}" disabled>
+                            <label for="modelo">Modelo</label>
+                            <input type="text" class="form-control" name="modelo" id="modelo" placeholder="modelo" value="{{editvehiculo.modelo}}" disabled>
+                            <label for="matricula">Matrícula</label>
+                            <input type="text" class="form-control" name="matricula" id="matricula" placeholder="Matrícula" value="{{editvehiculo.matricula}}" disabled>
+                            <label for="anyo">Año</label>
+                            <input type="text" class="form-control" name="anyo" id="anyo" placeholder="Año" value="{{editvehiculo.anyo}}" disabled>
+                            <label for="perioitv">Periodicidad ITV</label>
+                            <input type="text" class="form-control" name="perioitv" id="perioitv" placeholder="Periodicidad ITV" value="{{editvehiculo.perioitv}}" disabled>
+                            <label for="fechamodif">Fecha Última Modificación</label> 
+                            <input type="date" class="form-control" name="fechamodif" value="{{editvehiculo.fechamodif}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

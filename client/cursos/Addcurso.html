@@ -1,0 +1,29 @@
+<template name="Addcurso">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Curso</h2> 
+                <a href="/mapa">Mapa de procesos ></a><a href="/formacion"> Formación ></a><a href="/planesform"> Plan de Formación ></a> Añadir Nuevo Curso
+            </div>
+            <form class="add-objeto add-curso">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="titulo" class="sr-only">Título del Curso</label>
+                <input type="text" class="form-control" name="titulo" id="titulo" placeholder="Título del curso" required autofocus>
+                <label for="organizador" class="sr-only">Organizador</label>
+                <input type="text" class="form-control" name="organizador" id="organizador" placeholder="Organizador" required autofocus>
+                <label for="horas" class="sr-only">Nº de horas</label>
+                <input type="text" class="form-control" name="horas" id="horas" placeholder="Nº de horas" required autofocus>
+                <label for="asistentes" class="sr-only">Asistentes</label>
+                <input type="text" class="form-control" name="asistentes" id="asistentes" placeholder="Asistentes" required autofocus>
+                <label for="fechas" class="sr-only">Fechas</label>
+                <input type="text" class="form-control" name="fechas" id="fechas" placeholder="Fechas" required autofocus>
+                <label for="observaciones" class="sr-only">Observaciones</label>
+                <input type="text" class="form-control" name="observaciones" id="observaciones" placeholder="Observaciones" required autofocus>
+                <label for="fechamodif" class="sr-only">Fecha Última Modificación</label> 
+                <input type="date" name="fechamodif" class="form-control">
+                <button class="btn btn-primary" type="submit">Crear Curso</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

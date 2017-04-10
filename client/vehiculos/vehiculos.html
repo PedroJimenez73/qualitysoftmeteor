@@ -1,0 +1,39 @@
+<template name="Vehiculos"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Vehiculos</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addveh">Añadir Vehículo</a> 
+                    <a href="/mapa">Mapa de procesos ></a> Vehículos
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nº asignado</th>
+                                    <th>Marca</th>
+                                    <th>Modelo</th>
+                                    <th>Matrícula</th>
+                                    <th>Ficha</th>
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each vehiculos}}
+                                    <tr>
+                                        <td>{{numero}}</td>
+                                        <td>{{nombre}}</td>
+                                        <td>{{modelo}}</td>
+                                        <td>{{matricula}}</td>
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewveh/{{_id}}">Ficha</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editveh/{{_id}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

@@ -32,3 +32,11 @@ Products.allow({
   }
 });
 
+Meteor.publish('vehiculos', function(){
+    return Vehiculos.find({});
+});
+
+Meteor.publish('cursos', function(){
+    return Cursos.find({});
+});
+
