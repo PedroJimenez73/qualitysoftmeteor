@@ -1,0 +1,34 @@
+<template name="Addope">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Operacion de Vehículo {{addoperacion.nombre}} {{addoperacion.modelo}} {{addoperacion.kms}}</h2> 
+            </div>
+            <form class="add-objeto add-ope">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="operacion" class="sr-only">Operación</label>
+                <select class="form-control" id="operacion" name="operacion">
+                    <option class="boxCheck" value="vencimientopoliza">Vencimiento Póliza de Seguro</option>
+                    <option class="boxCheck" value="vencimientoitv">Vencimiento ITV</option> 
+                    <option class="boxCheck" value="cambioaceite">Cambio de Aceite</option>
+                    <option class="boxCheck" value="cambiocorrea">Cambio correa distribución, radiador</option> 
+                    <option class="boxCheck" value="arreglofrenos">Arreglo de Frenos</option>
+                    <option class="boxCheck" value="cambioalternador">Cambio de Alternador</option>           
+                </select>
+                <label for="fecha" class="sr-only">Fecha</label>
+                <input type="date" name="fecha" class="form-control">
+                <label for="importe" class="sr-only">Importe</label>
+                <input type="text" class="form-control" name="importe" id="importe" placeholder="Importe" >
+                <label for="kms" class="sr-only">Kilómetros</label>
+                <input type="text" class="form-control" name="kms" id="kms" placeholder="Kilómetros" >
+                <label for="garantia" class="sr-only">Garantía</label>
+                <input type="text" class="form-control" name="garantia" id="garantia" placeholder="Garantía" >
+                <label for="varios" class="sr-only">Varios</label>
+                <input type="text" class="form-control" name="varios" id="varios" placeholder="Varios" >
+                
+                <button class="btn btn-primary" type="submit">Crear Operación</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

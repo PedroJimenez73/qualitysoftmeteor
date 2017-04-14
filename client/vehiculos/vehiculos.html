@@ -17,6 +17,7 @@
                                     <th>Matrícula</th>
                                     <th>Ficha</th>
                                     <th>Editar</th>
+                                    <th>Nueva Operación</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,6 +29,7 @@
                                         <td>{{matricula}}</td>
                                         <td><a class="pull-right btn btn-primary" type="button" href="/viewveh/{{_id}}">Ficha</a> </td>
                                         <td><a class="pull-right btn btn-warning" type="button" href="/editveh/{{_id}}">Editar</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/addope/{{_id}}">Operación</a> </td>                                    
                                     </tr>
                                 {{/each}}
                             </tbody>

@@ -22,6 +22,25 @@
                             <input type="text" class="form-control" name="perioitv" id="perioitv" placeholder="Periodicidad ITV" value="{{editvehiculo.perioitv}}" disabled>
                             <label for="fechamodif">Fecha Última Modificación</label> 
                             <input type="date" class="form-control" name="fechamodif" value="{{editvehiculo.fechamodif}}" disabled>
+                            <label for="operaciones"><h4>Operaciones</h4></label>
+                            <br>
+                            {{#each editvehiculo.operaciones}}
+                            <form class="add-objeto view-ope">
+                                <label for="operacion">Operación</label>
+                                <input type="text" class="form-control" name="operacion" id="operacion"  value="{{operacion}}" disabled>  
+                                <label for="fecha">Fecha</label>
+                                <input type="date" class="form-control" name="fecha" id="fecha"  value="{{fecha}}" disabled>  
+                                <label for="importe">Importe</label>
+                                <input type="text" class="form-control" name="importe" id="importe"  value="{{importe}}" disabled> 
+                                <label for="kms">Kilómetros</label>
+                                <input type="text" class="form-control" name="kms" id="kms"  value="{{kms}}" disabled>
+                                <label for="garantia">Garantía</label>
+                                <input type="text" class="form-control" name="garantia" id="garantia"  value="{{garantia}}" disabled> 
+                                <label for="varios">Varios</label>
+                                <input type="text" class="form-control" name="varios" id="varios"  value="{{varios}}" disabled>  
+                            </form>
+                            <br>
+                            {{/each}}
                         </form>
                         
                     </div>

@@ -127,6 +127,12 @@ color: #00448D;
   border-bottom-left-radius: 0;
 }
 
+.view-ope {
+   border-style: solid;
+   border-width: 1px;
+   border-color: grey;
+}
+
 /* select en formularios */
 
 select {
@@ -159,4 +165,8 @@ select {
    padding-left: 10px; /* If you add too much padding here, the options won't show in IE */
    -webkit-appearance: none;
    -webkit-border-radius: 0px;
+}
+
+td a {
+  text-align: left;
 }
