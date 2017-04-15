@@ -98,7 +98,7 @@ nav:hover .forAnimate{
 /* .....NavBar: Icon only with coloring/layout.....*/
 
 /*small/medium side display*/
-@media (min-width: 768px) {
+
 
     /*Allow main to be next to Nav*/
     .container-main{
@@ -175,28 +175,11 @@ nav:hover .forAnimate{
     .forAnimate{
         opacity: 0;
     }
-}
 
-/* .....NavBar: Fully showing nav bar..... */
 
-@media (min-width: 1330px) {
+/* .....NavBar: Fully showing nav bar.....*/ 
 
-    /*Allow main to be next to Nav*/
-    .container-main{
-        width: calc(100% - 300px); /*keeps 100% minus nav size*/
-        margin-left: 300px;
-    }
 
-    /*Show all nav*/
-    nav.sidebar{
-        margin-left: 0px;
-        float: left;
-    }
-    /*Show hidden items on nav*/
-    nav.sidebar .forAnimate{
-        opacity: 1;
-    }
-}
 
 .vacio {
     min-height: 100px;
