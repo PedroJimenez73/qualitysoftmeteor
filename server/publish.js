@@ -10,6 +10,10 @@ Meteor.publish('provee', function(){
     return Provee.find({});
 });
 
+Meteor.publish('clientes', function(){
+    return Clientes.find({});
+});
+
 Meteor.publish('ProductsImages', function(){
     return ProductsImages.find({});
 });

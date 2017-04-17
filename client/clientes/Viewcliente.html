@@ -1,0 +1,32 @@
+<template name="Viewcliente"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles {{editcliente.nombre}}</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/clientes">Volver a Clientes</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-cliente">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editcliente.nombre}}" disabled>
+                            <label for="cif">CIF</label>
+                            <input type="text" class="form-control" name="cif" id="cif" placeholder="CIF" value="{{editcliente.cif}}" disabled>
+                            <label for="direccion">Dirección</label>
+                            <input type="text" class="form-control" name="direccion" id="direccion" placeholder="Dirección" value="{{editcliente.direccion}}" disabled>
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" value="{{editcliente.telefono}}" disabled>
+                            <label for="persona">Persona de Contacto</label>
+                            <input type="text" class="form-control" name="persona" id="persona" placeholder="Persona de Contacto" value="{{editcliente.persona}}" disabled>
+                            <label for="mail">Persona de Contacto</label>
+                            <input type="text" class="form-control" name="mail" id="mail" placeholder="Mail" value="{{editcliente.mail}}" disabled>
+                            <label for="fechamodif">Fecha Última Modificación</label> 
+                            <input type="date" class="form-control" name="fechamodif" value="{{editcliente.fechamodif}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

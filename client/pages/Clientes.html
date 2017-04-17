@@ -1,0 +1,38 @@
+<template name="Clientes"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Listado de Clientes</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addcliente">Añadir Cliente</a> 
+                    <a href="/mapa">Mapa de procesos ></a> Listado de Clientes
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nombre</th>
+                                    <th>Teléfono</th>
+                                    <th>Mail</th>
+                                    <th></th>
+                                    <th></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each clientes}}
+                                    <tr>
+                                        <td>{{nombre}}</td>
+                                        <td>{{telefono}}</td>
+                                        <td><a href="mailto:{{mail}}" style="text-decoration: none;">{{mail}}</a></td>
+                                        <td><a class="pull-right btn btn-success" type="button" href="/viewcliente/{{_id._str}}">Más Info</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editcliente/{{_id._str}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>
