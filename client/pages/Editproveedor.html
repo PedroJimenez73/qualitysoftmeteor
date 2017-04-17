@@ -34,10 +34,24 @@
                             <input type="date" name="fechamodif" class="form-control" value="{{editproveedor.fechamodif}}">
                             <button class="btn btn-primary" type="submit">Guardar Cambios</button>
                             <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
-                            <button class="btn btn-danger" id="deleteProveedor" type="button">Eliminar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
                         </form>
                         
                     </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Proveedor {{editproveedor.nombre}}?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteProveedor" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
                 </div>
             </div>
     </div>

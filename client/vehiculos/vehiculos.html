@@ -2,7 +2,7 @@
     <div id="page-content-wrapper">
             <div class="container">
                 <div class="row encabezado">
-                    <h2>Vehiculos</h2> 
+                    <h2>Vehículos</h2> 
                     <a class="pull-right btn btn-success" type="button" href="/addveh">Añadir Vehículo</a> 
                     <a href="/mapa">Mapa de procesos ></a> Vehículos
                 </div>
@@ -27,9 +27,9 @@
                                         <td>{{nombre}}</td>
                                         <td>{{modelo}}</td>
                                         <td>{{matricula}}</td>
-                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewveh/{{_id}}">Ficha</a> </td>
-                                        <td><a class="pull-right btn btn-warning" type="button" href="/editveh/{{_id}}">Editar</a> </td>
-                                        <td><a class="pull-right btn btn-warning" type="button" href="/addope/{{_id}}">Operación</a> </td>                                    
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewveh/{{_id._str}}">Ficha</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editveh/{{_id._str}}">Editar</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/addope/{{_id._str}}">Operación</a> </td>                                    
                                     </tr>
                                 {{/each}}
                             </tbody>

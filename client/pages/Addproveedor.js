@@ -17,7 +17,26 @@ Template.Addproveedor.events({
 
 		Meteor.call('addProveedor', nombre, servicio, cif, direccion, telefono, persona, mail, pago, nc, eval, fechamodif);
 
-		FlowRouter.go('/proveedores');
+		toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "3000",
+                "extendedTimeOut": "500",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+                };
+            
+        toastr["success"]("Nuevo proveedor añadido");
+        FlowRouter.go('/proveedores');
         
 
         return false;

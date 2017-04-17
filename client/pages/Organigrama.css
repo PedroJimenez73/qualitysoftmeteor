@@ -78,6 +78,8 @@
 }
 
 .modalDialog4 {
+	font-family: 'Roboto', sans-serif;
+    color: #222;
 	position: fixed;
 	top: 0;
 	right: 0;
@@ -90,8 +92,10 @@
 	-moz-transition: opacity 400ms ease-in;
 	transition: opacity 400ms ease-in;
 	pointer-events: none;
-     
+}
 
+.modalDialog4 a {
+	font-family: 'Roboto', sans-serif;
 }
 
 .modalDialog4:target {

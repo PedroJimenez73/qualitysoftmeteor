@@ -133,7 +133,7 @@ color: #00448D;
    border-color: grey;
 }
 
-/* select en formularios */
+/* select en formularios 
 
 select {
    height: 40px;
@@ -146,10 +146,58 @@ select {
    background: transparent;
    font-size: 18px;
    color: lightslategrey;
-   padding-left: 10px; /* If you add too much padding here, the options won't show in IE */
-   -webkit-appearance: none;
-   -webkit-border-radius: 0px;
-}
+   padding-left: 10px; 
+   webkit-appearance: none;
+   webkit-border-radius: 0px;
+   
+}*/
+
+select {
+    height: 42px !important;
+    border-radius: 0 !important;
+    overflow: hidden;
+    width: 100%;
+    margin-bottom: 15px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: lightgrey;
+    font-size: 18px;
+    color: lightslategrey;
+    padding-left: 10px; 
+    background-image: 
+      -webkit-linear-gradient(bottom left, transparent 50%, gray 50%),
+      -webkit-linear-gradient(top left, gray 50%, transparent 50%),
+      -webkit-linear-gradient(left, #ccc, #ccc);
+    background-position:
+      calc(100% - 20px) calc(1em + 2px),
+      calc(100% - 15px) calc(1em + 2px),
+      calc(100% - 2.5em) 0.5em;
+    background-size:
+      5px 5px,
+      5px 5px,
+      1px 1.5em;
+    background-repeat: no-repeat;
+  }
+
+  /*select.minimal:focus {
+            background-image:
+                linear-gradient(45deg, green 50%, transparent 50%),
+                linear-gradient(135deg, transparent 50%, green 50%),
+                linear-gradient(to right, #ccc, #ccc);
+            background-position:
+                calc(100% - 15px) 1em,
+                calc(100% - 20px) 1em,
+                calc(100% - 2.5em) 0.5em;
+            background-size:
+                5px 5px,
+                5px 5px,
+                1px 1.5em;
+            background-repeat: no-repeat;
+            border-color: green;
+            outline: 0;
+            }*/
+
+
 
 .cargadoc {
    height: 40px;
@@ -169,4 +217,46 @@ select {
 
 td a {
   text-align: left;
+}
+
+.modalDialogDelete {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: rgba(0,0,0,0.3);
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+     
+
+}
+
+.modalDialogDelete:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialogDelete > div {
+	width: 350px;
+    height: 200px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+	background: #fff;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.closeD {
+	color: #606061;
+	font-size: 20px;
+	position: absolute;
+	right: 15px;
+	text-align: center;
+	top: 15px;
+	text-decoration: none;
 }

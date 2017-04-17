@@ -6,8 +6,8 @@ Meteor.publish('allUsers', function(){
     return Meteor.users.find();
 });
 
-Meteor.publish('proveedores', function(){
-    return Proveedores.find({});
+Meteor.publish('provee', function(){
+    return Provee.find({});
 });
 
 Meteor.publish('ProductsImages', function(){

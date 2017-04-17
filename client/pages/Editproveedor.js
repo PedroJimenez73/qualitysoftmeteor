@@ -1,13 +1,15 @@
 Template.Editproveedor.helpers({
     editproveedor: function(){
         var currentProveedor = FlowRouter.getParam('_id');
-        return Proveedores.findOne({_id: currentProveedor});
+        return Provee.findOne({_id: new Meteor.Collection.ObjectID(currentProveedor)});
     },
     seleccionado: function(key){
       var currentProveedorId = FlowRouter.getParam('_id');
-      var currentProveedor = Proveedores.findOne({_id: currentProveedorId});
+      var currentProveedor = Provee.findOne({_id: new Meteor.Collection.ObjectID(currentProveedorId)});
       return key == currentProveedor.eval ? 'selected' : '';
+      
    }
+   
 });
 
 Template.Editproveedor.events({
@@ -28,7 +30,25 @@ Template.Editproveedor.events({
 		Meteor.call('editProveedor', _id, nombre, servicio, cif, direccion, telefono, persona, mail, pago, nc, eval, fechamodif);
 
 
-        toastr.success('Modicaciones guardadas!')
+        toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "3000",
+                "extendedTimeOut": "500",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+                };
+            
+        toastr["success"]("Modificaciones guardadas");
         FlowRouter.go('/proveedores');
 
         return false;

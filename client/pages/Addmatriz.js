@@ -16,7 +16,26 @@ Template.Addmatriz.events({
 
 		Meteor.call('addMatriz', proceso, responsable, causacambio, riesgo, oportunidad, controlfrecuencia, impacto, probabilidad, ponderacion, accion);
 
-		FlowRouter.go('/matrices');
+		toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "3000",
+                "extendedTimeOut": "500",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+                };
+            
+        toastr["success"]("Nuevo proceso añadido");
+        FlowRouter.go('/matrices');
         
 
         return false;

@@ -1,7 +1,8 @@
 Template.Editveh.helpers({
     editvehiculo: function(){
         var currentVehiculo = FlowRouter.getParam('_id');
-        return Vehiculos.findOne({_id: currentVehiculo});
+        //return Cursos.findOne({_id: currentCurso});
+        return Vehiculos.findOne({_id: new Meteor.Collection.ObjectID(currentVehiculo)});
     }
 });
 
@@ -19,7 +20,25 @@ Template.Editveh.events({
 		Meteor.call('editVeh', _id, numero, nombre, modelo, matricula, anyo, perioitv, fechamodif);
 
 
-        toastr.success('Modicaciones guardadas!')
+        toastr.options = {
+                "closeButton": false,
+                "debug": false,
+                "newestOnTop": false,
+                "progressBar": false,
+                "positionClass": "toast-top-center",
+                "preventDuplicates": false,
+                "onclick": null,
+                "showDuration": "300",
+                "hideDuration": "1000",
+                "timeOut": "3000",
+                "extendedTimeOut": "500",
+                "showEasing": "swing",
+                "hideEasing": "linear",
+                "showMethod": "fadeIn",
+                "hideMethod": "fadeOut"
+                };
+            
+        toastr["success"]("Modificaciones guardadas");
         FlowRouter.go('/vehiculos');
 
         return false;
