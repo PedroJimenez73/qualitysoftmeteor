@@ -6,8 +6,8 @@ Meteor.publish('allUsers', function(){
     return Meteor.users.find();
 });
 
-Meteor.publish('provee', function(){
-    return Provee.find({});
+Meteor.publish('proves', function(){
+    return Proves.find({});
 });
 
 Meteor.publish('clientes', function(){

@@ -1,7 +1,7 @@
 Template.Proveedores.helpers({
-    provee: function(){
-        return Provee.find();
+    proves: function(){
+        return Proves.find();
     }
 });
 
-Meteor.subscribe('provee');
+Meteor.subscribe('proves');
