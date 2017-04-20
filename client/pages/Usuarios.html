@@ -21,6 +21,7 @@
                                     <th>Rol/Departamento</th>
                                     <th>Fecha alta</th>
                                     <th>Permisos Administrador</th>
+                                    <th>Logins</th>                                    
                                 </tr>
                             </thead>
                             <tbody>
@@ -40,7 +41,8 @@
                                                     <button class="toggle-admin btn btn-danger">Añadir permiso</button>
                                                 {{/if}}
                                             </div>
-                                        </td>             
+                                        </td>
+                                        <td>{{logins}}</td>             
                                     </tr>
                                 {{/each}}
                             </tbody>

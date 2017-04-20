@@ -27,6 +27,9 @@ Template.Usuarios.helpers({
     },
     dateFormat: function() {
         return moment(this.createdAt).format('LLLL');
+    },
+    logins: function() {
+        return Meteor.users.findOne(this._id).services.resume.loginTokens.length;;
     }
 });
 
