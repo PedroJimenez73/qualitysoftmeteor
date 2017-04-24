@@ -1,0 +1,30 @@
+<template name="Viewplan"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles del Plan de Auditoría</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/planes">Volver a Planes</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-plan">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Fecha" value="{{editplan.fecha}}" disabled>
+                            <label for="alcance">Alcance</label>
+                            <input type="text" class="form-control" name="alcance" id="alcance" placeholder="Alcance" value="{{editplan.alcance}}" disabled>
+                            <label for="objeto">Objeto</label>
+                            <input type="text" class="form-control" name="objeto" id="objeto" placeholder="Objeto" value="{{editplan.objeto}}" disabled>
+                            <label for="responsable">Responsable</label>
+                            <input type="text" class="form-control" name="responsable" id="responsable" placeholder="Responsable" value="{{editplan.responsable}}" disabled>
+                            <label for="documentacion">Documentación</label>
+                            <input type="text" class="form-control" name="documentacion" id="documentacion" placeholder="Documentación" value="{{editplan.documentacion}}" disabled>
+                            <label for="sistematica">Sistemática</label>
+                            <input type="text" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática" value="{{editplan.sistematica}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

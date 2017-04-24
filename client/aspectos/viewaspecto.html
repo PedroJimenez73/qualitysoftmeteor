@@ -1,0 +1,34 @@
+<template name="Viewaspecto"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles Aspecto Medioambiental</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/aspectos">Volver a Aspectos Medioambientales</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-cliente">
+                            <label for="actividad" class="sr-only">Actividad</label>
+                            <input type="text" class="form-control" name="actividad" id="actividad" value="{{editaspecto.actividad}}" disabled>
+                            <label for="aspecto" class="sr-only">Aspecto Ambiental</label>
+                            <input type="text" class="form-control" name="aspecto" id="aspecto" value="{{editaspecto.aspecto}}" disabled>
+                            <label for="cuno" class="sr-only">Naturaleza/Sensibilidad/Gravedad C1</label>
+                            <input type="text" class="form-control" name="cuno" id="cuno" value="{{editaspecto.cuno}}" disabled>
+                            <label for="cdos" class="sr-only">Magnitud/Frecuencia C2</label>
+                            <input type="text" class="form-control" name="cdos" id="cdos" value="{{editaspecto.cdos}}" disabled>
+                            <label for="ctres" class="sr-only">Frecuencia de las situaciones de riesgos accidentales C3</label>
+                            <input type="text" class="form-control" name="ctres" id="ctres" value="{{editaspecto.ctres}}" disabled>
+                            <label for="ccuatro" class="sr-only">Gravedad de las consecuencias en el caso de que se produjera C4</label>
+                            <input type="textarea" class="form-control" name="ccuatro" id="ccuatro" value="{{editaspecto.ccuatro}}" disabled>
+                            <label for="significancia" class="sr-only">Significancia</label>
+                            <input type="textarea" class="form-control" name="significancia" id="significancia" value="{{editaspecto.significancia}}" disabled>
+                        </form>
+                        <div style="text-align: center">
+                        <a class="btn btn-success cjtobotones" type="button" href="#">Legislación Medioambiental</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+</template>

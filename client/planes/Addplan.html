@@ -1,0 +1,28 @@
+<template name="Addplan">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Plan de Auditoría</h2> 
+                <a href="/inicio">Inicio ></a><a href="/procedplan"> Procedimiento Auditorías ></a> <a href="/planes"> Planes de Auditoría ></a> Añadir nuevo plan
+            </div>
+            <form class="add-objeto add-plan">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="fecha" class="sr-only">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Fecha" required autofocus>
+                <label for="alcance" class="sr-only">Alcance</label>
+                <input type="text" class="form-control" name="alcance" id="alcance" placeholder="Alcance">
+                <label for="objeto" class="sr-only">Objeto</label>
+                <input type="text" class="form-control" name="objeto" id="objeto" placeholder="Objeto">
+                <label for="responsable" class="sr-only">Responsable</label>
+                <input type="text" class="form-control" name="responsable" id="responsable" placeholder="Responsable">
+                <label for="documentacion" class="sr-only">Documentación</label>
+                <input type="text" class="form-control" name="documentacion" id="documentacion" placeholder="Documentación">
+                <label for="sistematica" class="sr-only">Sistemática</label>
+                <input type="textarea" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática">
+
+                <button class="btn btn-primary" type="submit">Crear Plan</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

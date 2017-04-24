@@ -1,0 +1,49 @@
+<template name="Editplan"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar Plan de Auditoría</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-plan">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Fecha" value="{{editplan.fecha}}">
+                             <label for="alcance">Alcance</label>
+                            <input type="text" class="form-control" name="alcance" id="alcance" placeholder="Alcance" value="{{editplan.alcance}}">
+                             <label for="objeto">Objeto</label>
+                            <input type="text" class="form-control" name="objeto" id="objeto" placeholder="Objeto" value="{{editplan.objeto}}">
+                             <label for="responsable">Responsable</label>
+                            <input type="text" class="form-control" name="responsable" id="responsable" placeholder="Responsable" value="{{editplan.responsable}}">
+                             <label for="documentacion">Documentacion</label>
+                            <input type="text" class="form-control" name="documentacion" id="documentacion" placeholder="Documentacion" value="{{editplan.documentacion}}">
+                             <label for="sistematica">Sistemática</label>
+                            <input type="text" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática" value="{{editplan.sistematica}}">
+
+                            
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Plan?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deletePlan" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+    
+
+</template>

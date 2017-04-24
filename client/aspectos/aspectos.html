@@ -1,0 +1,68 @@
+<template name="Aspectos"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Identificación y Evaluación de Aspectos Medioambientales</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addaspecto">Añadir Aspecto Medioambiental</a> 
+                    <a href="/inicio">Inicio ></a><a href="/procedma"> Procedimiento Aspectos Medioambientales ></a> Aspectos Medioambientales
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Actividad</th>
+                                    <th>Aspecto Ambiental</th>
+                                    <th>Visualizar</th>                    
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each aspectos}}
+                                    <tr>
+                                        <td>{{actividad}}</td>
+                                        <td>{{aspecto}}</td>
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewaspecto/{{_id._str}}">Visualizar</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editaspecto/{{_id._str}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">	
+                        <div class="col-md-4 diviF">
+                            <p>
+                                Observaciones:
+                            </p>
+                            <p>
+                                N: Condiciones normales.
+                            </p>
+                            <p>
+                                 E: Condiciones de emergencia.
+                            </p>    
+                            <p>   
+                                A: Condiciones anormales.
+                            </p>
+                        </div>
+                        <div class="col-md-4 diviF">
+                            <p>
+                                Elaborado por:
+                            </p>
+                            <p>
+                                Fecha:
+                            </p>
+                        </div>
+	
+                        <div class="col-md-4 diviF">
+                            <p>
+                                Aprobado por:
+                            </p>
+                            <p>
+                                Fecha:
+                            </p>
+                        </div>
+                </div>
+            </div>
+    </div>
+</template>

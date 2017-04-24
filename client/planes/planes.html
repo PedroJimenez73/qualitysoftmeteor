@@ -1,0 +1,50 @@
+<template name="Planes"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Generación de Planes de Auditoría</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addplan">Añadir Plan de Auditoría</a> 
+                    <a href="/inicio">Inicio ></a><a href="/procedplan"> Procedimiento Auditorías ></a> Planes de Auditoría
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Fecha</th>
+                                    <th>Alcance</th>
+                                    <th>Objeto</th>
+                                    <th>Responsable</th>
+                                    <th>Programación</th>
+                                    <th>Visualizar</th>                    
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each planes}}
+                                    <tr>
+                                        <td>{{fecha}}</td>
+                                        <td>{{alcance}}</td>
+                                        <td>{{objeto}}</td>
+                                        <td>{{responsable}}</td>
+                                        <td><a class="pull-right btn btn-primary" type="button" href="#">Programación</a> </td>
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewplan/{{_id._str}}">Visualizar</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editplan/{{_id._str}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row bloque1">	
+                        <div class="col-md-4 divi4">
+                            <p>
+                                RESPONSABLE/FECHA DE REVISIÓN
+                                Gerencia:
+                            </p>
+                        </div>
+                        <div class="col-md-8 divi4"><p></p></div>
+                </div>
+            </div>
+    </div>
+</template>

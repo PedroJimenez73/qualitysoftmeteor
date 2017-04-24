@@ -1,10 +1,10 @@
-<template name="Documentos"> 
+<template name="Docsma"> 
     <div id="page-content-wrapper">
             <div class="container">
                 <div class="row encabezado">
-                    <h2>SGI (Sistema de Gestión Integrado)</h2> 
-                    <a class="pull-right btn btn-success" type="button" href="/adddoc">Añadir Documento</a> 
-                    <a href="/inicio">Inicio ></a> SGI
+                    <h2>Legislación Medioambiental</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/adddocma">Añadir Documento</a> 
+                    <a href="/inicio">Inicio ></a> Legislación Medioambiental
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -18,12 +18,12 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each products}}
+                                {{#each docs}}
                                     <tr>
                                         <td>{{nombre}}</td>
                                         <td>{{destino}}</td>
-                                        <td><a target="_blank" href="{{image}}" style="text-decoration: none;" type="button" class="btn btn-primary">Visualizar</a></td>
-                                        <td><a class="pull-right btn btn-warning" type="button" href="/editdoc/{{_id}}">Editar</a> </td>
+                                        <td><a target="_blank" href="{{pdf}}" style="text-decoration: none;" type="button" class="btn btn-primary">Visualizar</a></td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editdocma/{{_id}}">Editar</a> </td>
                                     </tr>
                                 {{/each}}
                             </tbody>

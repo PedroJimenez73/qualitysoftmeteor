@@ -1,0 +1,29 @@
+<template name="Addaspecto">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Aspecto Ambiental</h2> 
+                <a href="/inicio">Inicio ></a><a href="/procedma"> Procedimiento Evaluación Medioambiental ></a> <a href="/aspectos"> Ident. y Eval. de Aspectos Medioambientales ></a> Añadir nuevo Aspecto Medioambiental
+            </div>
+            <form class="add-objeto add-aspecto">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="actividad" class="sr-only">Actividad</label>
+                <input type="text" class="form-control" name="actividad" id="actividad" placeholder="Actividad" required autofocus>
+                <label for="aspecto" class="sr-only">Aspecto Ambiental</label>
+                <input type="text" class="form-control" name="aspecto" id="aspecto" placeholder="Aspecto Ambiental">
+                <label for="cuno" class="sr-only">Naturaleza/Sensibilidad/Gravedad C1</label>
+                <input type="text" class="form-control" name="cuno" id="cuno" placeholder="Naturaleza/Sensibilidad/Gravedad C1">
+                <label for="cdos" class="sr-only">Magnitud/Frecuencia C2</label>
+                <input type="text" class="form-control" name="cdos" id="cdos" placeholder="Magnitud/Frecuencia C2">
+                <label for="ctres" class="sr-only">Frecuencia de las situaciones de riesgos accidentales C3</label>
+                <input type="text" class="form-control" name="ctres" id="ctres" placeholder="Frecuencia">
+                <label for="ccuatro" class="sr-only">Gravedad de las consecuencias en el caso de que se produjera C4</label>
+                <input type="textarea" class="form-control" name="ccuatro" id="ccuatro" placeholder="Gravedad">
+                <label for="significancia" class="sr-only">Significancia</label>
+                <input type="textarea" class="form-control" name="significancia" id="significancia" placeholder="Significancia">
+                <button class="btn btn-primary" type="submit">Crear Aspecto Medioambiental</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

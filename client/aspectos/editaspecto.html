@@ -1,0 +1,51 @@
+<template name="Editaspecto"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar Aspecto Medioambiental</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-aspecto">
+                            <label for="actividad">Actividad</label>
+                            <input type="text" class="form-control" name="actividad" id="actividad" placeholder="Actividad" value="{{editaspecto.actividad}}">
+                             <label for="aspecto">Aspecto</label>
+                            <input type="text" class="form-control" name="aspecto" id="aspecto" placeholder="Aspecto" value="{{editaspecto.aspecto}}">
+                             <label for="cuno">Naturaleza/Sensibilidad/Gravedad C1</label>
+                            <input type="text" class="form-control" name="cuno" id="cuno" placeholder="C1" value="{{editaspecto.cuno}}">
+                             <label for="cdos">Magnitud/Frecuencia C2</label>
+                            <input type="text" class="form-control" name="cdos" id="cdos" placeholder="C2" value="{{editaspecto.cdos}}">
+                             <label for="ctres">Frecuencia de las situaciones de riesgos accidentales C3</label>
+                            <input type="text" class="form-control" name="ctres" id="ctres" placeholder="C3" value="{{editaspecto.ctres}}">
+                             <label for="ccuatro">Gravedad de las consecuencias en el caso de que se produjera C4</label>
+                            <input type="text" class="form-control" name="ccuatro" id="ccuatro" placeholder="C4" value="{{editaspecto.ccuatro}}">
+                             <label for="significancia">Significancia</label>
+                            <input type="text" class="form-control" name="significancia" id="significancia" placeholder="Significancia" value="{{editaspecto.significancia}}">
+
+                            
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Aspecto?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteAspecto" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+    
+
+</template>

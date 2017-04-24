@@ -1,0 +1,22 @@
+.iconoXL {
+    text-align: center;
+    padding: 10px;
+	display: block;
+	color: #fff; 
+    font-size: 30px;
+}
+
+
+.bigbutton {
+    text-align: center;
+    padding: 10px;
+	display: block;
+	color: #fff; 
+    font-size:18px;
+    height: 140px;
+}
+
+.bigbutton a{
+    
+    text-decoration: none;
+}

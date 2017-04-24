@@ -44,3 +44,33 @@ Meteor.publish('cursos', function(){
     return Cursos.find({});
 });
 
+Meteor.publish('planes', function(){
+    return Planes.find({});
+});
+
+Meteor.publish('aspectos', function(){
+    return Aspectos.find({});
+});
+
+Meteor.publish('DocsPdfs', function(){
+    return DocsPdfs.find({});
+});
+
+Meteor.publish('docs', function(){
+    return Docs.find({});
+});
+
+DocsPdfs.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
+Docs.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
