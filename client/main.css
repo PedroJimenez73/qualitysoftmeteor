@@ -179,6 +179,10 @@ select {
     background-repeat: no-repeat;
   }
 
+  select#asistentes {
+      height: 160px !important;
+  }
+
   select#eval.form-control {
       border-radius: 0px !important;
   }
@@ -263,4 +267,8 @@ td a {
 	text-align: center;
 	top: 15px;
 	text-decoration: none;
+}
+
+.rolling {
+    height: 500px;
 }

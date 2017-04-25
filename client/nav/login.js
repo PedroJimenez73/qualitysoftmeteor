@@ -31,7 +31,7 @@ Template.Login.events({
             
                 toastr["success"]("Bienvenido de nuevo a Quality Soft");
 
-                FlowRouter.go('/mapa');
+                FlowRouter.go('/inicio');
             }
         });
 

@@ -1,0 +1,27 @@
+<template name="Addprog">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Añadir Reunión de Programación</h2> 
+            </div>
+            <form class="add-objeto add-prog">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="asistentes">Asistentes (pulse control o mayúsculas para seleccionar varios)</label>
+                <select multiple class="form-control" id="asistentes" name="asistentes">
+                {{#each users}}
+                    <option value="{{username}}">{{username}} {{usersurname}}</option>           
+                {{/each}}       
+                </select>
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" class="form-control">
+                <label for="hora">Hora</label>
+                <input type="time" class="form-control" name="hora" id="hora">
+                <label for="lugar">Lugar</label>
+                <input type="text" class="form-control" name="lugar" id="lugar" placeholder="Lugar" >
+                
+                <button class="btn btn-primary" type="submit">Crear Reunión</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

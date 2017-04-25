@@ -14,14 +14,19 @@
                 <label for="objeto" class="sr-only">Objeto</label>
                 <input type="text" class="form-control" name="objeto" id="objeto" placeholder="Objeto">
                 <label for="responsable" class="sr-only">Responsable</label>
-                <input type="text" class="form-control" name="responsable" id="responsable" placeholder="Responsable">
+                <select class="form-control" id="responsable" name="responsable">
+                {{#each users}}
+                    <option class="boxCheck" value="{{username}}">{{username}}</option>           
+                {{/each}}
+                </select>
                 <label for="documentacion" class="sr-only">Documentación</label>
                 <input type="text" class="form-control" name="documentacion" id="documentacion" placeholder="Documentación">
                 <label for="sistematica" class="sr-only">Sistemática</label>
-                <input type="textarea" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática">
+                <textarea rows="10" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática"></textarea>
 
                 <button class="btn btn-primary" type="submit">Crear Plan</button>
                 <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
             </form>
         </div>
     </div>

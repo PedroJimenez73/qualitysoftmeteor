@@ -14,11 +14,15 @@
                              <label for="objeto">Objeto</label>
                             <input type="text" class="form-control" name="objeto" id="objeto" placeholder="Objeto" value="{{editplan.objeto}}">
                              <label for="responsable">Responsable</label>
-                            <input type="text" class="form-control" name="responsable" id="responsable" placeholder="Responsable" value="{{editplan.responsable}}">
+                            <select class="form-control" id="responsable" name="responsable" value="{{editplan.responsable}}">
+                            {{#each users}}
+                                <option class="boxCheck" value="{{username}}">{{username}}</option>           
+                            {{/each}}
+                            </select>
                              <label for="documentacion">Documentacion</label>
                             <input type="text" class="form-control" name="documentacion" id="documentacion" placeholder="Documentacion" value="{{editplan.documentacion}}">
                              <label for="sistematica">Sistemática</label>
-                            <input type="text" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática" value="{{editplan.sistematica}}">
+                            <textarea rows="10" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática" value="{{editplan.sistematica}}"></textarea>
 
                             
                             <button class="btn btn-primary" type="submit">Guardar Cambios</button>

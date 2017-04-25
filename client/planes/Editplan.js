@@ -3,7 +3,13 @@ Template.Editplan.helpers({
         var currentPlan = FlowRouter.getParam('_id');
         //return Cursos.findOne({_id: currentCurso});
         return Planes.findOne({_id: new Meteor.Collection.ObjectID(currentPlan)});
-    }
+    }/*,
+    seleccionado: function(key){
+      var currentPlanId = FlowRouter.getParam('_id');
+      var currentPlan = Planes.findOne({_id: new Meteor.Collection.ObjectID(currentPlanId)});
+      return key == currentPlan.responsable ? 'selected' : '';
+      
+   }*/
 });
 
 Template.Editplan.events({
@@ -53,4 +59,18 @@ Template.Editplan.events({
 
     }
 
+});
+
+Template.Editplan.onCreated(function(){
+    //if(Roles.userIsInRole(this.userId, 'admin'))
+    this.autorun(() => {
+        this.subscribe('allUsers');
+    });
+});
+
+
+Template.Editplan.helpers({
+    users: function(){
+        return Meteor.users.find();
+    }
 });

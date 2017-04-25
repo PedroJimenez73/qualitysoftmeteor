@@ -1,16 +1,23 @@
-Template.Addplan.events({
-	'click .cancelaradd': function() {
+Template.Addprog.helpers({
+    addprogram: function(){
+        var currentPlan = FlowRouter.getParam('_id');
+        return Planes.findOne({_id: currentPlan});
+    }
+});
+
+Template.Addprog.events({
+    'click .cancel-add': function() {
     	FlowRouter.go('/planes');
 	},
-    'submit .add-plan': function(){
-        var fecha = event.target.fecha.value;
-        var alcance = event.target.alcance.value;
-        var objeto = event.target.objeto.value;
-        var responsable = event.target.responsable.value;
-        var documentacion = event.target.documentacion.value;
-		var sistematica = event.target.sistematica.value;
 
-		Meteor.call('addPlan', fecha, alcance, objeto, responsable, documentacion, sistematica);
+    'submit .add-prog': function(){
+        var _id = FlowRouter.getParam('_id');
+        var array_asist = $('#asistentes').val();
+        var fecha = event.target.fecha.value;
+        var hora = event.target.hora.value;
+        var lugar = event.target.lugar.value;
+		
+		Meteor.call('addProg', _id, array_asist, fecha, hora, lugar);
 
 		toastr.options = {
                 "closeButton": false,
@@ -30,17 +37,15 @@ Template.Addplan.events({
                 "hideMethod": "fadeOut"
                 };
             
-        toastr["success"]("Nuevo plan añadido");
+        toastr["success"]("Nuevo Reunión añadida");
         FlowRouter.go('/planes');
         
 
         return false;
     }
-
 });
 
-
-Template.Addplan.onCreated(function(){
+Template.Addprog.onCreated(function(){
     //if(Roles.userIsInRole(this.userId, 'admin'))
     this.autorun(() => {
         this.subscribe('allUsers');
@@ -48,8 +53,11 @@ Template.Addplan.onCreated(function(){
 });
 
 
-Template.Addplan.helpers({
+Template.Addprog.helpers({
     users: function(){
         return Meteor.users.find();
-    }
+    },
+    usersurname: function(){
+        return this.profile.usersurname;
+    },
 });
