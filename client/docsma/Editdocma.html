@@ -11,9 +11,8 @@
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editdocma.nombre}}">
                             <label for="destino">Destino/situación del documento</label>                
                             <select class="form-control" id="destino" name="destino" value="{{editdocma.destino}}">          
-                                <option class="boxCheck" {{seleccionado "externo"}}>Externo en vigor</option>
-                                <option class="boxCheck" {{seleccionado "interno"}}>Interno en vigor</option>           
-                                <option class="boxCheck" {{seleccionado "obsoleto"}}>Obsoleto</option>           
+                                <option value="envigor" {{seleccionado "envigor"}}>En vigor</option>
+                                <option value="historico" {{seleccionado "historico"}}>Historico</option>           
                             </select>
                             
                             <button class="btn btn-primary" type="submit">Guardar Cambios</button>

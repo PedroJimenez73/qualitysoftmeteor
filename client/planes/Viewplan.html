@@ -23,7 +23,7 @@
                             <br>
                             {{#each editplan.reuniones}}
                             <form class="add-objeto view-ope">
-                                <label for="asistentes">Asistentes</label>
+                                <label for="asistentes">Asistentes/Mail</label>
                                 <input type="text" class="form-control" name="asistentes" id="asistentes"  value="{{array_asist}}" disabled>  
                                 <label for="fecha">Fecha</label>
                                 <input type="date" class="form-control" name="fecha" id="fecha"  value="{{fecha}}" disabled>  
@@ -31,7 +31,23 @@
                                 <input type="time" class="form-control" name="hora" id="hora"  value="{{hora}}" disabled> 
                                 <label for="lugar">Lugar</label>
                                 <input type="text" class="form-control" name="lugar" id="lugar"  value="{{lugar}}" disabled>
+                                <hr>
+                                <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar Reunión</a>
                             </form>
+                            <div id="openModalDelete" class="modalDialogDelete">
+                                <div>
+                                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                                        <div style="padding: 30px">
+                                            <h4>¿Eliminar la Reunión?</h4>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center">        
+                                            <button class="btn btn-danger" id="deleteProg" type="button">Eliminar Reunión</button>
+                                        </div>
+                                        <div class="col-md-6" style="text-align: center">
+                                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                                        </div>                         
+                                </div>
+                            </div>
                             <br>
                             {{/each}}
                         </form>
@@ -40,5 +56,6 @@
                 </div>
             </div>
     </div>
+            
 
 </template>

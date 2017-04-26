@@ -2,29 +2,55 @@
     <div id="page-content-wrapper">
             <div class="container">
                 <div class="row encabezado">
-                    <h2>SGI (Sistema de Gestión Integrado)</h2> 
+                    <h2>Documentos Externos</h2> 
                     <a class="pull-right btn btn-success" type="button" href="/adddoc">Añadir Documento</a> 
-                    <a href="/inicio">Inicio ></a> SGI
+                    <a href="/inicio">Inicio ></a><a href="/sgi">SGI ></a> Documentos Externos
                 </div>
                 <div class="row">
                     <div class="col-md-12">
+                        <h3>Documentos Externos en Vigor</h3>
                         <table class="table table-bordered table-striped tabla">
                             <thead>
                                 <tr class="filters">
                                     <th>Nombre</th>
-                                    <th>Situación</th>
                                     <th>Visualizar</th>
                                     <th>Editar situación</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 {{#each products}}
+                                {{#if isEnVigor}}
                                     <tr>
                                         <td>{{nombre}}</td>
-                                        <td>{{destino}}</td>
                                         <td><a target="_blank" href="{{image}}" style="text-decoration: none;" type="button" class="btn btn-primary">Visualizar</a></td>
                                         <td><a class="pull-right btn btn-warning" type="button" href="/editdoc/{{_id}}">Editar</a> </td>
                                     </tr>
+                                {{/if}}
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Histórico de Documentos Obsoletos</h3>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nombre</th>
+                                    <th>Visualizar</th>
+                                    <th>Editar situación</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each products}}
+                                {{#if isHistorico}}
+                                    <tr>
+                                        <td>{{nombre}}</td>
+                                        <td><a target="_blank" href="{{image}}" style="text-decoration: none;" type="button" class="btn btn-primary">Visualizar</a></td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editdoc/{{_id}}">Editar</a> </td>
+                                    </tr>
+                                {{/if}}
                                 {{/each}}
                             </tbody>
                         </table>

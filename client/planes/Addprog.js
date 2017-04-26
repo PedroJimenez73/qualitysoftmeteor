@@ -18,6 +18,8 @@ Template.Addprog.events({
         var lugar = event.target.lugar.value;
 		
 		Meteor.call('addProg', _id, array_asist, fecha, hora, lugar);
+        Meteor.call('sendMail', array_asist);
+        console.log(array_asist);
 
 		toastr.options = {
                 "closeButton": false,
@@ -37,7 +39,7 @@ Template.Addprog.events({
                 "hideMethod": "fadeOut"
                 };
             
-        toastr["success"]("Nuevo Reunión añadida");
+        toastr["success"]("Nuevo Reunión añadida, se ha enviado un mail a cada asistente");
         FlowRouter.go('/planes');
         
 
@@ -59,5 +61,8 @@ Template.Addprog.helpers({
     },
     usersurname: function(){
         return this.profile.usersurname;
+    },
+    userEmail: function() {
+        return this.emails[0].address;
     },
 });

@@ -43,3 +43,7 @@ themeteorchef:bert
 cfs:standard-packages
 cfs:gridfs
 
+
+email
+service-configuration
+

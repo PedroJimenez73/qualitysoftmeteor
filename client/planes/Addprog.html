@@ -9,7 +9,7 @@
                 <label for="asistentes">Asistentes (pulse control o mayúsculas para seleccionar varios)</label>
                 <select multiple class="form-control" id="asistentes" name="asistentes">
                 {{#each users}}
-                    <option value="{{username}}">{{username}} {{usersurname}}</option>           
+                    <option value="{{username}} {{userEmail}}">{{username}} {{usersurname}}</option>           
                 {{/each}}       
                 </select>
                 <label for="fecha">Fecha</label>
