@@ -1,15 +1,26 @@
-<template name="Adddoc">
+<template name="Addint">
     <div id="page-content-wrapper">
         <div class="container">
             <div class="row encabezado">
                 <h2>Nuevo documento</h2> 
-                <a href="/inicio">Inicio ></a><a href="/sgi"> SGI ></a><a href="/documentos"> Documentos Externos ></a> Añadir documento
+                <a href="/inicio">Inicio ></a><a href="/sgi"> SGI ></a><a href="/internos"> Documentos Internos ></a> Añadir documento
             </div>
-                <form class="add-objeto addDoc">
+                <form class="add-objeto addInt">
                     <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
                     <label for="nombre">Nombre del documento</label>
                     <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre del documento" required autofocus>   
-                    <label for="destino" class="sr-only">Destino/situación del documento</label>                
+                    <label for="asignados">Usuarios asignados (pulse control o mayúsculas para seleccionar varios)</label>
+                    <select multiple class="form-control" id="asignados" name="asignados">
+                    {{#each users}}
+                        <option value="{{username}} {{userEmail}}">{{username}} {{usersurname}}</option>           
+                    {{/each}}       
+                    </select>
+                    <label for="revision">Revisión del documento</label>                
+                    <select class="form-control" id="revision" name="revision">
+                        <option class="boxCheck" value="pendiente">Pendiente</option>
+                        <option class="boxCheck" value="aprobado">Aprobado</option>              
+                    </select>
+                    <label for="destino">Situación del documento</label>                
                     <select class="form-control" id="destino" name="destino">
                         <option class="boxCheck" value="envigor">En Vigor</option>
                         <option class="boxCheck" value="historico">Historico</option>              

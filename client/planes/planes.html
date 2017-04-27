@@ -15,8 +15,8 @@
                                     <th>Alcance</th>
                                     <th>Objeto</th>
                                     <th>Responsable</th>
-                                    <th>Programación</th>
-                                    <th>Visualizar</th>                    
+                                    <th>Visualizar</th> 
+                                    <th>Programación</th>                   
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -27,8 +27,8 @@
                                         <td>{{alcance}}</td>
                                         <td>{{objeto}}</td>
                                         <td>{{responsable}}</td>
-                                        <td><a class="pull-right btn btn-primary" type="button" href="/addprog/{{_id._str}}">Programar Reunión</a> </td>
                                         <td><a class="pull-right btn btn-primary" type="button" href="/viewplan/{{_id._str}}">Visualizar</a> </td>
+                                        <td><a class="pull-right btn btn-success" type="button" href="/addprog/{{_id._str}}">Programar Reunión</a> </td>
                                         <td><a class="pull-right btn btn-warning" type="button" href="/editplan/{{_id._str}}">Editar</a> </td>
                                     </tr>
                                 {{/each}}

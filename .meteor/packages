@@ -47,3 +47,5 @@ cfs:gridfs
 email
 service-configuration
 
+#meteorhacks:ssr
+

@@ -1,24 +1,30 @@
-Template.Editdoc.helpers({
-    editdocumento: function(){
-        var currentDocumento = FlowRouter.getParam('_id');
-        return Products.findOne({_id: currentDocumento});
+Template.Editint.helpers({
+    editint: function(){
+        var currentDocint = FlowRouter.getParam('_id');
+        return Internos.findOne({_id: currentDocint});
     },
     seleccionado: function(key){
-      var currentDocumentoId = FlowRouter.getParam('_id');
-      var currentDocumento = Products.findOne({_id: currentDocumentoId});
-      return key == currentDocumento.destino ? 'selected' : '';
+      var currentDocintId = FlowRouter.getParam('_id');
+      var currentDocint = Internos.findOne({_id: currentDocintId});
+      return key == currentDocint.destino ? 'selected' : '';
+   },
+    seleccionado2: function(key){
+      var currentDocintId = FlowRouter.getParam('_id');
+      var currentDocint = Internos.findOne({_id: currentDocintId});
+      return key == currentDocint.revision ? 'selected' : '';
    }
 });
 
-Template.Editdoc.events({
-    'submit .edit-documento': function(){
+Template.Editint.events({
+    'submit .edit-int': function(){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
+        var revision = event.target.revision.value;
 		var destino = event.target.destino.value;
+        var modifAt = new Date()
 
-		Meteor.call('editDocumento', _id, nombre, destino);
-
-        toastr.options = {
+		Meteor.call('editDocint', _id, nombre, revision, destino, modifAt);
+                        toastr.options = {
                 "closeButton": false,
                 "debug": false,
                 "newestOnTop": false,
@@ -37,21 +43,20 @@ Template.Editdoc.events({
                 };
             
         toastr["success"]("Modificaciones guardadas")
-        FlowRouter.go('/documentos');
+        FlowRouter.go('/internos');
 
         return false;
     },
     'click .cancel-add': function() {
-    	FlowRouter.go('/documentos');
+    	FlowRouter.go('/internos');
 	},
-    'click #deleteDocumento': function(){
+    'click #deleteDocint': function(){
 		   
         var _id = FlowRouter.getParam('_id');
 		
-	   
-        Products.remove({_id: _id});
+        Internos.remove({_id: _id});
 
-        FlowRouter.go('/documentos');   
+        FlowRouter.go('/internos');   
         return false;
 
     }

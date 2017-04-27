@@ -1,24 +1,30 @@
-Template.Editdoc.helpers({
-    editdocumento: function(){
-        var currentDocumento = FlowRouter.getParam('_id');
-        return Products.findOne({_id: currentDocumento});
+Template.Editpro.helpers({
+    editpro: function(){
+        var currentDocpro = FlowRouter.getParam('_id');
+        return Procesos.findOne({_id: currentDocpro});
     },
     seleccionado: function(key){
-      var currentDocumentoId = FlowRouter.getParam('_id');
-      var currentDocumento = Products.findOne({_id: currentDocumentoId});
-      return key == currentDocumento.destino ? 'selected' : '';
+      var currentDocproId = FlowRouter.getParam('_id');
+      var currentDocpro = Procesos.findOne({_id: currentDocproId});
+      return key == currentDocpro.destino ? 'selected' : '';
+   },
+    seleccionado2: function(key){
+      var currentDocproId = FlowRouter.getParam('_id');
+      var currentDocpro = Procesos.findOne({_id: currentDocproId});
+      return key == currentDocpro.revision ? 'selected' : '';
    }
 });
 
-Template.Editdoc.events({
-    'submit .edit-documento': function(){
+Template.Editpro.events({
+    'submit .edit-pro': function(){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
+        var revision = event.target.revision.value;
 		var destino = event.target.destino.value;
+        var modifAt = new Date();
 
-		Meteor.call('editDocumento', _id, nombre, destino);
-
-        toastr.options = {
+		Meteor.call('editDocpro', _id, nombre, revision, destino, modifAt);
+            toastr.options = {
                 "closeButton": false,
                 "debug": false,
                 "newestOnTop": false,
@@ -37,21 +43,20 @@ Template.Editdoc.events({
                 };
             
         toastr["success"]("Modificaciones guardadas")
-        FlowRouter.go('/documentos');
+        FlowRouter.go('/procesos');
 
         return false;
     },
     'click .cancel-add': function() {
-    	FlowRouter.go('/documentos');
+    	FlowRouter.go('/procesos');
 	},
-    'click #deleteDocumento': function(){
+    'click #deleteDocpro': function(){
 		   
         var _id = FlowRouter.getParam('_id');
 		
-	   
-        Products.remove({_id: _id});
+        Procesos.remove({_id: _id});
 
-        FlowRouter.go('/documentos');   
+        FlowRouter.go('/procesos');   
         return false;
 
     }

@@ -183,6 +183,14 @@ select {
       height: 160px !important;
   }
 
+  select#asignados{
+      height: 160px !important;
+  }
+
+  select#tareas{
+      height: 100px !important;
+  }
+
   select#eval.form-control {
       border-radius: 0px !important;
   }

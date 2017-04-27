@@ -1,0 +1,49 @@
+<template name="Editint"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Modificar documento {{editint.nombre}}</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-int">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editint.nombre}}">
+                            <label for="revision">Revisión</label>                
+                            <select class="form-control" id="revision" name="revision" value="{{editint.revision}}">          
+                                <option value="pendiente" {{seleccionado2 "pendiente"}}>Pendiente</option>
+                                <option value="aprobado" {{seleccionado2 "aprobado"}}>Aprobado</option>           
+                            </select>
+                            <label for="destino">Destino/situación del documento</label>                
+                            <select class="form-control" id="destino" name="destino" value="{{editint.destino}}">          
+                                <option value="envigor" {{seleccionado "envigor"}}>En Vigor</option>
+                                <option value="historico" {{seleccionado "historico"}}>Historico</option>           
+                            </select>
+                            
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                            
+                        </form>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Documento {{editint.nombre}}?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteDocint" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+
+</template>

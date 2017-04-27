@@ -74,3 +74,48 @@ Docs.allow({
   }
 });
 
+
+Meteor.publish('InternosPdfs', function(){
+    return InternosPdfs.find({});
+});
+
+Meteor.publish('internos', function(){
+    return Internos.find({});
+});
+
+InternosPdfs.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
+Internos.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
+Meteor.publish('ProcesosWords', function(){
+    return ProcesosWords.find({});
+});
+
+Meteor.publish('procesos', function(){
+    return Procesos.find({});
+});
+
+ProcesosWords.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
+Procesos.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+

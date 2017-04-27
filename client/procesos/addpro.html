@@ -1,0 +1,43 @@
+<template name="Addpro">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Documento de Proceso</h2> 
+                <a href="/inicio">Inicio ></a><a href="/sgi"> SGI ></a><a href="/procesos"> Documentos de Procesos ></a> Añadir documento
+            </div>
+                <form class="add-objeto addPro">
+                    <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                    <label for="nombre">Nombre del Documento de Proceso</label>
+                    <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre del documento" required autofocus>   
+                    <label for="asignados">Usuarios asignados (pulse control o mayúsculas para seleccionar varios)</label>
+                    <select multiple class="form-control" id="asignados" name="asignados">
+                    {{#each users}}
+                        <option value="{{username}} {{userEmail}}">{{username}} {{usersurname}}</option>           
+                    {{/each}}       
+                    </select>
+                    <label for="tareas">Tareas (pulse control o mayúsculas para seleccionar varios)</label>
+                    <select multiple class="form-control" id="tareas" name="tareas">
+                        <option value="Desarrollo">Desarrollo</option> 
+                        <option value="Optimización">Optimizacion</option>
+                        <option value="Seguimiento">Seguimiento</option>   
+                        <option value="Comprobación">Comprobación</option>          
+                    </select>
+                    <label for="revision">Revisión del documento</label>                
+                    <select class="form-control" id="revision" name="revision">
+                        <option class="boxCheck" value="Pendiente">Pendiente</option>
+                        <option class="boxCheck" value="Aprobado">Aprobado</option>              
+                    </select>
+                    <label for="destino">Situación del documento</label>                
+                    <select class="form-control" id="destino" name="destino">
+                        <option class="boxCheck" value="En Vigor">En Vigor</option>
+                        <option class="boxCheck" value="Historico">Historico</option>              
+                    </select>
+                    <label>Documento</label>
+                    <input class="form-control" type="file" name="docword" id="docword">
+                    <button class="btn btn-primary" type="submit">Añadir documento</button>
+                    <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                </form>
+        </div>
+    </div>
+   
+</template>

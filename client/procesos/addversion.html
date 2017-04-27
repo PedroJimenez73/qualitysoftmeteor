@@ -1,0 +1,25 @@
+<template name="Addversion">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Añadir Versión de Documento de Proceso</h2> 
+            </div>
+            <form class="add-objeto add-version">
+                <label for="numero">Nº Versión</label>
+                <input type="text" class="form-control" name="numero" id="numero" placeholder="Nº Versión" >
+                <label for="usuario" class="sr-only">Usuario</label>
+                <select class="form-control" id="usuario" name="usuario">
+                {{#each users}}
+                    <option value="{{username}} {{userEmail}}">{{username}} {{usersurname}}</option>           
+                {{/each}}
+                </select>
+                <label for="modificaciones">Modificaciones realizadas</label>
+                <textarea rows="5" class="form-control" name="modificaciones" id="modificaciones" placeholder="Modificaciones realizadas"></textarea>
+                <label>Documento Modificado</label>
+                <input class="form-control" type="file" name="docword" id="docword">
+                <button class="btn btn-primary" type="submit">Añadir Versión</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

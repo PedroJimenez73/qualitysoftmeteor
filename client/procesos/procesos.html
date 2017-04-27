@@ -1,37 +1,33 @@
-<template name="Internos"> 
+<template name="Procesos"> 
     <div id="page-content-wrapper">
             <div class="container">
                 <div class="row encabezado">
-                    <h2>Documentos Internos</h2> 
-                    <a class="pull-right btn btn-success" type="button" href="/addint">Añadir Documento</a> 
-                    <a href="/inicio">Inicio ></a><a href="/sgi">SGI ></a> Documentos Internos
+                    <h2>Documentos de Procesos</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addpro">Añadir Documento de Proceso</a> 
+                    <a href="/inicio">Inicio ></a><a href="/sgi">SGI ></a> Documentos de Procesos
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Documentos Internos en Vigor</h3>
+                        <h3>Documentos de Procesos en Vigor</h3>
                         <table class="table table-bordered table-striped tabla">
                             <thead>
                                 <tr class="filters">
                                     <th>Nombre</th>
-                                    <th>Usuarios Asignados/Mail</th>
                                     <th>Revisión</th>
                                     <th>Visualizar</th>
+                                    <th>Versiones</th>
                                     <th>Editar</th>
-                                    <th>Fecha Creación</th>
-                                    <th>Fecha Modificación</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each internos}}
+                                {{#each procesos}}
                                 {{#if isEnVigor}}
                                     <tr>
                                         <td>{{nombre}}</td>
-                                        <td>{{asignados}}</td>
                                         <td>{{revision}}</td>
-                                        <td><a target="_blank" href="{{pdf}}" style="text-decoration: none;" type="button" class="btn btn-primary">Visualizar</a></td>
-                                        <td><a class="pull-right btn btn-warning" type="button" href="/editint/{{_id}}">Editar</a> </td>
-                                        <td>{{createdAtForm}}</td>
-                                        <td>{{modifAtForm}}</td>
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewpro/{{_id}}">Visualizar</a></td>
+                                        <td><a class="pull-right btn btn-success" type="button" href="/addversion/{{_id}}">Añadir Versión</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editpro/{{_id}}">Editar</a> </td>
                                     </tr>
                                 {{/if}}
                                 {{/each}}
@@ -41,30 +37,24 @@
                 </div>
                 <div class="row">
                     <div class="col-md-12">
-                        <h3>Histórico de Documentos Archivados</h3>
+                        <h3>Histórico de Documentos de Procesos Archivados</h3>
                         <table class="table table-bordered table-striped tabla">
                             <thead>
                                 <tr class="filters">
                                     <th>Nombre</th>
-                                    <th>Usuarios Asignados/Mail</th>
                                     <th>Revisión</th>
                                     <th>Visualizar</th>
                                     <th>Editar</th>
-                                    <th>Fecha Creación</th>
-                                    <th>Fecha Modificación</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each internos}}
+                                {{#each procesos}}
                                 {{#if isHistorico}}
                                     <tr>
                                         <td>{{nombre}}</td>
-                                        <td>{{asignados}}</td>
                                         <td>{{revision}}</td>
-                                        <td><a target="_blank" href="{{pdf}}" style="text-decoration: none;" type="button" class="btn btn-primary">Visualizar</a></td>
-                                        <td><a class="pull-right btn btn-warning" type="button" href="/editint/{{_id}}">Editar</a> </td>
-                                        <td>{{createdAtForm}}</td>
-                                        <td>{{modifAtForm}}</td>
+                                        <td><a class="pull-right btn btn-primary" type="button" href="/viewpro/{{_id}}">Visualizar</a> </td>
+                                        <td><a class="pull-right btn btn-warning" type="button" href="/editpro/{{_id}}">Editar</a> </td>
                                     </tr>
                                 {{/if}}
                                 {{/each}}
