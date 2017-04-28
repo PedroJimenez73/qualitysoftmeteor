@@ -1,0 +1,60 @@
+<template name="Viewmed"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Mediciones de Indicador</h2> 
+                    <a class="pull-right btn btn-primary" type="button" href="/viewind/{{viewind._id._str}}">Volver al Indicador</a> 
+                    <a class="pull-right btn btn-success" type="button" href="/addmed/{{viewind._id._str}}">Añadir Medición</a>
+                    <h4>Indicador: {{viewind.indicador}}</h4>
+                    <h4>Fórmula: {{viewind.formula}}</h4>
+                    <h4>Valor superior: {{viewind.superior}}</h4>
+                    <h4>Valor inferior: {{viewind.inferior}}</h4>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters"> 
+                                    <th>Fecha</th>
+                                    <th>Mediciones</th>                   
+                                    <th>Control de Desviación</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each viewind.mediciones}}
+                                    <tr>
+                                        <td>{{fecha}}</td>
+                                        <td>{{medicion}}</td>
+                                        <td>
+                                            {{#if isCorrecto}}<p style="color: green;"><i class="fa fa-check-square "></i> Sin desviación</p>{{/if}}
+                                            {{#if isDesviadoup}}<p style="color: red;"><i class="fa fa-exclamation-triangle "></i> Desviación por exceso</p>{{/if}}
+                                            {{#if isDesviadodown}}<p style="color: red;"><i class="fa fa-exclamation-triangle "></i> Desviación por defecto</p>{{/if}}
+                                        </td>
+                                        <td>
+                                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar Medición</a>
+                                            <div id="openModalDelete" class="modalDialogDelete">
+                                                <div>
+                                                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                                                        <div style="padding: 30px">
+                                                            <h4>¿Eliminar la Medición?</h4>
+                                                        </div>
+                                                        <div class="col-md-6" style="text-align: center">        
+                                                            <button class="btn btn-danger" id="deleteMed" type="button">Eliminar Medición</button>
+                                                        </div>
+                                                        <div class="col-md-6" style="text-align: center">
+                                                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                                                        </div>                         
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

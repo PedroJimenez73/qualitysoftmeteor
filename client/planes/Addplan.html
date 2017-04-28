@@ -7,21 +7,21 @@
             </div>
             <form class="add-objeto add-plan">
                 <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
-                <label for="fecha" class="sr-only">Fecha</label>
+                <label for="fecha">Fecha</label>
                 <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Fecha" required autofocus>
-                <label for="alcance" class="sr-only">Alcance</label>
+                <label for="alcance">Alcance</label>
                 <input type="text" class="form-control" name="alcance" id="alcance" placeholder="Alcance">
-                <label for="objeto" class="sr-only">Objeto</label>
+                <label for="objeto">Objeto</label>
                 <input type="text" class="form-control" name="objeto" id="objeto" placeholder="Objeto">
-                <label for="responsable" class="sr-only">Responsable</label>
+                <label for="responsable">Responsable</label>
                 <select class="form-control" id="responsable" name="responsable">
                 {{#each users}}
                     <option class="boxCheck" value="{{username}}">{{username}}</option>           
                 {{/each}}
                 </select>
-                <label for="documentacion" class="sr-only">Documentación</label>
+                <label for="documentacion">Documentación</label>
                 <input type="text" class="form-control" name="documentacion" id="documentacion" placeholder="Documentación">
-                <label for="sistematica" class="sr-only">Sistemática</label>
+                <label for="sistematica">Sistemática</label>
                 <textarea rows="10" class="form-control" name="sistematica" id="sistematica" placeholder="Sistemática"></textarea>
 
                 <button class="btn btn-primary" type="submit">Crear Plan</button>

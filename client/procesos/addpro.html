@@ -15,13 +15,8 @@
                         <option value="{{username}} {{userEmail}}">{{username}} {{usersurname}}</option>           
                     {{/each}}       
                     </select>
-                    <label for="tareas">Tareas (pulse control o mayúsculas para seleccionar varios)</label>
-                    <select multiple class="form-control" id="tareas" name="tareas">
-                        <option value="Desarrollo">Desarrollo</option> 
-                        <option value="Optimización">Optimizacion</option>
-                        <option value="Seguimiento">Seguimiento</option>   
-                        <option value="Comprobación">Comprobación</option>          
-                    </select>
+                    <label for="tareas">Tareas</label>
+                    <textarea rows="6" class="form-control" name="tareas" id="tareas" placeholder="Describa las tareas a realizar en el documento de proceso"></textarea>
                     <label for="revision">Revisión del documento</label>                
                     <select class="form-control" id="revision" name="revision">
                         <option class="boxCheck" value="Pendiente">Pendiente</option>

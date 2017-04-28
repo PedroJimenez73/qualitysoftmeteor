@@ -1,0 +1,450 @@
+Meteor.methods({
+
+    addMatriz: function(proceso, responsable, riesgo, oportunidad, control){
+
+        Matrices.insert({
+			proceso : proceso,
+        	responsable : responsable,
+			riesgo : riesgo,
+			oportunidad : oportunidad,
+			control : control
+            
+        });
+
+    },
+	addProveedor: function(nombre, servicio, cif, direccion, telefono, persona, mail, pago, nc, eval, fechamodif){
+
+        Proves.insert({
+			nombre : nombre,
+        	servicio : servicio,
+			cif : cif,
+			direccion : direccion,
+			telefono : telefono,
+			persona : persona,
+			mail : mail,
+			pago : pago,
+			nc : nc,
+			eval : eval,
+			fechamodif : fechamodif
+            
+        });
+
+    },
+	editProveedor: function(_id, nombre, servicio, cif, direccion, telefono, persona, mail, pago, nc, eval, fechamodif){
+
+        Proves.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                nombre : nombre,
+				servicio : servicio,
+				cif : cif,
+				direccion : direccion,
+				telefono : telefono,
+				persona : persona,
+				mail : mail,
+				pago : pago,
+				nc : nc,
+				eval : eval,
+				fechamodif : fechamodif
+
+            }
+        });
+
+    },
+	removeProveedor: function(_id){
+        Proves.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+	addCliente: function(nombre, cif, direccion, telefono, persona, mail, fechamodif){
+
+        Clientes.insert({
+			nombre : nombre,
+			cif : cif,
+			direccion : direccion,
+			telefono : telefono,
+			persona : persona,
+			mail : mail,
+			fechamodif : fechamodif
+            
+        });
+
+    },
+	editCliente: function(_id, nombre, cif, direccion, telefono, persona, mail, fechamodif){
+
+        Clientes.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                nombre : nombre,
+				cif : cif,
+				direccion : direccion,
+				telefono : telefono,
+				persona : persona,
+				mail : mail,
+				fechamodif : fechamodif
+
+            }
+        });
+
+    },
+	removeCliente: function(_id){
+        Clientes.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+	editDocumento: function(_id, nombre, destino){
+
+        Products.update({
+            _id: _id
+        }, {
+            $set:{
+                nombre : nombre,
+				destino : destino
+
+            }
+        });
+
+    },
+	editDocma: function(_id, nombre, destino){
+
+        Docs.update({
+            _id: _id
+        }, {
+            $set:{
+                nombre : nombre,
+				destino : destino
+
+            }
+        });
+
+    },
+	editDocint: function(_id, nombre, revision, destino, modifAt){
+
+        Internos.update({
+            _id: _id
+        }, {
+            $set:{
+                nombre : nombre,
+				revision: revision,
+				destino : destino,
+				modifAt: modifAt
+
+            }
+        });
+
+    },
+	  editDocpro: function(_id, nombre, revision, destino, modifAt){
+
+        Procesos.update({
+            _id: _id
+        }, {
+            $set:{
+                nombre : nombre,
+				        revision: revision,
+				        destino : destino,
+				        modifAt: modifAt
+
+            }
+        });
+
+    },
+	addVeh: function(numero, nombre, modelo, matricula, anyo, perioitv, fechamodif){
+
+        Vehiculos.insert({
+			numero : numero,
+        	nombre : nombre,
+			modelo : modelo,
+			matricula : matricula,
+			anyo : anyo,
+			perioitv : perioitv,
+			fechamodif : fechamodif
+            
+        });
+
+    },
+	editVeh: function( _id, numero, nombre, modelo, matricula, anyo, perioitv, fechamodif){
+
+        Vehiculos.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                numero : numero,
+				nombre : nombre,
+				modelo : modelo,
+				matricula : matricula,
+				anyo : anyo,
+				perioitv : perioitv,
+				fechamodif : fechamodif
+
+            }
+        });
+
+    },
+	removeVehiculo: function(_id){
+        Vehiculos.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+	addCurso: function(titulo, organizador, horas, asistentes, fechas, observaciones, fechamodif){
+
+        Cursos.insert({
+			titulo : titulo,
+        	organizador : organizador,
+			horas : horas,
+			asistentes : asistentes,
+			fechas : fechas,
+			observaciones : observaciones,
+			fechamodif : fechamodif
+            
+        });
+
+    },
+	editCurso: function(_id, titulo, organizador, horas, asistentes, fechas, observaciones, fechamodif){
+
+        Cursos.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                titulo : titulo,
+				organizador : organizador,
+				horas : horas,
+				asistentes : asistentes,
+				fechas : fechas,
+				observaciones : observaciones,
+				fechamodif : fechamodif
+
+            }
+        });
+
+    },
+	removeCurso: function(_id){
+        Cursos.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+	addOperacion: function(_id, operacion, fecha, importe, kms, garantia, varios){
+
+        Vehiculos.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $push:{
+                operaciones : {
+					operacion: operacion,
+					fecha: fecha,
+					importe: importe,
+					kms: kms,
+					garantia: garantia,
+					varios: varios
+				}
+
+            }
+        });
+
+    },
+	addPlan: function(fecha, alcance, objeto, responsable, documentacion, sistematica){
+
+        Planes.insert({
+			fecha : fecha,
+        	alcance : alcance,
+			objeto : objeto,
+			responsable : responsable,
+			documentacion : documentacion,
+			sistematica : sistematica
+            
+        });
+
+    },
+	editPlan: function(_id, fecha, alcance, objeto, responsable, documentacion, sistematica){
+
+        Planes.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                fecha : fecha,
+				alcance : alcance,
+				objeto : objeto,
+				responsable : responsable,
+				documentacion : documentacion,
+				sistematica : sistematica
+
+            }
+        });
+
+    },
+	removePlan: function(_id){
+        Planes.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+	addProg: function(_id, array_asist, fecha, hora, lugar){
+
+        Planes.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $push:{
+                reuniones : {
+					array_asist: array_asist,
+					fecha: fecha,
+					hora: hora,
+					lugar: lugar
+				}
+
+            }
+        });
+
+    },
+	removeProg: function(reuniones){
+      Planes.update({reuniones: reuniones}, {$pull : {reuniones : reuniones}});
+    },
+    addInd: function(indicador, riesgo, responsable, formula, proceso, superior, inferior, inicio, fin){
+
+        Indicadores.insert({
+			indicador : indicador,
+            riesgo: riesgo,
+        	responsable: responsable,
+            formula : formula,
+			proceso : proceso,
+			superior : superior,
+            inferior : inferior,
+			inicio : inicio,
+			fin : fin
+            
+        });
+
+    },
+    editInd: function(_id, indicador, formula, proceso, superior, inferior, inicio, fin){
+
+        Indicadores.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                indicador : indicador,
+				formula : formula,
+				proceso : proceso,
+				superior : superior,
+                inferior : inferior,
+				inicio : inicio,
+				fin : fin
+
+            }
+        });
+
+    },
+	removeInd: function(_id){
+        Indicadores.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+    addMed: function(_id, fecha, medicion){
+
+        Indicadores.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $push:{
+                mediciones : {
+					fecha: fecha,
+					medicion: medicion
+				}
+
+            }
+        });
+
+    },
+	removeMed: function(mediciones){
+      Indicadores.update({mediciones: mediciones}, {$pull : {mediciones : mediciones}});
+    },
+	addAspecto: function(actividad, aspecto, cuno, cdos, ctres, ccuatro, significancia){
+
+        Aspectos.insert({
+			actividad : actividad,
+        	aspecto : aspecto,
+			cuno : cuno,
+			cdos : cdos,
+			ctres : ctres,
+			ccuatro : ccuatro,
+			significancia: significancia
+            
+        });
+
+    },
+	editAspecto: function(_id, actividad, aspecto, cuno, cdos, ctres, ccuatro, significancia){
+
+        Aspectos.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                actividad : actividad,
+				aspecto : aspecto,
+				cuno : cuno,
+				cdos : cdos,
+				ctres : ctres,
+				ccuatro : ccuatro,
+				significancia: significancia
+
+            }
+        });
+
+    },
+	removeAspecto: function(_id){
+        Aspectos.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+
+  sendMailInt: function (nombre, asignados) {
+      SSR.compileTemplate('htmlEmail', Assets.getText('maildocint.html'));
+
+      var emailData = {
+          nombre: nombre,
+      };
+
+      Email.send({
+        from: "calidad@qualitycw.com",
+        to: asignados,
+        subject: "Quality Soft: Nuevo documento asignado",
+        html: SSR.render('htmlEmail', emailData),
+      });
+  },
+  sendMailReu: function (array_asist, fecha, hora, lugar) {
+      SSR.compileTemplate('htmlEmail', Assets.getText('mailreunion.html'));
+
+      var emailData = {
+          fecha: fecha,
+          hora: hora,
+          lugar: lugar
+      };
+
+      Email.send({
+        from: "calidad@qualitycw.com",
+        to: array_asist,
+        subject: "Quality Soft: Nuevo reunión programada",
+        html: SSR.render('htmlEmail', emailData),
+      });
+  },
+
+  sendMailPro: function (nombre, asignados, tareas) {
+      SSR.compileTemplate('htmlEmail', Assets.getText('maildocpro.html'));
+
+      var emailData = {
+          nombre: nombre,
+          tareas: tareas
+      };
+
+      Email.send({
+        from: "calidad@qualitycw.com",
+        to: asignados,
+        subject: "Quality Soft: Nuevo documento de proceso asignado",
+        html: SSR.render('htmlEmail', emailData),
+      });
+  },
+
+    sendMailDesv: function (fecha, medicion, nombre, responsable) {
+      SSR.compileTemplate('htmlEmail', Assets.getText('maildocdesv.html'));
+
+      var emailData = {
+          fecha: fecha,
+          medicion: medicion,
+          nombre: nombre
+      };
+
+      Email.send({
+        from: "calidad@qualitycw.com",
+        to: responsable,
+        subject: "Quality Soft: Alerta de desviación",
+        html: SSR.render('htmlEmail', emailData),
+      });
+  },
+
+    removeVers: function(versiones){
+      Procesos.update({versiones: versiones}, {$pull : {versiones : versiones}});
+    },
+
+});

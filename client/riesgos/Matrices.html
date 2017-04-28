@@ -3,7 +3,7 @@
             <div class="container">
                 <div class="row encabezado">
                     <h2>Matriz de Riesgos y Oportunidades</h2> 
-                    <a class="pull-right btn btn-success" type="button" href="/addmatriz">Añadir Proceso</a> 
+                    <a class="pull-right btn btn-success" type="button" href="/addmatriz">Añadir Riesgo</a> 
                     <a href="/inicio">Inicio ></a><a href="/riesgos"> Gestión del Riesgo ></a><a href="/matrices"> Matriz de Riesgos</a>
                 </div>
                 <div class="row">
@@ -13,14 +13,10 @@
                                 <tr class="filters">
                                     <th>Proceso</th>
                                     <th>Responsable</th>
-                                    <th>Causa/Cambio</th>
                                     <th>Riesgo</th>
                                     <th>Oportunidad</th>
                                     <th>Control/Frecuencia</th>
-                                    <th>Impacto</th>
-                                    <th>Probabilidad</th>
-                                    <th>Ponderacion</th>
-                                    <th>Acción</th>
+                                    <th>Indicador</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -28,14 +24,10 @@
                                     <tr>
                                         <td>{{proceso}}</td>
                                         <td>{{responsable}}</td>
-                                        <td>{{causacambio}}</td>
                                         <td>{{riesgo}}</td>
                                         <td>{{oportunidad}}</td> 
-                                        <td>{{controlfrecuencia}}</td>            
-                                        <td>{{impacto}}</td>
-                                        <td>{{probabilidad}}</td>
-                                        <td>{{ponderacion}}</td>
-                                        <td>{{accion}}</td>
+                                        <td>{{control}}</td>            
+                                        <td><a class="btn btn-success" type="button" href="/addind/{{_id._str}}">Añadir Indicador</a> </td>
                                     </tr>
                                 {{/each}}
                             </tbody>

@@ -9,6 +9,8 @@
                         <form class="add-objeto edit-pro">
                             <label for="nombre">Nombre</label>
                             <input type="text" class="form-control" name="nombre" id="nombre" placeholder="Nombre" value="{{editpro.nombre}}">
+                            <label for="tareas">Tareas</label>
+                            <textarea rows="6" class="form-control" name="tareas" id="tareas" placeholder="Tareas" value="{{editpro.tareas}}"></textarea>
                             <label for="revision">Revisión</label>                
                             <select class="form-control" id="revision" name="revision" value="{{editpro.revision}}">          
                                 <option value="Pendiente" {{seleccionado2 "Pendiente"}}>Pendiente</option>

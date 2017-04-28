@@ -56,7 +56,7 @@ Template.Addint.events({
             
                 toastr["success"]("Documento añadido");
 
-            Meteor.call('sendAsDoc', asignados);
+            Meteor.call('sendMailInt', nombre, asignados);
 
             FlowRouter.go('/internos');
    

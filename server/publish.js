@@ -48,6 +48,10 @@ Meteor.publish('planes', function(){
     return Planes.find({});
 });
 
+Meteor.publish('indicadores', function(){
+    return Indicadores.find({});
+});
+
 Meteor.publish('aspectos', function(){
     return Aspectos.find({});
 });

@@ -5,16 +5,11 @@ Template.Addmatriz.events({
     'submit .add-matriz': function(){
         var proceso = event.target.proceso.value;
         var responsable = event.target.responsable.value;
-        var causacambio = event.target.causacambio.value;
         var riesgo = event.target.riesgo.value;
         var oportunidad = event.target.oportunidad.value;
-        var controlfrecuencia = event.target.controlfrecuencia.value;
-		var impacto = event.target.impacto.value;
-		var probabilidad = event.target.probabilidad.value;
-		var ponderacion = event.target.ponderacion.value;
-		var accion = event.target.accion.value;
+        var control = event.target.control.value;
 
-		Meteor.call('addMatriz', proceso, responsable, causacambio, riesgo, oportunidad, controlfrecuencia, impacto, probabilidad, ponderacion, accion);
+		Meteor.call('addMatriz', proceso, responsable, riesgo, oportunidad, control);
 
 		toastr.options = {
                 "closeButton": false,
@@ -34,11 +29,23 @@ Template.Addmatriz.events({
                 "hideMethod": "fadeOut"
                 };
             
-        toastr["success"]("Nuevo proceso añadido");
+        toastr["success"]("Nuevo riesgo/oportunidad añadido");
         FlowRouter.go('/matrices');
         
 
         return false;
     }
 
+});
+
+Template.Addmatriz.helpers({
+    users: function(){
+        return Meteor.users.find();
+    },
+    usersurname: function(){
+        return this.profile.usersurname;
+    },
+    userEmail: function() {
+        return this.emails[0].address;
+    },
 });

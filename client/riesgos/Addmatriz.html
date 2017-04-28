@@ -1,0 +1,31 @@
+<template name="Addmatriz">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Matriz de Riesgos y Oportunidades</h2> 
+                <a href="/inicio">Inicio ></a><a href="/riesgos"> Gestión del Riesgo ></a><a href="/matrices"> Matriz de Riesgos ></a><a href="/addmatriz"> Añadir nuevo Riesgo</a>
+            </div>
+            <form class="add-objeto add-matriz">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="proceso">Proceso</label>
+                <input type="text" class="form-control" name="proceso" id="proceso" placeholder="Proceso" required autofocus>
+                <label for="responsable">Responsable</label>
+                <select class="form-control" id="responsable" name="responsable">
+                {{#each users}}
+                    <option value="{{username}} {{usersurname}} {{userEmail}}">{{username}} {{usersurname}}</option>           
+                {{/each}}
+                </select>
+                <label for="riesgo">Riesgo</label>
+                <input type="text" class="form-control" name="riesgo" id="riesgo" placeholder="Riesgo">
+                <label for="oportunidad">Oportunidad</label>
+                <input type="text" class="form-control" name="oportunidad" id="oportunidad" placeholder="Oportunidad">
+                <label for="control">Control/Frecuencia</label>
+                <input type="text" class="form-control" name="control" id="control" placeholder="Control/Frecuencia">
+                
+
+                <button class="btn btn-primary" type="submit">Crear Riesgo</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

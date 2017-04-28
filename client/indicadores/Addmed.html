@@ -1,0 +1,20 @@
+<template name="Addmed">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Añadir Medición de Indicador {{addmed.indicador}}</h2> 
+            </div>
+            <form class="add-objeto add-med">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+
+                <label for="fecha">Fecha</label>
+                <input type="date" name="fecha" class="form-control">
+                <label for="medicion">Medición</label>
+                <input type="number" class="form-control" name="medicion" id="medicion" placeholder="Medición" >
+                
+                <button class="btn btn-primary" type="submit">Crear Medición</button>
+                <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

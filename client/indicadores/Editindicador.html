@@ -1,0 +1,54 @@
+<template name="Editindicador"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar Indicador {{editind.indicador}} </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-ind">
+                            <label for="indicador">Indicador</label>
+                            <input type="text" class="form-control" name="indicador" id="indicador" placeholder="Indicador" value="{{editind.indicador}}">
+                            <label for="riesgo">Riesgo</label>
+                            <input type="text" class="form-control" name="riesgo" id="riesgo" value="{{editind.riesgo}}" disabled>
+                            <label for="responsable">Responsable</label>
+                            <input type="text" class="form-control" name="responsable" id="responsable" value="{{editind.responsable}}" disabled>
+                             <label for="formula">Formula</label>
+                            <input type="text" class="form-control" name="formula" id="formula" placeholder="Fórmula" value="{{editind.formula}}">
+                             <label for="proceso">Proceso</label>
+                            <input type="text" class="form-control" name="proceso" id="proceso" placeholder="Proceso" value="{{editind.proceso}}">
+                             <label for="superior">Valor superior</label>
+                            <input type="number" class="form-control" name="superior" id="superior" placeholder="superior" value="{{editind.superior}}">
+                            <label for="inferior">Valor inferior</label>
+                            <input type="number" class="form-control" name="inferior" id="inferior" placeholder="inferior" value="{{editind.inferior}}">
+                             <label for="inicio">Periodo de Medición: Inicio</label>
+                            <input type="date" class="form-control" name="inicio" id="inicio" value="{{editind.inicio}}">
+                             <label for="fin">Periodo de Medición: Fin</label>
+                            <input type="date" class="form-control" name="fin" id="fin" value="{{editind.fin}}">
+
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Indicador?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteInd" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+    
+
+</template>

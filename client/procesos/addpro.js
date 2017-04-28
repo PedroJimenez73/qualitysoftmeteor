@@ -5,7 +5,7 @@ Template.Addpro.events({
     'submit .addPro': function(event){
         var nombre = event.target.nombre.value;
         var asignados = $('#asignados').val();
-        var tareas = $('#tareas').val();
+        var tareas = event.target.tareas.value;
         var revision = event.target.revision.value;
         var destino = event.target.destino.value;
         
@@ -58,9 +58,9 @@ Template.Addpro.events({
                 "hideMethod": "fadeOut"
                 };
             
-                toastr["success"]("Documento de Proceso añadido");
+                toastr["success"]("Documento de Proceso añadido, se ha enviado un mail a cada usuario con las tareas.");
 
-            //Meteor.call('sendAsDoc', asignados);
+            Meteor.call('sendMailPro', nombre, asignados, tareas);
 
             FlowRouter.go('/procesos');
    

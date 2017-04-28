@@ -1,0 +1,39 @@
+<template name="Viewindicador"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Indicador {{viewind.indicador}}</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/indicadores">Volver a Indicadores</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-ind">
+                            <label for="indicador">Indicador</label>
+                            <input type="text" class="form-control" name="indicador" id="indicador" value="{{viewind.indicador}}" disabled>
+                            <label for="riesgo">Riesgo</label>
+                            <input type="text" class="form-control" name="riesgo" id="riesgo" value="{{viewind.riesgo}}" disabled>
+                            <label for="responsable">Responsable/Mail</label>
+                            <input type="text" class="form-control" name="responsable" id="responsable" value="{{viewind.responsable}}" disabled>
+                            <label for="formula">Fórmula</label>
+                            <input type="text" class="form-control" name="formula" id="formula" value="{{viewind.formula}}" disabled>
+                            <label for="proceso">Proceso</label>
+                            <input type="text" class="form-control" name="proceso" id="proceso" value="{{viewind.proceso}}" disabled>
+                            <label for="superior">Valor superior</label>
+                            <input type="number" class="form-control" name="superior" id="superior" value="{{viewind.superior}}" disabled>
+                            <label for="inferior">Valor inferior</label>
+                            <input type="number" class="form-control" name="inferior" id="inferior" value="{{viewind.inferior}}" disabled>
+                            <label for="inicio">Periodo de Medición: Inicio</label>
+                            <input type="date" class="form-control" name="inicio" id="inicio" value="{{viewind.inicio}}" disabled>
+                            <label for="fin">Periodo de Medición: Fin</label>
+                            <input type="date" class="form-control" name="fin" id="fin" value="{{viewind.fin}}" disabled>
+                            <hr>
+                            <a class="btn btn-success" type="button" href="/viewmed/{{viewind._id._str}}">Acceder a Mediciones del Indicador</a>   
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+            
+
+</template>

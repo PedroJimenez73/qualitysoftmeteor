@@ -1,0 +1,39 @@
+<template name="Indicadores"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Generación de Indicadores</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addind">Añadir Indicador</a> 
+                    <a href="/inicio">Inicio ></a> Generación de Indicadores
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Indicador</th>
+                                    <th>Riesgo Asociado</th>
+                                    <th>Responsable</th>
+                                    <th>Visualizar</th> 
+                                    <th>Mediciones</th>                   
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each indicadores}}
+                                    <tr>
+                                        <td>{{indicador}}</td>
+                                        <td>{{riesgo}}</td>
+                                        <td>{{responsable}}</td>
+                                        <td><a class="btn btn-primary" type="button" href="/viewind/{{_id._str}}">Visualizar</a> </td>
+                                        <td><a class="btn btn-success" type="button" href="/addmed/{{_id._str}}">Añadir Medición</a> </td>
+                                        <td><a class="btn btn-warning" type="button" href="/editind/{{_id._str}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

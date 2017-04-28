@@ -1,0 +1,39 @@
+<template name="Addindicador">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Indicador</h2> 
+                <a href="/inicio">Inicio ></a> <a href="/indicadores"> Generación de Indicadores > </a> Añadir nuevo Indicador
+            </div>
+            <form class="add-objeto add-ind">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="indicador">Indicador</label>
+                <input type="text" class="form-control" name="indicador" id="indicador" placeholder="Indicador" required autofocus>
+                <label for="riesgo">Riesgo</label>
+                <input type="text" class="form-control" name="riesgo" id="riesgo" placeholder="Indicador manual sin Riesgo asociado" value="{{matriz.riesgo}}">
+                <label for="responsable">Responsable</label>
+                <select class="form-control" id="responsable" name="responsable">
+                {{#each users}}
+                    <option value="{{username}} {{usersurname}} {{userEmail}}">{{username}} {{usersurname}}</option>           
+                {{/each}}
+                </select>
+                <label for="formula">Fórmula</label>
+                <input type="text" class="form-control" name="formula" id="formula" placeholder="Fórmula">
+                <label for="proceso">Proceso</label>
+                <input type="text" class="form-control" name="proceso" id="proceso" placeholder="Proceso">               
+                <label for="superior">Valor superior</label>
+                <input type="number" class="form-control" name="superior" id="superior" placeholder="Valor superior">
+                <label for="inferior">Valor inferior</label>
+                <input type="number" class="form-control" name="inferior" id="inferior" placeholder="Valor inferior">
+                <label for="inicio">Periodo de Medición: Inicio</label>
+                <input type="date" class="form-control" name="inicio" id="inicio">
+                <label for="fin">Periodo de Medición: Fin</label>
+                <input type="date" class="form-control" name="fin" id="fin">
+
+                <button class="btn btn-primary" type="submit">Crear Indicador</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</template>

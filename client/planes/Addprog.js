@@ -18,8 +18,8 @@ Template.Addprog.events({
         var lugar = event.target.lugar.value;
 		
 		Meteor.call('addProg', _id, array_asist, fecha, hora, lugar);
-        Meteor.call('sendMail', array_asist);
-        console.log(array_asist);
+        Meteor.call('sendMailReu', array_asist, fecha, hora, lugar);
+        
 
 		toastr.options = {
                 "closeButton": false,
