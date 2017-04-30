@@ -26,23 +26,34 @@ Template.Viewmed.helpers({
     var superior = indicador.superior;
     var inferior = indicador.inferior;
     return medicion < inferior;
+    },
+    indicadores: function(){
+        return Indicadores.find();
     }
 });
 
+Meteor.subscribe('indicadores');
+
 Template.Viewmed.onRendered(function () {
 
-        $(document).ready(function() {
-            var fecha = $('input.fecha').val();
-            console.log(fecha);
-        });
-
-    
+    Tracker.autorun(function(){
         var currentInd = FlowRouter.getParam('_id');
+        var indicador = Indicadores.find({_id: new Meteor.Collection.ObjectID(currentInd)}).fetch().map(function(Indicadores) {
+               return Indicadores.mediciones;
+        });
+        medicion = indicador[0];
+        var fechas = _.reduce(medicion, function(memo, medicion) {
+            return memo.concat(medicion.fecha);
+        }, []);
+         var mediciones = _.reduce(medicion, function(memo, medicion) {
+            return memo.concat(medicion.medicion);
+        }, []);
 
-           
+        console.log(fechas);   
+        console.log(mediciones);
 
             chartData = {
-                        labels: ["1", "2", "3", "4", "5", "6"],
+                        labels: fechas,
                         datasets: [
                             {
                                 label: "My First dataset",
@@ -52,7 +63,7 @@ Template.Viewmed.onRendered(function () {
                                 pointStrokeColor: "#fff",
                                 pointHighlightFill: "#fff",
                                 pointHighlightStroke: "rgba(220,220,220,1)",
-                                data: [12, 22, 10, 31, 13, 19]
+                                data: mediciones
                             }
                         ]
                     };
@@ -61,7 +72,7 @@ Template.Viewmed.onRendered(function () {
                 });
 
 
-
+    });
 
 });
 
