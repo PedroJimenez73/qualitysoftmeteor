@@ -1,0 +1,55 @@
+<template name="Editnoconf"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar No Conformidad nº {{editnoconf.numero}} </h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-noconf">
+                            <label for="numero">Número</label>
+                            <input type="number" class="form-control" name="numero" id="numero" placeholder="Número" value="{{editnoconf.numero}}">
+                            <label for="fecha">fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{editnoconf.fecha}}" disabled>
+                            <label for="tipo">Tipo</label>                
+                            <select class="form-control" id="tipo" name="tipo" value="{{editpro.tipo}}">          
+                                <option value="Real" {{seleccionado "Real"}}>Real</option>
+                                <option value="Potencial" {{seleccionado "Potencial"}}>Potencial</option>           
+                            </select>
+                            <label for="departamento">Departamento Origen</label>
+                            <input type="text" class="form-control" name="departamento" id="departamento" placeholder="Departamento Origen" value="{{editnoconf.departamento}}">
+                            <label for="descripcion">Descripción</label>
+                            <textarea rows="6" class="form-control" name="descripcion" id="descripcion" placeholder="Descripción" value="{{editnoconf.descripcion}}"></textarea>
+                            <label for="causa">Posible causa</label>
+                            <textarea rows="6" class="form-control" name="causa" id="causa" placeholder="Posible causa" value="{{editnoconf.causa}}"></textarea>
+                            <label for="seguimiento">Seguimiento</label>                
+                            <select class="form-control" id="seguimiento" name="seguimiento" value="{{editpro.seguimiento}}">          
+                                <option value="Pendiente" {{seleccionado2 "Pendiente"}}>Pendiente</option>
+                                <option value="Cerrada" {{seleccionado2 "Cerrada"}}>Cerrada</option>           
+                            </select>
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar la No Conformidad?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteNoconf" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+    
+
+</template>

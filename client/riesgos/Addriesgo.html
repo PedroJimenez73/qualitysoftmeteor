@@ -1,11 +1,11 @@
-<template name="Addmatriz">
+<template name="Addriesgo">
     <div id="page-content-wrapper">
         <div class="container">
             <div class="row encabezado">
-                <h2>Matriz de Riesgos y Oportunidades</h2> 
-                <a href="/inicio">Inicio ></a><a href="/riesgos"> Gestión del Riesgo ></a><a href="/matrices"> Matriz de Riesgos ></a><a href="/addmatriz"> Añadir nuevo Riesgo</a>
+                <h2>Nuevo Riesgo</h2> 
+                <a href="/inicio">Inicio ></a> <a href="/riesgos"> Generación de Riesgos y Oportunidades > </a> Añadir nuevo Riesgo/Oportunidad
             </div>
-            <form class="add-objeto add-matriz">
+            <form class="add-objeto add-riesgo">
                 <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
                 <label for="proceso">Proceso</label>
                 <input type="text" class="form-control" name="proceso" id="proceso" placeholder="Proceso" required autofocus>
@@ -18,13 +18,13 @@
                 <label for="riesgo">Riesgo</label>
                 <input type="text" class="form-control" name="riesgo" id="riesgo" placeholder="Riesgo">
                 <label for="oportunidad">Oportunidad</label>
-                <input type="text" class="form-control" name="oportunidad" id="oportunidad" placeholder="Oportunidad">
+                <input type="text" class="form-control" name="oportunidad" id="oportunidad" placeholder="Oportunidad">               
                 <label for="control">Control/Frecuencia</label>
-                <input type="text" class="form-control" name="control" id="control" placeholder="Control/Frecuencia">
-                
+                <input type="text" class="form-control" name="control" id="control" placeholder="Control/Frecuencia">               
 
-                <button class="btn btn-primary" type="submit">Crear Riesgo</button>
+                <button class="btn btn-primary" type="submit">Crear Riesgo/Oportunidad</button>
                 <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
             </form>
         </div>
     </div>

@@ -1,0 +1,35 @@
+<template name="Viewnoconf"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>No Conformidad nº {{viewnoconf.numero}}</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/noconfs">Volver a No Conformidades</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-noconf">
+                            <label for="numero">Número</label>
+                            <input type="number" class="form-control" name="numero" id="numero" value="{{viewnoconf.numero}}" disabled>
+                            <label for="fecha">Fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{viewnoconf.fecha}}" disabled>
+                            <label for="tipo">Tipo</label>
+                            <input type="text" class="form-control" name="tipo" id="tipo" value="{{viewnoconf.tipo}}" disabled>
+                            <label for="departamento">Departamento Origen</label>
+                            <input type="text" class="form-control" name="departamento" id="departamento" value="{{viewnoconf.departamento}}" disabled>
+                            <label for="descripcion">Descripción</label>
+                            <input type="text" class="form-control" name="descripcion" id="descripcion" value="{{viewnoconf.descripcion}}" disabled>
+                            <label for="causa">Posible causa</label>
+                            <input type="text" class="form-control" name="causa" id="causa" value="{{viewnoconf.causa}}" disabled>
+                            <label for="responsables">Responsables/Mail</label>
+                            <input type="text" class="form-control" name="responsables" id="responsables" value="{{viewnoconf.responsables}}" disabled>
+                            <label for="seguimiento">Seguimiento</label>
+                            <input type="text" class="form-control" name="seguimiento" id="seguimiento" value="{{viewnoconf.seguimiento}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+            
+
+</template>

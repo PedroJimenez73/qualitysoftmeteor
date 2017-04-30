@@ -1,0 +1,42 @@
+<template name="Addnoconf">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nueva No Conformidad</h2> 
+                <a href="/inicio">Inicio ></a> <a href="/noconfs"> Generación de No Conformidades > </a> Añadir nueva No Conformidad
+            </div>
+            <form class="add-objeto add-noconf">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="numero">Número</label>
+                <input type="number" class="form-control" name="numero" id="numero" placeholder="Número" required autofocus>
+                <label for="fecha">fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha">
+                <label for="tipo">Tipo</label>
+                <select class="form-control" id="tipo" name="tipo">
+                    <option value="Real">Real</option>
+                    <option value="Potencial">Potencial</option>                      
+                </select>
+                <label for="departamento">Departamento Origen</label>
+                <input type="text" class="form-control" name="departamento" id="departamento" placeholder="Departamento Origen">
+                <label for="descripcion">Descripcion</label>
+                <textarea rows="6" type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>               
+                <label for="causa">Posible causa</label>
+                <textarea rows="4" type="text" class="form-control" name="causa" id="causa" placeholder="Posible causa"></textarea>               
+                <label for="responsables">Responsables (pulse control o mayúsculas para seleccionar varios)</label>
+                    <select multiple class="form-control" id="responsables" name="responsables">
+                    {{#each users}}
+                        <option value="{{username}} {{userEmail}}">{{username}} {{usersurname}}</option>           
+                    {{/each}}       
+                    </select>
+                <label for="seguimiento">Seguimiento</label>
+                <select class="form-control" id="seguimiento" name="seguimiento">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Cerrada">Cerrada</option>                      
+                </select>
+                <button class="btn btn-primary" type="submit">Crear No Conformidad</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</template>

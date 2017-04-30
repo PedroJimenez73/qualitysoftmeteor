@@ -187,6 +187,10 @@ select {
       height: 160px !important;
   }
 
+  select#responsables{
+      height: 160px !important;
+  }
+
   select#tareas{
       height: 100px !important;
   }

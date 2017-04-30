@@ -1,15 +1,15 @@
-Template.Addmatriz.events({
+Template.Addriesgo.events({
 	'click .cancelaradd': function() {
-    	FlowRouter.go('/matrices');
+    	FlowRouter.go('/riesgos');
 	},
-    'submit .add-matriz': function(){
+    'submit .add-riesgo': function(){
         var proceso = event.target.proceso.value;
         var responsable = event.target.responsable.value;
         var riesgo = event.target.riesgo.value;
         var oportunidad = event.target.oportunidad.value;
-        var control = event.target.control.value;
+		var control = event.target.control.value;
 
-		Meteor.call('addMatriz', proceso, responsable, riesgo, oportunidad, control);
+		Meteor.call('addRiesgo', proceso, responsable, riesgo, oportunidad, control);
 
 		toastr.options = {
                 "closeButton": false,
@@ -29,8 +29,8 @@ Template.Addmatriz.events({
                 "hideMethod": "fadeOut"
                 };
             
-        toastr["success"]("Nuevo riesgo/oportunidad añadido");
-        FlowRouter.go('/matrices');
+        toastr["success"]("Nuevo Riesgo/Oportunidad añadida");
+        FlowRouter.go('/riesgos');
         
 
         return false;
@@ -38,7 +38,7 @@ Template.Addmatriz.events({
 
 });
 
-Template.Addmatriz.helpers({
+Template.Addriesgo.helpers({
     users: function(){
         return Meteor.users.find();
     },
@@ -47,5 +47,5 @@ Template.Addmatriz.helpers({
     },
     userEmail: function() {
         return this.emails[0].address;
-    },
+    }
 });

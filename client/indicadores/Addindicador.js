@@ -55,6 +55,6 @@ Template.Addindicador.helpers({
     matriz: function(){
         var currentRiesgo = FlowRouter.getParam('_id');
         //return Cursos.findOne({_id: currentCurso});
-        return Matrices.findOne({_id: new Meteor.Collection.ObjectID(currentRiesgo)});
+        return Riesgos.findOne({_id: new Meteor.Collection.ObjectID(currentRiesgo)});
     }
 });

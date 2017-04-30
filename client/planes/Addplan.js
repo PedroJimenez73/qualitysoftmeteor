@@ -40,16 +40,14 @@ Template.Addplan.events({
 });
 
 
-Template.Addplan.onCreated(function(){
-    //if(Roles.userIsInRole(this.userId, 'admin'))
-    this.autorun(() => {
-        this.subscribe('allUsers');
-    });
-});
-
-
 Template.Addplan.helpers({
     users: function(){
         return Meteor.users.find();
+    },
+    usersurname: function(){
+        return this.profile.usersurname;
+    },
+    userEmail: function() {
+        return this.emails[0].address;
     }
 });

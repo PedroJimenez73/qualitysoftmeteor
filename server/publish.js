@@ -1,5 +1,5 @@
-Meteor.publish('matrices', function(){
-	return Matrices.find({});
+Meteor.publish('riesgos', function(){
+	return Riesgos.find({});
   });
 
 Meteor.publish('allUsers', function(){
@@ -122,4 +122,10 @@ Procesos.allow({
     return true;
   }
 });
+
+Meteor.publish('noconfs', function(){
+    return Noconfs.find({});
+});
+
+
 

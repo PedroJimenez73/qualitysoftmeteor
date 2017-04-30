@@ -49,3 +49,6 @@ service-configuration
 
 meteorhacks:ssr
 
+chart:chart
+
+

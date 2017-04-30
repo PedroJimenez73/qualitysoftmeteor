@@ -1,0 +1,52 @@
+<template name="Editriesgo"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar Riesgo</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-riesgo">
+                            <label for="Proceso">proceso</label>
+                            <input type="text" class="form-control" name="proceso" id="proceso" placeholder="Proceso" value="{{editriesgo.proceso}}">
+                             <label for="responsable">Responsable</label>
+                            <select class="form-control" id="responsable" name="responsable" value="{{editriesgo.responsable}}">
+                            {{#each users}}
+                                <option class="boxCheck" value="{{username}}">{{username}}</option>           
+                            {{/each}}
+                            </select>
+                             <label for="riesgo">Riesgo</label>
+                            <input type="text" class="form-control" name="riesgo" id="riesgo" placeholder="riesgo" value="{{editriesgo.riesgo}}">
+                            <label for="oportunidad">Oportunidad</label>
+                            <input type="text" class="form-control" name="oportunidad" id="oportunidad" placeholder="Oportunidad" value="{{editriesgo.oportunidad}}">
+                            <label for="control">Control/Frecuencia</label>
+                            <input type="text" class="form-control" name="control" id="control" placeholder="Control/Frecuencia" value="{{editriesgo.control}}">
+                             
+
+                            
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Riesgo?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteRiesgo" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+    
+
+</template>

@@ -2,7 +2,6 @@ Template.Viewmed.helpers({
     viewind: function(){
         var currentInd = FlowRouter.getParam('_id');
         return Indicadores.findOne({_id: new Meteor.Collection.ObjectID(currentInd)});
-
     },
     isCorrecto: function () {
     var currentInd = FlowRouter.getParam('_id');
@@ -27,7 +26,43 @@ Template.Viewmed.helpers({
     var superior = indicador.superior;
     var inferior = indicador.inferior;
     return medicion < inferior;
-    },
+    }
+});
+
+Template.Viewmed.onRendered(function () {
+
+        $(document).ready(function() {
+            var fecha = $('input.fecha').val();
+            console.log(fecha);
+        });
+
+    
+        var currentInd = FlowRouter.getParam('_id');
+
+           
+
+            chartData = {
+                        labels: ["1", "2", "3", "4", "5", "6"],
+                        datasets: [
+                            {
+                                label: "My First dataset",
+                                fillColor: "rgba(220,220,220,0.2)",
+                                strokeColor: "blue",
+                                pointColor: "rgba(220,220,220,1)",
+                                pointStrokeColor: "#fff",
+                                pointHighlightFill: "#fff",
+                                pointHighlightStroke: "rgba(220,220,220,1)",
+                                data: [12, 22, 10, 31, 13, 19]
+                            }
+                        ]
+                    };
+                myChart = new Chart(document.getElementById("canvas").getContext("2d")).Line(chartData, {
+                responsive: true
+                });
+
+
+
+
 });
 
 Template.Viewmed.events({
@@ -65,3 +100,4 @@ Template.Viewmed.events({
 	},
 
 });
+

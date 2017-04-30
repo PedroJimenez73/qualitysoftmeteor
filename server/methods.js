@@ -1,8 +1,8 @@
 Meteor.methods({
 
-    addMatriz: function(proceso, responsable, riesgo, oportunidad, control){
+    addRiesgo: function(proceso, responsable, riesgo, oportunidad, control){
 
-        Matrices.insert({
+        Riesgos.insert({
 			proceso : proceso,
         	responsable : responsable,
 			riesgo : riesgo,
@@ -11,6 +11,24 @@ Meteor.methods({
             
         });
 
+    },
+    editRiesgo: function(_id, proceso, responsable, riesgo, oportunidad, control){
+
+        Riesgos.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                proceso : proceso,
+                responsable : responsable,
+                riesgo : riesgo,
+                oportunidad : oportunidad,
+                control : control
+            }
+        });
+
+    },
+	removeRiesgo: function(_id){
+        Riesgos.remove({_id: new Meteor.Collection.ObjectID(_id)});
     },
 	addProveedor: function(nombre, servicio, cif, direccion, telefono, persona, mail, pago, nc, eval, fechamodif){
 
@@ -442,9 +460,62 @@ Meteor.methods({
         html: SSR.render('htmlEmail', emailData),
       });
   },
+      sendMailNC: function (fecha, tipo, departamento, descripcion, responsables) {
+      SSR.compileTemplate('htmlEmail', Assets.getText('mailNC.html'));
+
+      var emailData = {
+          fecha: fecha,
+          tipo: tipo,
+          departamento: departamento,
+          descripcion: descripcion
+      };
+
+      Email.send({
+        from: "calidad@qualitycw.com",
+        to: responsables,
+        subject: "Quality Soft: Alerta de No Conformidad",
+        html: SSR.render('htmlEmail', emailData),
+      });
+  },
 
     removeVers: function(versiones){
       Procesos.update({versiones: versiones}, {$pull : {versiones : versiones}});
+    },
+    addNoconf: function(numero, fecha, tipo, departamento, descripcion, causa, responsables, seguimiento){
+
+        Noconfs.insert({
+			numero : numero,
+        	fecha : fecha,
+			tipo : tipo,
+			departamento : departamento,
+			descripcion : descripcion,
+			causa : causa,
+            responsables: responsables,
+            seguimiento: seguimiento
+            
+        });
+
+    },
+    editNoconf: function(_id, numero, fecha, tipo, departamento, descripcion, causa, seguimiento){
+
+        Noconfs.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                numero : numero,
+				fecha : fecha,
+				tipo : tipo,
+				departamento : departamento,
+				descripcion : descripcion,
+				causa : causa,
+				seguimiento: seguimiento
+
+            }
+        });
+
+    },
+	removeNoconf: function(_id){
+        Noconfs.remove({_id: new Meteor.Collection.ObjectID(_id)});
     },
 
 });

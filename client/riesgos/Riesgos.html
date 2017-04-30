@@ -1,10 +1,10 @@
-<template name="Matrices"> 
+<template name="Riesgos"> 
     <div id="page-content-wrapper">
             <div class="container">
                 <div class="row encabezado">
-                    <h2>Matriz de Riesgos y Oportunidades</h2> 
-                    <a class="pull-right btn btn-success" type="button" href="/addmatriz">Añadir Riesgo</a> 
-                    <a href="/inicio">Inicio ></a><a href="/riesgos"> Gestión del Riesgo ></a><a href="/matrices"> Matriz de Riesgos</a>
+                    <h2>Generación de Riesgos y Oportunidades</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addriesgo">Añadir Riesgo</a> 
+                    <a href="/inicio">Inicio ></a> Generación de Riesgos
                 </div>
                 <div class="row">
                     <div class="col-md-12">
@@ -16,33 +16,27 @@
                                     <th>Riesgo</th>
                                     <th>Oportunidad</th>
                                     <th>Control/Frecuencia</th>
-                                    <th>Indicador</th>
+                                    <th>Crear Indicador</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each matrices}}
+                                {{#each riesgos}}
                                     <tr>
                                         <td>{{proceso}}</td>
                                         <td>{{responsable}}</td>
                                         <td>{{riesgo}}</td>
                                         <td>{{oportunidad}}</td> 
                                         <td>{{control}}</td>            
-                                        <td><a class="btn btn-success" type="button" href="/addind/{{_id._str}}">Añadir Indicador</a> </td>
+                                        <td><a class="btn btn-success" type="button" href="/addind/{{_id._str}}">Crear Indicador Asociado</a> </td>
+                                        <td><a class="btn btn-warning" type="button" href="/editriesgo/{{_id._str}}">Editar</a> </td>
                                     </tr>
                                 {{/each}}
                             </tbody>
                         </table>
                     </div>
                 </div>
-                <div class="row bloque1">	
-                        <div class="col-md-4 divi4">
-                            <p>
-                                RESPONSABLE/FECHA DE REVISIÓN
-                                Gerencia:
-                            </p>
-                        </div>
-                        <div class="col-md-8 divi4"><p></p></div>
-                </div>
+
             </div>
     </div>
 </template>
