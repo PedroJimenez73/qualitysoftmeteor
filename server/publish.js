@@ -1,25 +1,38 @@
 Meteor.publish('riesgos', function(){
+  if(this.userId){
 	return Riesgos.find({});
+    }
   });
 
 Meteor.publish('allUsers', function(){
+  if(this.userId){
     return Meteor.users.find();
+  }
 });
 
 Meteor.publish('proves', function(){
+    if(this.userId){
     return Proves.find({});
+    }
 });
 
 Meteor.publish('clientes', function(){
+  if(this.userId){
     return Clientes.find({});
+  }
 });
 
-Meteor.publish('ProductsImages', function(){
+
+Meteor.publish('ProductsImages', function(){  
+    if(this.userId){
     return ProductsImages.find({});
+    }
 });
 
 Meteor.publish('products', function(){
-    return Products.find({});
+    if(this.userId){
+        return Products.find({});
+    }
 });
 
 ProductsImages.allow({
@@ -37,31 +50,45 @@ Products.allow({
 });
 
 Meteor.publish('vehiculos', function(){
-    return Vehiculos.find({});
+      if(this.userId){
+        return Vehiculos.find({});
+      }
 });
 
 Meteor.publish('cursos', function(){
-    return Cursos.find({});
+      if(this.userId){
+        return Cursos.find({});
+      }
 });
 
 Meteor.publish('planes', function(){
-    return Planes.find({});
+    if(this.userId){
+        return Planes.find({});
+    }
 });
 
 Meteor.publish('indicadores', function(){
-    return Indicadores.find({});
+    if(this.userId){
+        return Indicadores.find({});
+    }
 });
 
 Meteor.publish('aspectos', function(){
-    return Aspectos.find({});
+    if(this.userId){
+        return Aspectos.find({});
+    }
 });
 
 Meteor.publish('DocsPdfs', function(){
-    return DocsPdfs.find({});
+    if(this.userId){
+        return DocsPdfs.find({});
+    }
 });
 
 Meteor.publish('docs', function(){
-    return Docs.find({});
+    if(this.userId){
+        return Docs.find({});
+    }
 });
 
 DocsPdfs.allow({
@@ -80,11 +107,15 @@ Docs.allow({
 
 
 Meteor.publish('InternosPdfs', function(){
-    return InternosPdfs.find({});
+    if(this.userId){
+        return InternosPdfs.find({});
+    }
 });
 
 Meteor.publish('internos', function(){
-    return Internos.find({});
+    if(this.userId){
+        return Internos.find({});
+    }
 });
 
 InternosPdfs.allow({
@@ -102,11 +133,15 @@ Internos.allow({
 });
 
 Meteor.publish('ProcesosWords', function(){
-    return ProcesosWords.find({});
+    if(this.userId){
+        return ProcesosWords.find({});
+    }
 });
 
 Meteor.publish('procesos', function(){
-    return Procesos.find({});
+    if(this.userId){
+        return Procesos.find({});
+    }
 });
 
 ProcesosWords.allow({
@@ -124,19 +159,26 @@ Procesos.allow({
 });
 
 Meteor.publish('noconfs', function(){
-    return Noconfs.find({});
+    if(this.userId){
+        return Noconfs.find({});
+    }
 });
 
 Meteor.publish('acciones', function(){
-    return Acciones.find({});
+    if(this.userId){
+        return Acciones.find({});
+    }
 });
 
 Meteor.publish('encuestas', function(){
-    return Encuestas.find({});
+        return Encuestas.find({});
+    
 });
 
 Meteor.publish('reclamas', function(){
-    return Reclamas.find({});
+    if(this.userId){
+        return Reclamas.find({});
+    }
 });
 
 

@@ -48,7 +48,11 @@
                             </tbody>
                         </table>
                     {{else}}
-                        <h3>Acceso no autorizado, por favor consulte a su administrador</h3>
+                    <div class="row encabezado" style="text-align: center;">
+                        <p style="font-size: 50px"><i class="fa fa-lock"></i></p>
+                        <h4>Lo sentimos, no tiene autorización para acceder a esta información.</h4>
+                        <a class="btn btn-primary" href="/inicio" type="button"> Volver a inicio</a>
+                    </div>
                     {{/if}}
                     </div>
                 </div>
