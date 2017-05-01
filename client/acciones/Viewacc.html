@@ -1,0 +1,33 @@
+<template name="Viewacc"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Detalles Acción</h2>
+                    <a class="pull-right btn btn-primary" type="button" href="/acciones">Volver a Acciones</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto view-acc">
+                            <label for="accion">Acción</label>
+                            <input type="text" class="form-control" name="accion" id="accion" value="{{viewacc.accion}}" disabled>
+                            <label for="ncasoc">No Conformidad Asociada</label>
+                            <input type="text" class="form-control" name="ncasoc" id="ncasoc" value="{{viewacc.ncasoc}}" disabled>
+                            <label for="tipo">Tipo</label>
+                            <input type="text" class="form-control" name="tipo" id="tipo" value="{{viewacc.tipo}}" disabled>
+                            <label for="responsable">Responsable</label>
+                            <input type="text" class="form-control" name="responsable" id="responsable" value="{{viewacc.responsable}}" disabled>
+                            <label for="fecha">Fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" value="{{viewacc.fecha}}" disabled>
+                            <label for="tareas">Tareas</label>
+                            <textarea rows="6" class="form-control" name="tareas" id="tareas" value="{{viewacc.tareas}}" disabled></textarea>
+                            <label for="seguimiento">Seguimiento</label>
+                            <input type="text" class="form-control" name="seguimiento" id="seguimiento" value="{{viewacc.seguimiento}}" disabled>
+                        </form>
+                        
+                    </div>
+                </div>
+            </div>
+    </div>
+            
+
+</template>

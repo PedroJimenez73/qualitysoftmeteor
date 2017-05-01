@@ -1,0 +1,42 @@
+<template name="Acciones"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Generación de Acciones</h2> 
+                    <a class="pull-right btn btn-primary" type="button" href="/ranking">Ranking de Acciones de Mejora</a>
+                    <a class="pull-right btn btn-success" type="button" href="/addacc">Añadir Acción</a> 
+                    <a href="/inicio">Inicio ></a> Generación de Acciones
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Acción</th>
+                                    <th>No Conformidad Asociada</th>
+                                    <th>Tipo</th>
+                                    <th>Responsable</th>
+                                    <th>Seguimiento</th>
+                                    <th>Visualizar</th> 
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each acciones}}
+                                    <tr>
+                                        <td>{{accion}}</td>
+                                        <td>{{ncasoc}}</td>
+                                        <td>{{tipo}}</td>
+                                        <td>{{responsable}}</td>
+                                        <td>{{seguimiento}}</td>
+                                        <td><a class="btn btn-primary" type="button" href="/viewacc/{{_id._str}}">Visualizar</a> </td>
+                                        <td><a class="btn btn-warning" type="button" href="/editacc/{{_id._str}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

@@ -1,9 +1,12 @@
-<template name="AppLayout">
+<template name="EncLayout">
     <div id="wrapper">
         <div class="overlay"></div>
-        {{> header}}
-        {{> nav}}
+
             <main class="app-layout">
+                <div class="row pie">
+                    <img class="logoheader" src="/Logotipo.png" alt="logotipo">
+                    <hr>
+                </div>
                 {{> Template.dynamic template=main}}
                 <div class="row pie">
                     <hr>

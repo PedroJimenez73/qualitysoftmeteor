@@ -1,0 +1,34 @@
+<template name="Addrec">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nueva Reclamación</h2> 
+                <a href="/inicio">Inicio ></a> <a href="/reclamaciones"> Registro de Reclamaciones > </a> Generar nueva Reclamación
+            </div>
+            <form class="add-objeto add-rec">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha">
+                <label for="cliente">Cliente</label>
+                <select class="form-control" id="cliente" name="cliente">
+                {{#each clientes}}
+                    <option value="{{nombre}}">{{nombre}}</option>           
+                {{/each}}
+                </select>
+                <label for="departamento">Departamento Origen</label>
+                <input type="text" class="form-control" name="departamento" id="departamento" placeholder="Departamento Origen">
+                <label for="descripcion">Descripcion</label>
+                <textarea rows="6" type="text" class="form-control" name="descripcion" id="descripcion" placeholder="Descripcion"></textarea>               
+                <label for="seguimiento">Seguimiento</label>
+                <select class="form-control" id="seguimiento" name="seguimiento">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Cerrada">Cerrada</option>                      
+                </select>
+
+                <button class="btn btn-primary" type="submit">Registrar Reclamación</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</template>

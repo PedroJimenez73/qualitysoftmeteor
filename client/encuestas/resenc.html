@@ -1,0 +1,82 @@
+<template name="Resenc"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h3>Encuenta de Satisfacción al Cliente</h3>
+                    <br>
+                    <h4>Por favor valore las siguientes cuestiones, a partir de cuyos resultados podremos mejorar en nuestro servicio.</h4>
+
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto res-enc">
+                            <label for="cliente">Cliente/Mail</label>
+                            <input type="text" class="form-control" name="cliente" id="cliente" value="{{resenc.cliente}}" disabled>
+                            <label for="preguno">Calidad técnica de nuestro servicio</label>
+                            <select class="form-control" id="preguno" name="preguno">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+                            <label for="pregdos">Cumplimiento de fechas de entrega</label>
+                            <select class="form-control" id="pregdos" name="pregdos">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+                            <label for="pregtres">Cualificación  del personal técnico</label>
+                            <select class="form-control" id="pregtres" name="pregtres">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+                            <label for="pregcuatro">Capacidad de respuestas ante incidencias o imprevistos</label>
+                            <select class="form-control" id="pregcuatro" name="pregcuatro">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+                            <label for="pregcinco">Atención personalizada del equipo</label>
+                            <select class="form-control" id="pregcinco" name="pregcinco">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+                            <label for="pregseis">Precios de los servicios</label>
+                            <select class="form-control" id="pregseis" name="pregseis">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+                            <label for="pregsiete">Tiempo de respuesta ante ofertas</label>
+                            <select class="form-control" id="pregsiete" name="pregsiete">
+                                <option value="Muy satisfecho">Muy satisfecho</option>
+                                <option value="Satisfecho">Satisfecho</option>
+                                <option value="Indiferente">Indiferente</option>
+                                <option value="Insatisfecho">Insatisfecho</option>
+                                <option value="Muy insatisfecho">Muy insatisfecho</option>
+                            </select>
+
+                            <button class="btn btn-primary" type="submit">Guardar Encuesta</button>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+           
+    </div>
+    
+
+</template>

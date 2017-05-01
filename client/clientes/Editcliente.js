@@ -15,9 +15,8 @@ Template.Editcliente.events({
         var telefono = event.target.telefono.value;
         var persona = event.target.persona.value;
         var mail = event.target.mail.value;
-		var fechamodif = event.target.fechamodif.value;
 
-		Meteor.call('editCliente', _id, nombre, cif, direccion, telefono, persona, mail, fechamodif);
+		Meteor.call('editCliente', _id, nombre, cif, direccion, telefono, persona, mail);
 
 
         toastr.options = {

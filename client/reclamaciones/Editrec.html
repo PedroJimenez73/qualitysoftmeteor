@@ -1,0 +1,49 @@
+<template name="Editrec"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Editar Reclamación</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-rec">
+                            <label for="fecha">Fecha</label>
+                            <input type="date" class="form-control" name="fecha" id="fecha" placeholder="Fecha" value="{{editrec.fecha}}">
+                            <label for="cliente">Cliente</label>
+                            <input type="text" class="form-control" name="cliente" id="cliente" value="{{editrec.cliente}}" disabled>
+                             <label for="departamento">Departamento Origen</label>
+                            <input type="text" class="form-control" name="departamento" id="departamento" placeholder="Departamento Origen" value="{{editrec.departamento}}">
+                             <label for="descripcion">Descripción</label>
+                            <textarea rows="6" class="form-control" name="descripcion" id="descripcion" placeholder="descripcion" value="{{editrec.descripcion}}"></textarea>
+                            <label for="seguimiento">Seguimiento</label>                
+                            <select class="form-control" id="seguimiento" name="seguimiento" value="{{editrec.seguimiento}}">          
+                                <option value="Pendiente" {{seleccionado2 "Pendiente"}}>Pendiente</option>
+                                <option value="Cerrada" {{seleccionado2 "Cerrada"}}>Cerrada</option>           
+                            </select>
+
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                        </form>
+                            
+                    </div>
+                </div>
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar la Reclamación?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteRec" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+    
+
+</template>

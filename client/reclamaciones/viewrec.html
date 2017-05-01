@@ -1,0 +1,23 @@
+<template name="Viewrec">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Detalles de Reclamación</h2>
+                <a class="pull-right btn btn-primary" type="button" href="/reclamaciones">Volver a Reclamaciones</a>  
+
+            </div>
+            <form class="add-objeto view-rec">
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha" value="{{viewrec.fecha}}" disabled>
+                <label for="cliente">cliente</label>
+                <input type="text" class="form-control" name="cliente" id="cliente" value="{{viewrec.cliente}}" disabled>
+                <label for="departamento">Departamento Origen</label>
+                <input type="text" class="form-control" name="departamento" id="departamento" value="{{viewrec.departamento}}" disabled>
+                <label for="descripcion">Descripción</label>
+                <textarea rows="6" class="form-control" name="descripcion" id="descripcion" value="{{viewrec.descripcion}}" disabled></textarea>
+                <label for="seguimiento">Seguimiento</label>
+                <input type="text" class="form-control" name="seguimiento" id="seguimiento" value="{{viewrec.seguimiento}}" disabled>
+            </form>
+        </div>
+    </div>
+</template>

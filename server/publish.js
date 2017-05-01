@@ -127,5 +127,17 @@ Meteor.publish('noconfs', function(){
     return Noconfs.find({});
 });
 
+Meteor.publish('acciones', function(){
+    return Acciones.find({});
+});
+
+Meteor.publish('encuestas', function(){
+    return Encuestas.find({});
+});
+
+Meteor.publish('reclamas', function(){
+    return Reclamas.find({});
+});
+
 
 

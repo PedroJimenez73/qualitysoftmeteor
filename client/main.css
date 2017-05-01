@@ -284,3 +284,7 @@ td a {
 .rolling {
     height: 500px;
 }
+
+.pie {
+    text-align: center;
+}

@@ -1,17 +1,20 @@
+Template.Envenc.helpers({
+    envenc: function(){
+        var currentEnc = FlowRouter.getParam('_id');
+        return Encuestas.findOne({_id: new Meteor.Collection.ObjectID(currentEnc)});
+    }
+});
 
-Template.Addcliente.events({
-	'click .cancel-add': function() {
-    	FlowRouter.go('/clientes');
+Template.Envenc.events({
+	'click .cancelaradd': function() {
+    	FlowRouter.go('/encuestas');
 	},
-    'submit .add-cliente': function(){
-        var nombre = event.target.nombre.value;
-        var cif = event.target.cif.value;
-        var direccion = event.target.direccion.value;
-        var telefono = event.target.telefono.value;
-        var persona = event.target.persona.value;
-        var mail = event.target.mail.value;
-
-		Meteor.call('addCliente', nombre, cif, direccion, telefono, persona, mail);
+    'submit .env-enc': function(){
+        var cliente = event.target.cliente.value;
+        var currentEnc = FlowRouter.getParam('_id');
+        var urlEnc = 'http://localhost:3000/resenc/'+currentEnc;
+		
+		Meteor.call('sendMailEnc', cliente, urlEnc);
 
 		toastr.options = {
                 "closeButton": false,
@@ -31,11 +34,12 @@ Template.Addcliente.events({
                 "hideMethod": "fadeOut"
                 };
             
-        toastr["success"]("Nuevo cliente añadido");
-        FlowRouter.go('/clientes');
+        toastr["success"]("Encuesta Enviada a Cliente");
+        FlowRouter.go('/encuestas');
         
 
         return false;
     }
 
 });
+

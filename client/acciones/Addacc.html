@@ -1,0 +1,41 @@
+<template name="Addacc">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nueva Acción</h2> 
+                <a href="/inicio">Inicio ></a> <a href="/acciones"> Generación de Acciones > </a> Añadir nueva Acción
+            </div>
+            <form class="add-objeto add-acc">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="accion">Acción</label>
+                <input type="text" class="form-control" name="accion" id="accion" placeholder="Acción" required autofocus>
+                <label for="ncasoc">No Conformidad Asociada</label>
+                <input type="text" class="form-control" name="ncasoc" id="ncasoc" placeholder="Acción manual sin No Conformidad asociada" value="{{noconf.descripcion}}">
+                <label for="tipo">Tipo</label>
+                <select class="form-control" id="tipo" name="tipo">
+                    <option value="Acción Correctiva">Acción Correctiva</option>
+                    <option value="Acción Preventiva">Acción Preventiva</option>
+                    <option value="Acción de Mejora">Acción de Mejora</option>
+                </select>
+                <label for="responsable">Responsable</label>
+                <select class="form-control" id="responsable" name="responsable">
+                {{#each users}}
+                    <option value="{{username}} {{usersurname}}">{{username}} {{usersurname}}</option>           
+                {{/each}}
+                </select>
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha">
+                <label for="tareas">Tareas</label>
+                <textarea rows="6" type="text" class="form-control" name="tareas" id="tareas" placeholder="Tareas"></textarea>               
+                <label for="seguimiento">Seguimiento</label>
+                <select class="form-control" id="seguimiento" name="seguimiento">
+                    <option value="Pendiente">Pendiente</option>
+                    <option value="Cerrada">Cerrada</option>                      
+                </select>
+                <button class="btn btn-primary" type="submit">Crear Acción</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</template>

@@ -1,17 +1,12 @@
-
-Template.Addcliente.events({
-	'click .cancel-add': function() {
-    	FlowRouter.go('/clientes');
+Template.Genenc.events({
+	'click .cancelaradd': function() {
+    	FlowRouter.go('/encuestas');
 	},
-    'submit .add-cliente': function(){
-        var nombre = event.target.nombre.value;
-        var cif = event.target.cif.value;
-        var direccion = event.target.direccion.value;
-        var telefono = event.target.telefono.value;
-        var persona = event.target.persona.value;
-        var mail = event.target.mail.value;
+    'submit .gen-enc': function(){
+        var cliente = event.target.cliente.value;
+		var fecha = event.target.fecha.value;
 
-		Meteor.call('addCliente', nombre, cif, direccion, telefono, persona, mail);
+		Meteor.call('genEnc', cliente, fecha);
 
 		toastr.options = {
                 "closeButton": false,
@@ -31,11 +26,23 @@ Template.Addcliente.events({
                 "hideMethod": "fadeOut"
                 };
             
-        toastr["success"]("Nuevo cliente añadido");
-        FlowRouter.go('/clientes');
+        toastr["success"]("Nuevo Encuesta Generada");
+        FlowRouter.go('/encuestas');
         
 
         return false;
     }
 
+});
+
+Template.Genenc.helpers({
+    clientes: function(){
+        return Clientes.find();
+    },
+    nombre: function(){
+        return this.nombre;
+    },
+    mail: function() {
+        return this.mail;
+    }
 });

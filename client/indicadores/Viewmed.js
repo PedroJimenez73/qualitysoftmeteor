@@ -58,17 +58,17 @@ Template.Viewmed.onRendered(function () {
                             {
                                 label: "My First dataset",
                                 fillColor: "rgba(220,220,220,0.2)",
-                                strokeColor: "blue",
+                                strokeColor: "#00448D",
                                 pointColor: "rgba(220,220,220,1)",
                                 pointStrokeColor: "#fff",
                                 pointHighlightFill: "#fff",
                                 pointHighlightStroke: "rgba(220,220,220,1)",
                                 data: mediciones
                             }
-                        ]
+                        ],
+ 
                     };
                 myChart = new Chart(document.getElementById("canvas").getContext("2d")).Line(chartData, {
-                responsive: true
                 });
 
 
@@ -103,6 +103,8 @@ Template.Viewmed.events({
                 };
             
         toastr["success"]("Medición eliminada correctamente");  
+        location.reload();
+
         return false;
 
     },

@@ -73,7 +73,7 @@ Meteor.methods({
 	removeProveedor: function(_id){
         Proves.remove({_id: new Meteor.Collection.ObjectID(_id)});
     },
-	addCliente: function(nombre, cif, direccion, telefono, persona, mail, fechamodif){
+	addCliente: function(nombre, cif, direccion, telefono, persona, mail){
 
         Clientes.insert({
 			nombre : nombre,
@@ -82,12 +82,11 @@ Meteor.methods({
 			telefono : telefono,
 			persona : persona,
 			mail : mail,
-			fechamodif : fechamodif
             
         });
 
     },
-	editCliente: function(_id, nombre, cif, direccion, telefono, persona, mail, fechamodif){
+	editCliente: function(_id, nombre, cif, direccion, telefono, persona, mail){
 
         Clientes.update({
             _id: new Meteor.Collection.ObjectID(_id)
@@ -99,7 +98,6 @@ Meteor.methods({
 				telefono : telefono,
 				persona : persona,
 				mail : mail,
-				fechamodif : fechamodif
 
             }
         });
@@ -477,7 +475,20 @@ Meteor.methods({
         html: SSR.render('htmlEmail', emailData),
       });
   },
+      sendMailEnc: function (cliente, urlEnc) {
+      SSR.compileTemplate('htmlEmail', Assets.getText('mailEnc.html'));
 
+      var emailData = {
+          urlEnc: urlEnc
+      };
+
+      Email.send({
+        from: "calidad@qualitycw.com",
+        to: cliente,
+        subject: "Encuesta de Satisfacción de Cliente",
+        html: SSR.render('htmlEmail', emailData),
+      });
+  },
     removeVers: function(versiones){
       Procesos.update({versiones: versiones}, {$pull : {versiones : versiones}});
     },
@@ -516,6 +527,97 @@ Meteor.methods({
     },
 	removeNoconf: function(_id){
         Noconfs.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+    addAcc: function(accion, ncasoc, tipo, responsable, fecha, tareas, seguimiento){
+
+        Acciones.insert({
+			accion : accion,
+        	ncasoc : ncasoc,
+			tipo : tipo,
+			responsable : responsable,
+			fecha : fecha,
+			tareas : tareas,
+            seguimiento: seguimiento
+            
+        });
+
+    },
+    editAcc: function(_id, accion, ncasoc, tipo, fecha, tareas, seguimiento){
+
+        Acciones.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                accion : accion,
+                ncasoc : ncasoc,
+                tipo : tipo,
+                fecha : fecha,
+                tareas : tareas,
+                seguimiento: seguimiento
+
+            }
+        });
+
+    },
+	removeAcc: function(_id){
+        Acciones.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+    genEnc: function(cliente, fecha){
+
+        Encuestas.insert({
+			cliente : cliente,
+			fecha : fecha
+            
+        });
+
+    },
+    resEnc: function(_id, preguno, pregdos, pregtres, pregcuatro, pregcinco, pregseis, pregsiete){
+
+        Encuestas.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                preguno : preguno,
+				pregdos : pregdos,
+				pregtres : pregtres,
+				pregcuatro : pregcuatro,
+				pregcinco : pregcinco,
+				pregseis : pregseis,
+				pregsiete: pregsiete
+
+            }
+        });
+
+    },
+    addRec: function(fecha, cliente, departamento, descripcion, seguimiento){
+
+        Reclamas.insert({
+			fecha : fecha,
+        	cliente : cliente,
+			departamento : departamento,
+			descripcion : descripcion,
+            seguimiento: seguimiento
+            
+        });
+
+    },
+    editRec: function(_id, fecha, departamento, descripcion, seguimiento){
+
+        Reclamas.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $set:{
+                fecha : fecha,
+                departamento : departamento,
+                descripcion : descripcion,
+                seguimiento: seguimiento
+
+            }
+        });
+
+    },
+	removeRec: function(_id){
+        Reclamas.remove({_id: new Meteor.Collection.ObjectID(_id)});
     },
 
 });

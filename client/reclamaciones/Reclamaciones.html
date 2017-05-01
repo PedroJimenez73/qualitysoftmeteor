@@ -1,33 +1,33 @@
-<template name="Noconform"> 
+<template name="Reclamaciones"> 
     <div id="page-content-wrapper">
             <div class="container">
                 <div class="row encabezado">
-                    <h2>Generación de No Conformidades</h2> 
-                    <a class="pull-right btn btn-success" type="button" href="/addnoconf">Añadir No Conformidad</a> 
-                    <a href="/inicio">Inicio ></a> Generación de No Conformidades
+                    <h2>Registro de Reclamaciones de Cliente</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/addrec">Añadir Reclamación</a> 
+                    <a href="/inicio">Inicio ></a> Registro de Reclamaciones
                 </div>
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-bordered table-striped tabla">
                             <thead>
                                 <tr class="filters">
-                                    <th>Nº Conformidad</th>
                                     <th>Fecha</th>
+                                    <th>Cliente</th>
+                                    <th>Departamento Origen</th>
                                     <th>Seguimiento</th>
                                     <th>Visualizar</th> 
                                     <th>Editar</th>
-                                    <th>Añadir Acciones</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                {{#each noconfs}}
+                                {{#each reclamas}}
                                     <tr>
-                                        <td>{{numero}}</td>
                                         <td>{{fecha}}</td>
+                                        <td>{{cliente}}</td>
+                                        <td>{{departamento}}</td>
                                         <td>{{seguimiento}}</td>
-                                        <td><a class="btn btn-primary" type="button" href="/viewnoconf/{{_id._str}}">Visualizar</a> </td>
-                                        <td><a class="btn btn-warning" type="button" href="/editnoconf/{{_id._str}}">Editar</a> </td>
-                                        <td><a class="btn btn-success" type="button" href="/addacc/{{_id._str}}">Añadir Acción</a> </td>
+                                        <td><a class="btn btn-primary" type="button" href="/viewrec/{{_id._str}}">Visualizar</a> </td>
+                                        <td><a class="btn btn-warning" type="button" href="/editrec/{{_id._str}}">Editar</a> </td>
                                     </tr>
                                 {{/each}}
                             </tbody>

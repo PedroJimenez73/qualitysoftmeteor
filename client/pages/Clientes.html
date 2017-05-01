@@ -4,6 +4,7 @@
                 <div class="row encabezado">
                     <h2>Listado de Clientes</h2> 
                     <a class="pull-right btn btn-success" type="button" href="/addcliente">Añadir Cliente</a> 
+                    <a class="pull-right btn btn-primary" type="button" href="/encuestas">Acceder a Encuestas de Satisfacción</a>
                     <a href="/inicio">Inicio ></a> Listado de Clientes
                 </div>
                 <div class="row">
@@ -14,8 +15,8 @@
                                     <th>Nombre</th>
                                     <th>Teléfono</th>
                                     <th>Mail</th>
-                                    <th></th>
-                                    <th></th>
+                                    <th>Visualizar</th>
+                                    <th>Editar</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -24,7 +25,7 @@
                                         <td>{{nombre}}</td>
                                         <td>{{telefono}}</td>
                                         <td><a href="mailto:{{mail}}" style="text-decoration: none;">{{mail}}</a></td>
-                                        <td><a class="btn btn-success" type="button" href="/viewcliente/{{_id._str}}">Más Info</a> </td>
+                                        <td><a class="btn btn-success" type="button" href="/viewcliente/{{_id._str}}">Visualizar</a> </td>
                                         <td><a class="btn btn-warning" type="button" href="/editcliente/{{_id._str}}">Editar</a> </td>
                                     </tr>
                                 {{/each}}

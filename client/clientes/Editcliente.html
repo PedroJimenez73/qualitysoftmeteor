@@ -17,10 +17,9 @@
                             <input type="text" class="form-control" name="telefono" id="telefono" placeholder="Teléfono" value="{{editcliente.telefono}}">
                             <label for="persona">Persona de Contacto</label>
                             <input type="text" class="form-control" name="persona" id="persona" placeholder="Persona de Contacto" value="{{editcliente.persona}}">
-                            <label for="mail">Persona de Contacto</label>
+                            <label for="mail">Mail</label>
                             <input type="text" class="form-control" name="mail" id="mail" placeholder="Mail" value="{{editcliente.mail}}">
-                            <label for="fechamodif">Fecha Última Modificación</label> 
-                            <input type="date" name="fechamodif" class="form-control" value="{{editcliente.fechamodif}}">
+                            
                             <button class="btn btn-primary" type="submit">Guardar Cambios</button>
                             <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
                             <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
@@ -33,7 +32,7 @@
                 <div>
                     <a href="#closeD" title="CloseD" class="closeD">X</a>
                         <div style="padding: 30px">
-                            <h4>¿Eliminar el Cliente {{editcliente.nombre}}?</h4>
+                            <h4>¿Eliminar el Cliente?</h4>
                         </div>
                         <div class="col-md-6" style="text-align: center">        
                             <button class="btn btn-danger" id="deleteCliente" type="button">Eliminar</button>

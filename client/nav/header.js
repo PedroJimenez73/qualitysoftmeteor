@@ -26,7 +26,7 @@ Template.header.events({
             
                 toastr["success"]("¡Hasta pronto!");
                 
-                FlowRouter.go('/');
+                //FlowRouter.go('/');
             }
         });
     }

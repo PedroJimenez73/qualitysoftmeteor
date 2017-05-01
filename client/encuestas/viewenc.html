@@ -1,0 +1,34 @@
+<template name="Viewenc">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Resultados de encuesta</h2>
+                <a class="pull-right btn btn-primary" type="button" href="/encuestas">Volver a Encuestas</a>  
+
+            </div>
+            <form class="add-objeto env-enc">
+                <label for="cliente">Cliente/Mail</label>
+                <input type="text" class="form-control" name="cliente" id="cliente" value="{{viewenc.cliente}}" disabled>
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha" value="{{viewenc.fecha}}" disabled>
+                <label for="preguno">Calidad técnica de nuestro servicio</label>
+                <input type="text" class="form-control" name="preguno" id="preguno" value="{{viewenc.preguno}}" disabled>
+                <label for="pregdos">Cumplimiento de fechas de entrega</label>
+                <input type="text" class="form-control" name="pregdos" id="pregdos" value="{{viewenc.pregdos}}" disabled>
+                <label for="pregtres">Cualificación  del personal técnico</label>
+                <input type="text" class="form-control" name="pregtres" id="pregtres" value="{{viewenc.pregtres}}" disabled>
+                <label for="pregcuatro">Capacidad de respuestas ante incidencias o imprevistos</label>
+                <input type="text" class="form-control" name="pregcuatro" id="pregcuatro" value="{{viewenc.pregcuatro}}" disabled>
+                <label for="pregcinco">Atención personalizada del equipo</label>
+                <input type="text" class="form-control" name="pregcinco" id="pregcinco" value="{{viewenc.pregcinco}}" disabled>
+                <label for="pregseis">Precios de los servicios</label>
+                <input type="text" class="form-control" name="pregseis" id="pregseis" value="{{viewenc.pregseis}}" disabled>
+                <label for="pregsiete">Tiempo de respuesta ante ofertas</label>
+                <input type="text" class="form-control" name="pregsiete" id="pregsiete" value="{{viewenc.pregsiete}}" disabled>
+
+                
+
+            </form>
+        </div>
+    </div>
+</template>

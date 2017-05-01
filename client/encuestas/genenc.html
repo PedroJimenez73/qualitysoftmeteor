@@ -1,0 +1,25 @@
+<template name="Genenc">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nuevo Indicador</h2> 
+                <a href="/inicio">Inicio ></a> <a href="/encuestas"> Generación de Encuestas > </a> Generar nueva Encuesta
+            </div>
+            <form class="add-objeto gen-enc">
+                <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                <label for="cliente">Cliente/Mail</label>
+                <select class="form-control" id="cliente" name="cliente">
+                {{#each clientes}}
+                    <option value="{{nombre}} {{mail}}">{{nombre}} {{mail}}</option>           
+                {{/each}}
+                </select>
+                <label for="fecha">Fecha</label>
+                <input type="date" class="form-control" name="fecha" id="fecha">
+
+                <button class="btn btn-primary" type="submit">Generar Encuesta</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+
+            </form>
+        </div>
+    </div>
+</template>

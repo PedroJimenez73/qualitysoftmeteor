@@ -1,0 +1,36 @@
+<template name="Encuestas"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Generación de Encuestas</h2> 
+                    <a class="pull-right btn btn-success" type="button" href="/genenc">Generar Encuesta</a> 
+                    <a class="pull-right btn btn-primary" type="button" href="/estadisticas">Estadísticas de Encuentas</a>
+                    <a href="/inicio">Inicio ></a> Generación de Encuestas
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Cliente/Mail</th>
+                                    <th>Fecha</th>
+                                    <th>Enviar a Cliente</th>
+                                    <th>Visualizar</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each encuestas}}
+                                    <tr>
+                                        <td>{{cliente}}</td>
+                                        <td>{{fecha}}</td>
+                                        <td><a class="btn btn-success" type="button" href="/envenc/{{_id._str}}">Enviar a Cliente</a> </td>
+                                        <td><a class="btn btn-primary" type="button" href="/viewenc/{{_id._str}}">Visualizar Resultados</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

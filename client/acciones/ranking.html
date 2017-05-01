@@ -1,0 +1,30 @@
+<template name="Ranking"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Ranking de Acciones de Mejora por Usuario</h2> 
+                    <a href="/inicio">Inicio ></a> <a href="/acciones"> Generación de Acciones ></a> Ranking
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Responsable</th>
+                                    <th>Número de Acciones Creadas</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResponsables}}
+                                    <tr>
+                                        <td>{{responsable}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

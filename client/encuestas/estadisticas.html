@@ -1,0 +1,157 @@
+<template name="Estadisticas"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Estadísticas de Encuestas</h2> 
+                    <a href="/inicio">Inicio ></a> <a href="/encuestas"> Generación de Encuestas ></a> Estadisticas
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 1 Calidad técnica de nuestro servicio</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResUno}}
+                                    <tr>
+                                        <td>{{preguno}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 2 Cumplimiento de fechas de entrega</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResDos}}
+                                    <tr>
+                                        <td>{{pregdos}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 3 Cualificación  del personal técnico</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResTres}}
+                                    <tr>
+                                        <td>{{pregtres}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 4 Capacidad de respuestas ante incidencias o imprevistos</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResCuatro}}
+                                    <tr>
+                                        <td>{{pregcuatro}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 5 Atención personalizada del equipo</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResCinco}}
+                                    <tr>
+                                        <td>{{pregcinco}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 6 Precios de los servicios</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResSeis}}
+                                    <tr>
+                                        <td>{{pregseis}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h4>Cuestión 7 Tiempo de respuesta ante ofertas</h4>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Respuestas</th>
+                                    <th>Número total</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each counterResSiete}}
+                                    <tr>
+                                        <td>{{pregsiete}}</td>
+                                        <td>{{count}}</td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>
