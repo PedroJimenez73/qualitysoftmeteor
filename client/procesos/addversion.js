@@ -7,7 +7,9 @@ Template.Addversion.helpers({
 
 Template.Addversion.events({
     'click .cancel-add': function() {
-    	FlowRouter.go('/procesos');
+        var _id = FlowRouter.getParam('_id');
+    	var url = '/viewvers/'+_id;
+        FlowRouter.go(url);
 	},
 
     'submit .add-version': function(){
@@ -67,7 +69,9 @@ Template.Addversion.events({
                 };
             
         toastr["success"]("Nueva Versión añadida");
-        FlowRouter.go('/procesos');
+        
+        var url = '/viewvers/'+_id;
+        FlowRouter.go(url);
         
 
         return false;

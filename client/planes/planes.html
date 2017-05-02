@@ -3,9 +3,12 @@
             <div class="container">
                 <div class="row encabezado">
                     <h2>Generación de Planes de Auditoría</h2> 
+                    {{#if isInRole 'admin, responsableCMS, gerente'}}
                     <a class="pull-right btn btn-success" type="button" href="/addplan">Añadir Plan de Auditoría</a> 
-                    <a href="/inicio">Inicio ></a><a href="/procedplan"> Procedimiento Auditorías ></a> Planes de Auditoría
+                    {{/if}}
+                    <a href="/inicio">Inicio ></a> Planes de Auditoría
                 </div>
+                {{#if isInRole 'admin, responsableCMS, gerente'}}
                 <div class="row">
                     <div class="col-md-12">
                         <table class="table table-bordered table-striped tabla">
@@ -36,6 +39,13 @@
                         </table>
                     </div>
                 </div>
+                {{else}}
+                    <div class="row encabezado" style="text-align: center;">
+                        <p style="font-size: 50px"><i class="fa fa-lock"></i></p>
+                        <h4>Lo sentimos, no tiene autorización para acceder a esta información.</h4>
+                        <a class="btn btn-primary" href="/inicio" type="button"> Volver a inicio</a>
+                    </div>
+                {{/if}}
             </div>
     </div>
 </template>

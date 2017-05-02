@@ -162,6 +162,20 @@ Meteor.methods({
         });
 
     },
+    editDocman: function(_id, version, revision, modifAt){
+
+        Manuales.update({
+            _id: _id
+        }, {
+            $set:{
+                version : version,
+				revision: revision,
+				modifAt: modifAt
+
+            }
+        });
+
+    },
 	addVeh: function(numero, nombre, modelo, matricula, anyo, perioitv, fechamodif){
 
         Vehiculos.insert({
@@ -489,7 +503,7 @@ Meteor.methods({
         html: SSR.render('htmlEmail', emailData),
       });
   },
-    removeVers: function(versiones){
+    removeVer: function(versiones){
       Procesos.update({versiones: versiones}, {$pull : {versiones : versiones}});
     },
     addNoconf: function(numero, fecha, tipo, departamento, descripcion, causa, responsables, seguimiento){

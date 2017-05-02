@@ -20,50 +20,14 @@
                             <input type="text" class="form-control" name="revision" id="revision" value="{{viewpro.revision}}" disabled>
                             <label for="destino">Situación del documento</label>
                             <input type="text" class="form-control" name="destino" id="destino" value="{{viewpro.destino}}" disabled>
-                            <label for="">Documento Original (Versión 0)</label><br>
-                            <a target="_blank" href="{{viewpro.word}}" style="text-decoration: none;" type="button" class="btn btn-primary">Descargar</a><br>
-                            
+                    
                             <br>
-                            <h3>Histórico de Versiones</h3>
-                            <br>
-                            {{#each viewpro.versiones}}
-                            <form class="add-objeto view-ope">
-                                <label for="numero">Nº Versión</label>
-                                <input type="text" class="form-control" name="numero" id="numero"  value="{{numero}}" disabled>  
-                                <label for="modifAtForm">Fecha de la Versión</label>
-                                <input type="text" class="form-control" name="modifAtForm" id="createdAtForm" value="{{modifAtForm}}" disabled>
-                                <label for="usuario">Usuario/Mail</label>
-                                <input type="text" class="form-control" name="usuario" id="usuario"  value="{{usuario}}" disabled>  
-                                <label for="modificaciones">Modificaciones realizadas</label>
-                                <textarea rows="5" class="form-control" name="modificaciones" id="modificaciones" value="{{modificaciones}}" disabled></textarea>
-                                <label for="word">Documento version nº {{numero}}</label><br>
-                                <a target="_blank" href="{{word}}" style="text-decoration: none;" type="button" class="btn btn-primary">Descargar</a><br>
-                                <hr>
-                                <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar Versión</a>
-                            </form>
-                            <div id="openModalDelete" class="modalDialogDelete">
-                                <div>
-                                    <a href="#closeD" title="CloseD" class="closeD">X</a>
-                                        <div style="padding: 30px">
-                                            <h4>¿Eliminar la Versión?</h4>
-                                        </div>
-                                        <div class="col-md-6" style="text-align: center">        
-                                            <button class="btn btn-danger" id="deleteVersion" type="button">Eliminar Versión</button>
-                                        </div>
-                                        <div class="col-md-6" style="text-align: center">
-                                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
-                                        </div>                         
-                                </div>
-                            </div>
-                            <br>
-                            {{/each}}
+                            <a class="btn btn-primary" type="button" href="/viewvers/{{viewpro._id}}">Acceder a Versiones</a>
                         </form>
                         
                     </div>
                 </div>
-                <div class="row">
-                    <a class="pull-right btn btn-primary" type="button" href="/procesos">Volver a Documentos</a>  
-                </div>
+
             </div>
     </div>
             

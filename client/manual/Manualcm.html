@@ -1,0 +1,39 @@
+<template name="Manualcm"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Manual de Calidad y Medioambiente</h2>
+                    <a class="pull-right btn btn-success" type="button" href="/addman">Añadir Versión del Manual de Calidad</a> 
+                    <a href="/inicio">Inicio ></a><a href="/mapa"> Mapa de Procesos ></a><a href="/organizacion"> Organización y su Contexto ></a> Manual de Calidad y M.A.
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <h3>Documento de Manual de Calidad y Medioambiente</h3>
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Versión</th>
+                                    <th>Fecha</th>
+                                    <th>Revisión</th>
+                                    <th>Descargar</th>
+                                    <th>Editar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each manuales}}
+                                    <tr>
+                                        <td>{{version}}</td>
+                                        <td>{{createdAt}}</td>
+                                        <td>{{revision}}</td>
+                                        <td><a target="_blank" href="{{word}}" style="text-decoration: none;" type="button" class="btn btn-primary">Descargar</a><br></td>
+                                        <td><a class="btn btn-warning" type="button" href="/editman/{{_id}}">Editar</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                  
+            </div>
+    </div>
+</template>

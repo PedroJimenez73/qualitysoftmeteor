@@ -1,0 +1,61 @@
+<template name="Viewvers"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Histórico de Versiones del Documento de Proceso</h2> 
+                    <a class="pull-right btn btn-primary" type="button" href="/viewpro/{{viewpro._id}}">Volver al Documento</a> 
+                    <a class="pull-right btn btn-success" type="button" href="/addversion/{{viewpro._id}}">Añadir Versión</a>
+                    <h4>Nombre del Documento de Proceso: {{viewpro.nombre}}</h4>
+                    <h4>Documento Original (Versión 0)</h4>
+                    <a target="_blank" href="{{viewpro.word}}" style="text-decoration: none;" type="button" class="btn btn-primary">Descargar</a><br>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters"> 
+                                    <th>Nº Versión</th>
+                                    <th>Fecha de la Versión</th>                   
+                                    <th>Usuario/Mail</th>
+                                    <th>Modificaciones realizadas</th>
+                                    <th>Documento</th>
+                                    <th>Eliminar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each viewpro.versiones}}
+                                    <tr>
+                                        <td>{{numero}}</td>
+                                        <td>{{modifAtForm}}</td>
+                                        <td>{{usuario}}</td>
+                                        <td>{{modificaciones}}</td>
+                                        <td><a target="_blank" href="{{word}}" style="text-decoration: none;" type="button" class="btn btn-primary">Descargar</a><br></td>
+                                        <td>
+                                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar Medición</a>
+                                            <div id="openModalDelete" class="modalDialogDelete">
+                                                <div>
+                                                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                                                        <div style="padding: 30px">
+                                                            <h4>¿Eliminar la Versión?</h4>
+                                                        </div>
+                                                        <div class="col-md-6" style="text-align: center">        
+                                                            <button class="btn btn-danger" id="deleteVer" type="button">Eliminar Versión</button>
+                                                        </div>
+                                                        <div class="col-md-6" style="text-align: center">
+                                                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                                                        </div>                         
+                                                </div>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+
+
+</template>

@@ -15,7 +15,6 @@
                                     <th>Nombre</th>
                                     <th>Revisión</th>
                                     <th>Visualizar</th>
-                                    <th>Versiones</th>
                                     <th>Editar</th>
                                 </tr>
                             </thead>
@@ -26,7 +25,6 @@
                                         <td>{{nombre}}</td>
                                         <td>{{revision}}</td>
                                         <td><a class="btn btn-primary" type="button" href="/viewpro/{{_id}}">Visualizar</a></td>
-                                        <td><a class="btn btn-success" type="button" href="/addversion/{{_id}}">Añadir Versión</a> </td>
                                         <td><a class="btn btn-warning" type="button" href="/editpro/{{_id}}">Editar</a> </td>
                                     </tr>
                                 {{/if}}

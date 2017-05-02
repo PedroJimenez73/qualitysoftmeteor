@@ -1,0 +1,44 @@
+<template name="Editman"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h2>Modificar Documento de Manual de Calidad</h2>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <form class="add-objeto edit-man">
+                            <label for="version">Versión</label>
+                            <input type="text" class="form-control" name="version" id="version" placeholder="Versión" value="{{editman.version}}">
+                            <label for="revision">Revisión</label>                
+                            <select class="form-control" id="revision" name="revision" value="{{editpro.revision}}">          
+                                <option value="Pendiente" {{seleccionado2 "Pendiente"}}>Pendiente</option>
+                                <option value="Aprobado" {{seleccionado2 "Aprobado"}}>Aprobado</option>           
+                            </select>
+                            
+                            <button class="btn btn-primary" type="submit">Guardar Cambios</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            <a class="btn btn-danger" type="button" href="#openModalDelete">Eliminar</a>
+                            
+                        </form>
+                        
+                    </div>
+                </div>
+                
+            </div>
+            <div id="openModalDelete" class="modalDialogDelete">
+                <div>
+                    <a href="#closeD" title="CloseD" class="closeD">X</a>
+                        <div style="padding: 30px">
+                            <h4>¿Eliminar el Documento de Manual?</h4>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">        
+                            <button class="btn btn-danger" id="deleteDocman" type="button">Eliminar</button>
+                        </div>
+                        <div class="col-md-6" style="text-align: center">
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                        </div>                         
+                </div>
+            </div>
+    </div>
+
+</template>

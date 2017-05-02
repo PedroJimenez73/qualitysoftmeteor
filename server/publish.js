@@ -158,6 +158,33 @@ Procesos.allow({
   }
 });
 
+
+Meteor.publish('ManualesWords', function(){
+    if(this.userId){
+        return ManualesWords.find({});
+    }
+});
+
+Meteor.publish('manuales', function(){
+    if(this.userId){
+        return Manuales.find({});
+    }
+});
+
+ManualesWords.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
+Manuales.allow({
+  'insert': function () {
+    // add custom authentication code here
+    return true;
+  }
+});
+
 Meteor.publish('noconfs', function(){
     if(this.userId){
         return Noconfs.find({});

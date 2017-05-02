@@ -1,0 +1,25 @@
+<template name="Addman">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h2>Nueva Versión del Manual de Calidad y Medioambiente</h2> 
+                <a href="/inicio">Inicio ></a><a href="/mapa"> Mapa de Procesos ></a><a href="/organizacion"> Organización y su Contexto ></a><a href="/manualcm"> Manual de Calidad y M.A.> </a>Añadir documento
+            </div>
+                <form class="add-objeto addMan">
+                    <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
+                    <label for="version">Versión</label>
+                    <input type="text" class="form-control" name="version" id="version" placeholder="Version del documento" required autofocus>
+                    <label for="revision">Revisión del documento</label>                
+                    <select class="form-control" id="revision" name="revision">
+                        <option class="boxCheck" value="Pendiente">Pendiente</option>
+                        <option class="boxCheck" value="Aprobado">Aprobado</option>              
+                    </select>
+                    <label>Documento</label>
+                    <input class="form-control" type="file" name="docword" id="docword">
+                    <button class="btn btn-primary" type="submit">Añadir documento</button>
+                    <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                </form>
+        </div>
+    </div>
+   
+</template>
