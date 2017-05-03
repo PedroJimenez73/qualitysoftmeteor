@@ -9,7 +9,7 @@ Template.Addope.events({
     'click .cancel-add': function() {
     	FlowRouter.go('/vehiculos');
 	},
-    'submit .add-ope': function(){
+    'submit .add-ope': function(event){
         var _id = FlowRouter.getParam('_id');
         var operacion = event.target.operacion.value;
         var fecha = event.target.fecha.value;

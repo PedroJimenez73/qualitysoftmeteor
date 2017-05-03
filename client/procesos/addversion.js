@@ -12,7 +12,7 @@ Template.Addversion.events({
         FlowRouter.go(url);
 	},
 
-    'submit .add-version': function(){
+    'submit .add-version': function(event){
         var _id = FlowRouter.getParam('_id');
         var numero = event.target.numero.value;
         var usuario = event.target.usuario.value;

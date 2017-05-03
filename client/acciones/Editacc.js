@@ -19,7 +19,7 @@ Template.Editacc.helpers({
 });
 
 Template.Editacc.events({
-    'submit .edit-acc': function(){
+    'submit .edit-acc': function(event){
         var _id = FlowRouter.getParam('_id');
         var accion = event.target.accion.value;
         var ncasoc = event.target.ncasoc.value;

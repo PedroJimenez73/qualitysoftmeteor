@@ -11,7 +11,7 @@ Template.Editdocma.helpers({
 });
 
 Template.Editdocma.events({
-    'submit .edit-docma': function(){
+    'submit .edit-docma': function(event){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
 		var destino = event.target.destino.value;

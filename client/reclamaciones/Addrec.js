@@ -2,7 +2,7 @@ Template.Addrec.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/reclamaciones');
 	},
-    'submit .add-rec': function(){
+    'submit .add-rec': function(event){
         var fecha = event.target.fecha.value;
         var cliente = event.target.cliente.value;
         var departamento = event.target.departamento.value;

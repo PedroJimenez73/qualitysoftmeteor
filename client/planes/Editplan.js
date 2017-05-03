@@ -13,7 +13,7 @@ Template.Editplan.helpers({
 });
 
 Template.Editplan.events({
-    'submit .edit-plan': function(){
+    'submit .edit-plan': function(event){
         var _id = FlowRouter.getParam('_id');
         var fecha = event.target.fecha.value;
         var alcance = event.target.alcance.value;

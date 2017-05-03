@@ -16,7 +16,7 @@ Template.Editint.helpers({
 });
 
 Template.Editint.events({
-    'submit .edit-int': function(){
+    'submit .edit-int': function(event){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
         var revision = event.target.revision.value;

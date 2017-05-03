@@ -3,7 +3,7 @@ Template.Addaspecto.events({
 	'click .cancel-add': function() {
     	FlowRouter.go('/aspectos');
 	},
-    'submit .add-aspecto': function(){
+    'submit .add-aspecto': function(event){
         var actividad = event.target.actividad.value;
         var aspecto = event.target.aspecto.value;
         var cuno = event.target.cuno.value;

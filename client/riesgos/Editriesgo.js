@@ -13,7 +13,7 @@ Template.Editriesgo.helpers({
 });
 
 Template.Editriesgo.events({
-    'submit .edit-riesgo': function(){
+    'submit .edit-riesgo': function(event){
         var _id = FlowRouter.getParam('_id');
         var proceso = event.target.proceso.value;
         var responsable = event.target.responsable.value;

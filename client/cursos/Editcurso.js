@@ -7,7 +7,7 @@ Template.Editcurso.helpers({
 });
 
 Template.Editcurso.events({
-    'submit .edit-curso': function(){
+    'submit .edit-curso': function(event){
         var _id = FlowRouter.getParam('_id');
         var titulo = event.target.titulo.value;
         var organizador = event.target.organizador.value;

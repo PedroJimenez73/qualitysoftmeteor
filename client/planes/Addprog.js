@@ -10,7 +10,7 @@ Template.Addprog.events({
     	FlowRouter.go('/planes');
 	},
 
-    'submit .add-prog': function(){
+    'submit .add-prog': function(event){
         var _id = FlowRouter.getParam('_id');
         var array_asist = $('#asistentes').val();
         var fecha = event.target.fecha.value;

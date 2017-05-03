@@ -2,7 +2,7 @@ Template.Addplan.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/planes');
 	},
-    'submit .add-plan': function(){
+    'submit .add-plan': function(event){
         var fecha = event.target.fecha.value;
         var alcance = event.target.alcance.value;
         var objeto = event.target.objeto.value;

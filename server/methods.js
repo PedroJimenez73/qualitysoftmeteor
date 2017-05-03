@@ -633,5 +633,19 @@ Meteor.methods({
 	removeRec: function(_id){
         Reclamas.remove({_id: new Meteor.Collection.ObjectID(_id)});
     },
+    addTicket: function(fecha, consulta, usuario, mail){
+
+        Tickets.insert({
+            fecha: fecha,
+			consulta : consulta,
+			usuario : usuario,
+            mail : mail
+            
+        });
+
+    },
+    removeTicket: function(_id){
+        Tickets.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
 
 });

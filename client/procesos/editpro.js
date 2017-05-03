@@ -16,7 +16,7 @@ Template.Editpro.helpers({
 });
 
 Template.Editpro.events({
-    'submit .edit-pro': function(){
+    'submit .edit-pro': function(event){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
         var revision = event.target.revision.value;

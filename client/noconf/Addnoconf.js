@@ -2,7 +2,7 @@ Template.Addnoconf.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/noconfs');
 	},
-    'submit .add-noconf': function(){
+    'submit .add-noconf': function(event){
         var numero = event.target.numero.value;
         var fecha = event.target.fecha.value;
         var tipo = $('#tipo').val();

@@ -2,7 +2,7 @@ Template.Addindicador.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/indicadores');
 	},
-    'submit .add-ind': function(){
+    'submit .add-ind': function(event){
         var indicador = event.target.indicador.value;
         var riesgo = event.target.riesgo.value;
         var responsable = event.target.responsable.value;

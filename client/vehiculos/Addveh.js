@@ -2,7 +2,7 @@ Template.Addveh.events({
 	'click .cancel-add': function() {
     	FlowRouter.go('/vehiculos');
 	},
-    'submit .add-veh': function(){
+    'submit .add-veh': function(event){
         var numero = event.target.numero.value;
         var nombre = event.target.nombre.value;
         var modelo = event.target.modelo.value;

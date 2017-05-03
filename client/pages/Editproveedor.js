@@ -13,7 +13,7 @@ Template.Editproveedor.helpers({
 });
 
 Template.Editproveedor.events({
-    'submit .edit-proveedor': function(){
+    'submit .edit-proveedor': function(event){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
         var servicio = event.target.servicio.value;

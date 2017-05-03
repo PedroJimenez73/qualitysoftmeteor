@@ -2,7 +2,7 @@ Template.Addproveedor.events({
 	'click .cancel-add': function() {
     	FlowRouter.go('/proveedores');
 	},
-    'submit .add-proveedor': function(){
+    'submit .add-proveedor': function(event){
         var nombre = event.target.nombre.value;
         var servicio = event.target.servicio.value;
         var cif = event.target.cif.value;

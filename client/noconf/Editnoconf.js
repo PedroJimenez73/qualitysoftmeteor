@@ -19,7 +19,7 @@ Template.Editnoconf.helpers({
 });
 
 Template.Editnoconf.events({
-    'submit .edit-noconf': function(){
+    'submit .edit-noconf': function(event){
         var _id = FlowRouter.getParam('_id');
         var numero = event.target.numero.value;
         var fecha = event.target.fecha.value;

@@ -7,7 +7,7 @@ Template.Editaspecto.helpers({
 });
 
 Template.Editaspecto.events({
-    'submit .edit-aspecto': function(){
+    'submit .edit-aspecto': function(event){
         var _id = FlowRouter.getParam('_id');
         var actividad = event.target.actividad.value;
         var aspecto = event.target.aspecto.value;

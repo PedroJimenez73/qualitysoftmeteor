@@ -7,7 +7,7 @@ Template.Editveh.helpers({
 });
 
 Template.Editveh.events({
-    'submit .edit-veh': function(){
+    'submit .edit-veh': function(event){
         var _id = FlowRouter.getParam('_id');
         var numero = event.target.numero.value;
         var nombre = event.target.nombre.value;

@@ -7,7 +7,7 @@ Template.Editcliente.helpers({
 });
 
 Template.Editcliente.events({
-    'submit .edit-cliente': function(){
+    'submit .edit-cliente': function(event){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
         var cif = event.target.cif.value;

@@ -11,7 +11,7 @@ Template.Addmed.events({
     	FlowRouter.go('/viewmed/'+currentInd);
 	},
 
-    'submit .add-med': function(){
+    'submit .add-med': function(event){
         var _id = FlowRouter.getParam('_id');
         var fecha = event.target.fecha.value;
         var medicion = parseInt(event.target.medicion.value);

@@ -11,7 +11,7 @@ Template.Editdoc.helpers({
 });
 
 Template.Editdoc.events({
-    'submit .edit-documento': function(){
+    'submit .edit-documento': function(event){
         var _id = FlowRouter.getParam('_id');
         var nombre = event.target.nombre.value;
 		var destino = event.target.destino.value;

@@ -9,7 +9,7 @@ Template.Envenc.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/encuestas');
 	},
-    'submit .env-enc': function(){
+    'submit .env-enc': function(event){
         var cliente = event.target.cliente.value;
         var currentEnc = FlowRouter.getParam('_id');
         var urlEnc = 'http://localhost:3000/resenc/'+currentEnc;

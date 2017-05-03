@@ -1,0 +1,50 @@
+<template name="Soporte"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h1>Soporte</h1> 
+                    <a href="/inicio">Inicio ></a> Soporte
+                </div>
+                {{#if isInRole 'admin'}}
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Fecha</th>
+                                    <th>Usuario</th>
+                                    <th>Mail</th>
+                                    <th>Ticket</th>
+                                    <th>Cerrar Ticket</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each tickets}}
+                                    <tr>
+                                        <td>{{dateFormat}}</td>
+                                        <td>{{usuario}}</td>
+                                        <td><a href="mailto:{{mail}}" style="text-decoration: none;">{{mail}}</a></td>
+                                        <td>{{consulta}}</td>
+                                        <a class="btn btn-success" type="button" id="closeTicket">Cerrar Consulta</a>                                       
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                {{else}}
+                <div class="row">
+                    <form class="add-objeto add-ticket">
+                        <h4 class="add-objeto-heading">Por favor añada el motivo de su incidencia y pulse enviar</h4>
+                        
+                        <label for="consulta">Incidencia</label>
+                        <textarea rows="6" type="text" class="form-control" name="consulta" id="consulta" placeholder="Consulta"></textarea>
+
+                        <button class="btn btn-primary" type="submit">Crear Incidencia</button>
+                        <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+                    </form>
+                </div>
+                {{/if}}
+            </div>
+    </div>
+</template>

@@ -2,7 +2,7 @@ Template.Genenc.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/encuestas');
 	},
-    'submit .gen-enc': function(){
+    'submit .gen-enc': function(event){
         var cliente = event.target.cliente.value;
 		var fecha = event.target.fecha.value;
 

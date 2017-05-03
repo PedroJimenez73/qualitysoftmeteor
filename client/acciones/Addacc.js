@@ -2,7 +2,7 @@ Template.Addacc.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/acciones');
 	},
-    'submit .add-acc': function(){
+    'submit .add-acc': function(event){
         var accion = event.target.accion.value;
         var ncasoc = event.target.ncasoc.value;
         var tipo = $('#tipo').val();

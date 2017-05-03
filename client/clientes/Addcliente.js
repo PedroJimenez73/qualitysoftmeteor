@@ -3,7 +3,7 @@ Template.Addcliente.events({
 	'click .cancel-add': function() {
     	FlowRouter.go('/clientes');
 	},
-    'submit .add-cliente': function(){
+    'submit .add-cliente': function(event){
         var nombre = event.target.nombre.value;
         var cif = event.target.cif.value;
         var direccion = event.target.direccion.value;

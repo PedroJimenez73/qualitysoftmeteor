@@ -103,7 +103,6 @@ Template.Viewmed.events({
                 };
             
         toastr["success"]("Medición eliminada correctamente");  
-        location.reload();
 
         return false;
 

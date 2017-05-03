@@ -2,7 +2,7 @@ Template.Addriesgo.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/riesgos');
 	},
-    'submit .add-riesgo': function(){
+    'submit .add-riesgo': function(event){
         var proceso = event.target.proceso.value;
         var responsable = event.target.responsable.value;
         var riesgo = event.target.riesgo.value;

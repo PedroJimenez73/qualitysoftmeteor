@@ -13,7 +13,7 @@ Template.Editrec.helpers({
 });
 
 Template.Editrec.events({
-    'submit .edit-rec': function(){
+    'submit .edit-rec': function(event){
         var _id = FlowRouter.getParam('_id');
         var fecha = event.target.fecha.value;
         var departamento = event.target.departamento.value;

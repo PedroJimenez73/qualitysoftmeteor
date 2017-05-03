@@ -13,7 +13,11 @@ body,html{
 
 * {
   border-radius: 0 !important;
-  text-decoration: none !important;
+  /*text-decoration: none !important;*/
+}
+
+h1 {
+  font-size: 28px !important;
 }
 
 .overlay {

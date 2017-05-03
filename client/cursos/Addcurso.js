@@ -2,7 +2,7 @@ Template.Addcurso.events({
 	'click .cancel-add': function() {
     	FlowRouter.go('/planesform');
 	},
-    'submit .add-curso': function(){
+    'submit .add-curso': function(event){
         var titulo = event.target.titulo.value;
         var organizador = event.target.organizador.value;
         var horas = event.target.horas.value;

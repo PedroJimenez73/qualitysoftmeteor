@@ -11,7 +11,7 @@ Template.Editman.helpers({
 });
 
 Template.Editman.events({
-    'submit .edit-man': function(){
+    'submit .edit-man': function(event){
         var _id = FlowRouter.getParam('_id');
         var version = event.target.version.value;
         var revision = event.target.revision.value;

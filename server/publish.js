@@ -208,5 +208,11 @@ Meteor.publish('reclamas', function(){
     }
 });
 
+Meteor.publish('tickets', function(){
+    if(this.userId){
+        return Tickets.find({});
+    }
+});
+
 
 

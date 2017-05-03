@@ -13,7 +13,7 @@ Template.Editindicador.helpers({
 });
 
 Template.Editindicador.events({
-    'submit .edit-ind': function(){
+    'submit .edit-ind': function(event){
         var _id = FlowRouter.getParam('_id');
         var indicador = event.target.indicador.value;
         var formula = event.target.formula.value;
