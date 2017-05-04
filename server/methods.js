@@ -417,7 +417,7 @@ Meteor.methods({
       };
 
       Email.send({
-        from: "calidad@qualitycw.com",
+        from: "calidad@firstbook.es",
         to: asignados,
         subject: "Quality Soft: Nuevo documento asignado",
         html: SSR.render('htmlEmail', emailData),
@@ -433,7 +433,7 @@ Meteor.methods({
       };
 
       Email.send({
-        from: "calidad@qualitycw.com",
+        from: "calidad@firstbook.es",
         to: array_asist,
         subject: "Quality Soft: Nuevo reunión programada",
         html: SSR.render('htmlEmail', emailData),
@@ -449,7 +449,7 @@ Meteor.methods({
       };
 
       Email.send({
-        from: "calidad@qualitycw.com",
+        from: "calidad@firstbook.es",
         to: asignados,
         subject: "Quality Soft: Nuevo documento de proceso asignado",
         html: SSR.render('htmlEmail', emailData),
@@ -466,7 +466,7 @@ Meteor.methods({
       };
 
       Email.send({
-        from: "calidad@qualitycw.com",
+        from: "calidad@firstbook.es",
         to: responsable,
         subject: "Quality Soft: Alerta de desviación",
         html: SSR.render('htmlEmail', emailData),
@@ -483,7 +483,7 @@ Meteor.methods({
       };
 
       Email.send({
-        from: "calidad@qualitycw.com",
+        from: "calidad@firstbook.es",
         to: responsables,
         subject: "Quality Soft: Alerta de No Conformidad",
         html: SSR.render('htmlEmail', emailData),
@@ -497,7 +497,7 @@ Meteor.methods({
       };
 
       Email.send({
-        from: "calidad@qualitycw.com",
+        from: "calidad@firstbook.es",
         to: cliente,
         subject: "Encuesta de Satisfacción de Cliente",
         html: SSR.render('htmlEmail', emailData),

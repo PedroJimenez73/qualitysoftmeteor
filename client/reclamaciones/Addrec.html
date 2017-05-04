@@ -8,7 +8,7 @@
             <form class="add-objeto add-rec">
                 <h4 class="add-objeto-heading">Introduzca los siguientes datos</h4>
                 <label for="fecha">Fecha</label>
-                <input type="date" class="form-control" name="fecha" id="fecha">
+                <input type="date" class="form-control" name="fecha" id="fecha" value ="today();">
                 <label for="cliente">Cliente</label>
                 <select class="form-control" id="cliente" name="cliente">
                 {{#each clientes}}
@@ -31,4 +31,5 @@
             </form>
         </div>
     </div>
+
 </template>

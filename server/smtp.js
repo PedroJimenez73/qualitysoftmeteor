@@ -1,3 +1,3 @@
 Meteor.startup(function () {
-process.env.MAIL_URL = 'smtp://calidad@qualitycw.com:stavros1234@smtp.strato.com:465';
+process.env.MAIL_URL = 'smtp://calidad@firstbook.es:Dosx3seis@smtp.firstbook.es:465';
 });
