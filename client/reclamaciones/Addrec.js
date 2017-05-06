@@ -47,3 +47,6 @@ Template.Addrec.helpers({
         return this.nombre;
     }
 });
+
+
+

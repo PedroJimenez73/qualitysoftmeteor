@@ -12,7 +12,7 @@ Template.Envenc.events({
     'submit .env-enc': function(event){
         var cliente = event.target.cliente.value;
         var currentEnc = FlowRouter.getParam('_id');
-        var urlEnc = 'http://localhost:3000/resenc/'+currentEnc;
+        var urlEnc = 'http://qualitysoft.firstbook.es/resenc/'+currentEnc;
 		
 		Meteor.call('sendMailEnc', cliente, urlEnc);
 

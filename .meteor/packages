@@ -44,8 +44,8 @@ cfs:standard-packages
 cfs:gridfs
 
 
-email
-service-configuration
+email@1.1.18
+service-configuration@1.0.11
 
 meteorhacks:ssr
 
