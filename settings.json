@@ -1,7 +1,7 @@
 {
   "galaxy.meteor.com": {
     "env": {
-      "MONGO_URL": "mongodb://pedro:stavros@ec2-34-209-72-49.us-west-2.compute.amazonaws.com:27018/meteordb"
+      "MONGO_URL": "mongodb://ec2-35-162-209-251.us-west-2.compute.amazonaws.com:27018/meteordb"
       
     }
   }
