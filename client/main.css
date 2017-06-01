@@ -185,14 +185,17 @@ select {
 
   select#asistentes {
       height: 160px !important;
+      overflow:scroll;
   }
 
   select#asignados{
       height: 160px !important;
+      overflow:scroll;
   }
 
   select#responsables{
       height: 160px !important;
+      overflow:scroll;
   }
 
   select#tareas{
@@ -292,3 +295,4 @@ td a {
 .pie {
     text-align: center;
 }
+

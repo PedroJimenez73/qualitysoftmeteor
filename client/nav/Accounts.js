@@ -77,6 +77,13 @@ AccountsTemplates.addFields([
       placeholder: "Contraseña"
   },
   {
+      _id: 'password_again',
+      type: 'password',
+      required: true,
+      displayName: "Repita Contraseña",
+      placeholder: "Repita Contraseña"
+  },
+  {
     _id: 'telefono',
     type: 'text',
     required: true,
