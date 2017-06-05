@@ -1,20 +1,22 @@
-Template.Envenc.helpers({
-    envenc: function(){
-        var currentEnc = FlowRouter.getParam('_id');
-        return Encuestas.findOne({_id: new Meteor.Collection.ObjectID(currentEnc)});
+
+Template.Envmasivo.helpers({
+    encuestas: function(){
+        return Encuestas.find();
     }
 });
 
-Template.Envenc.events({
+
+Meteor.subscribe('encuestas');
+
+Template.Envmasivo.events({
 	'click .cancelaradd': function() {
     	FlowRouter.go('/encuestas');
 	},
-    'submit .env-enc': function(event){
-        var cliente = event.target.cliente.value;
-        var currentEnc = FlowRouter.getParam('_id');
-        var urlEnc = 'https://www.qualitysoft.es/resenc/'+currentEnc;
+    'submit .env-mas': function(event){
+        var array_clientes = $('#clientes').val();
+        console.log(array_clientes);
 		
-		Meteor.call('sendMailEnc', cliente, urlEnc);
+		Meteor.call('sendMailEnc', array_clientes);
 
 		toastr.options = {
                 "closeButton": false,
@@ -42,4 +44,3 @@ Template.Envenc.events({
     }
 
 });
-

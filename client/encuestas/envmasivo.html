@@ -1,0 +1,18 @@
+<template name="Envmasivo">
+    <div id="page-content-wrapper">
+        <div class="container">
+            <div class="row encabezado">
+                <h1>Envío de encuestas masivo</h1> 
+            </div>
+            <form class="add-objeto env-mas">
+                
+                <input class="form-control" 
+                       id="clientes" 
+                       name="clientes" value=[{{#each encuestas}}{{cliente}} {{_id._str}},{{/each}}]>
+              
+                <button class="btn btn-primary" type="submit">Enviar Encuestas</button>
+                <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>
+            </form>
+        </div>
+    </div>
+</template>

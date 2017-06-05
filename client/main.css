@@ -198,6 +198,11 @@ select {
       overflow:scroll;
   }
 
+  select#clientes{
+      height: 160px !important;
+      overflow:scroll;
+  }
+
   select#tareas{
       height: 100px !important;
   }
