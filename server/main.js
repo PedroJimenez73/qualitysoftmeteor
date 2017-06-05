@@ -7,3 +7,6 @@ Meteor.startup(() => {
     return html.replace(/<html>/, '<!-- HTML 5 -->\n<html lang="es">');
   });
 });
+
+
+

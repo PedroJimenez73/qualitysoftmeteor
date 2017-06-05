@@ -8,7 +8,10 @@
                 
                 <input class="form-control" 
                        id="clientes" 
-                       name="clientes" value=[{{#each encuestas}}{{cliente}} {{_id._str}},{{/each}}]>
+                       name="clientes" 
+                       value=[{{#each encuestas}}
+                            {{cliente}} {{_id._str}},
+                       {{/each}}]>
               
                 <button class="btn btn-primary" type="submit">Enviar Encuestas</button>
                 <button class="btn btn-warning cancelaradd" type="button">Cancelar</button>

@@ -11,3 +11,4 @@ var postSignUp = function (userId, info) {
 AccountsTemplates.configure({
     postSignUpHook: postSignUp
 });
+

@@ -29,7 +29,8 @@ AccountsTemplates.configure({
           signUp: "Crear",
         }
         
-    }
+    },
+    
 });
 
 AccountsTemplates.removeField('email');
@@ -74,7 +75,10 @@ AccountsTemplates.addFields([
       type: 'password',
       required: true,
       displayName: "Contraseña",
-      placeholder: "Contraseña"
+      placeholder: "Mínimo 6 caracteres",
+      minLength: 6,
+      re: /(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,}/,
+      errStr: 'Introduzca al menos 1 número, 1 mayúscula y 1 minúscula'
   },
   {
       _id: 'password_again',
