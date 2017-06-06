@@ -646,6 +646,6 @@ Meteor.methods({
     },
     removeTicket: function(_id){
         Tickets.remove({_id: new Meteor.Collection.ObjectID(_id)});
-    },
+    }
 
 });

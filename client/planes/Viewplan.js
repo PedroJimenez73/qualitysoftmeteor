@@ -39,5 +39,22 @@ Template.Viewplan.events({
     'click .cancel-add': function() {
     	FlowRouter.go('/planes');
 	},
+    'click .downcopy': function() {
+        var currentPlan = FlowRouter.getParam('_id');
+        console.log(currentPlan);
+        var csvContent = CSV.unparse(Planes.find({_id: new Meteor.Collection.ObjectID(currentPlan)}).fetch());
+        window.open('data:text/csv;charset=utf-8,' + escape(csvContent), '_self');
+        //Meteor.call('download', currentPlan);
+
+	},
 
 });
+
+Template.Planes.helpers({
+    planes: function(){
+        return Planes.find();
+    }
+});
+
+
+Meteor.subscribe('planes');
