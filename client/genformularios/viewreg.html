@@ -1,0 +1,39 @@
+<template name="Viewreg"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h1>Registros del formulario {{viewreg.nombre}}</h1>
+                <a class="pull-right btn btn-primary" type="button" href="/formularios">Volver Formularios</a>  
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>{{viewreg.campo1}}</th>
+                                    <th>{{viewreg.campo2}}</th>
+                                    <th>{{viewreg.campo3}}</th>
+                                    <th>{{viewreg.campo4}}</th>
+                                    <th>{{viewreg.campo5}}</th>
+
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each viewreg.registros}}
+                                    <tr>
+                                        
+                                        <td>{{valor1}}</td>
+                                        <td>{{valor2}}</td>
+                                        <td>{{valor3}}</td>
+                                        <td>{{valor4}}</td>
+                                        <td>{{valor5}}</td>
+                                       
+                                    </tr>
+                                 {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

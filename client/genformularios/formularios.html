@@ -1,0 +1,33 @@
+<template name="Formularios"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h1>Generación de Formularios</h1> 
+                    <a class="pull-right btn btn-success" type="button" href="/genform">Generar Formulario</a> 
+                    <a href="/inicio">Inicio ></a> Generación de Formularios
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <table class="table table-bordered table-striped tabla">
+                            <thead>
+                                <tr class="filters">
+                                    <th>Nombre</th>
+                                    <th>Nuevo Registro</th> 
+                                    <th>Visualizar Registros</th> 
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {{#each formularios}}
+                                    <tr>
+                                        <td>{{nombre}}</td>
+                                        <td><a class="btn btn-success" type="button" href="/addregistro/{{_id._str}}">Nuevo Registro</a> </td>
+                                        <td><a class="btn btn-primary" type="button" href="/viewreg/{{_id._str}}">Visualizar Registros</a> </td>
+                                    </tr>
+                                {{/each}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+    </div>
+</template>

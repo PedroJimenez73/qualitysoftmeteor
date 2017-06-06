@@ -202,6 +202,11 @@ Meteor.publish('encuestas', function(){
     
 });
 
+Meteor.publish('formularios', function(){
+        return Formularios.find({});
+    
+});
+
 Meteor.publish('reclamas', function(){
     if(this.userId){
         return Reclamas.find({});

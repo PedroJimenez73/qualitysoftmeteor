@@ -1,0 +1,32 @@
+<template name="Addregistro"> 
+    <div id="page-content-wrapper">
+            <div class="container">
+                <div class="row encabezado">
+                    <h1>Nuevo Registro del formulario {{addregistro.nombre}}</h1>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                            
+                            <form class="add-objeto add-registro">
+                            <label for="valor1">{{addregistro.campo1}}</label>
+                            <input type="text" class="form-control" name="valor1" id="valor1">
+                            <label for="valor2">{{addregistro.campo2}}</label>
+                            <input type="text" class="form-control" name="valor2" id="valor2">
+                            <label for="valor3">{{addregistro.campo3}}</label>
+                            <input type="text" class="form-control" name="valor3" id="valor3">
+                            <label for="valor4">{{addregistro.campo4}}</label>
+                            <input type="text" class="form-control" name="valor4" id="valor4">
+                            <label for="valor5">{{addregistro.campo5}}</label>
+                            <input type="text" class="form-control" name="valor5" id="valor5">
+                            <button class="btn btn-primary" type="submit">Añadir registro</button>
+                            <button class="btn btn-warning cancel-add" type="button">Cancelar</button>
+                            </form>
+                            <hr>
+                    </div>
+                </div>
+            </div>
+
+    </div>
+    
+
+</template>

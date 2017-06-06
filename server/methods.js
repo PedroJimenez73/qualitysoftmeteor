@@ -576,11 +576,19 @@ Meteor.methods({
 	removeAcc: function(_id){
         Acciones.remove({_id: new Meteor.Collection.ObjectID(_id)});
     },
-    genEnc: function(cliente, fecha){
+    genEnc: function(cliente, fecha, pre1, pre2, pre3, pre4, pre5, pre6, pre7){
 
         Encuestas.insert({
 			cliente : cliente,
-			fecha : fecha
+			fecha : fecha,
+            pre1 : pre1,
+            pre2 : pre2,
+            pre3 : pre3,
+            pre4 : pre4,
+            pre5 : pre5,
+            pre6 : pre6,
+            pre7 : pre7
+
             
         });
 
@@ -646,6 +654,37 @@ Meteor.methods({
     },
     removeTicket: function(_id){
         Tickets.remove({_id: new Meteor.Collection.ObjectID(_id)});
+    },
+    genForm: function(nombre, campo1, campo2, campo3, campo4, campo5){
+
+        Formularios.insert({
+			nombre : nombre,
+            campo1 : campo1,
+            campo2 : campo2,
+            campo3 : campo3,
+            campo4 : campo4,
+            campo5 : campo5
+        
+        });
+
+    },
+    addRegistro: function(_id, valor1, valor2, valor3, valor4, valor5){
+
+        Formularios.update({
+            _id: new Meteor.Collection.ObjectID(_id)
+        }, {
+            $push:{
+                registros : {
+					valor1 : valor1,
+                    valor2 : valor2,
+                    valor3 : valor3,
+                    valor4 : valor4,
+                    valor5 : valor5
+				}
+
+            }
+        });
+
     }
 
 });
